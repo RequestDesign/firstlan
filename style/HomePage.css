@@ -6,10 +6,11 @@
   width: 100%;
 }
 .container-fluid {
-  margin-left: 160px !important;
-  margin-right: 160px !important;
+  margin-left: 160px;
+  margin-right: 160px ;
   width: 83.333vw !important;
   padding: 0 !important;
+  margin: 0 auto;
 }
 /* Main */
 .main {
@@ -19,8 +20,8 @@
 .main-category_block {
   display: flex;
   justify-content: space-between;
-  align-content: center;
-  height: 72px;
+  align-items: center;
+  height: 7.2vh;
 }
 .main-category_button {
   display: flex;
@@ -31,15 +32,109 @@
 .main-category_title {
   font-size: 3.125vw;
   color: rgba(41, 41, 45, 1);
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 .main-category_still {
   font-size: 0.833vw;
+  font-family: 'Gilroy', sans-serif;;
+  font-weight: 700;
+  font-style: normal;
+  color: rgba(41, 41, 45, 1);
+  text-transform: uppercase;
 }
+.main-category_items{
+  margin-top: 60px;
+  display: flex;
+  gap: 2.031vw;
+}
+.category-item_content{
+  display: flex;
+  gap: 15px;
+}
+.category-item_description{
+  margin-bottom: 4vmin;
+}
+.category_item{
+  width: 20vw;
+  height: 44.6vh;
+}
+.network{
+  width: 14vw;
+  height: 35vh;
+}
+.category-item_numder{
+  display: grid;
+  align-content: space-between;
+  justify-items: center;
+}
+.item_numder{
+  color: rgba(144, 202, 255, 0.14);
+  font-size: 5vmin;
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  margin-top: -10px;
+}
+.category-item_title{
+  font-family: 'Gilroy', sans-serif;
+  font-size: 1.25vw;
+  font-weight: 600;
+  font-style: normal;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.category-item_text{
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.938vw;
+}
+
+
+
+
+
+
+
+
 
 /* Button */
 .btn-blue {
   background: rgba(19, 75, 175, 1);
-  width: 3.75vw;
-  height: 3.75vw;
+  width: 8vmin;
+  height: 8vmin;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-gray{
+  background: rgba(233, 233, 233, 1);
+  width: 8vmin;
+  height: 8vmin;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-gray:focus{
+  background: rgba(19, 75, 175, 1);
+  .btn-gray-arrow{
+    color: white;
+  }
+}
+.btn-blue:focus {
   border: none;
 }
+.btn-arrow {
+  font-size: 3vmin;
+  color: white;
+}
+.btn-gray-arrow{
+  font-size: 3vmin;
+  color: black;
+} 
