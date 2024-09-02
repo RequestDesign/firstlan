@@ -1,0 +1,45 @@
+.body {
+  background: lightgray;
+}
+.header {
+  height: 100hv;
+  width: 100%;
+}
+.container-fluid {
+  margin-left: 160px !important;
+  margin-right: 160px !important;
+  width: 83.333vw !important;
+  padding: 0 !important;
+}
+/* Main */
+.main {
+  margin: 180px 0;
+}
+
+.main-category_block {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  height: 72px;
+}
+.main-category_button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 28px;
+}
+.main-category_title {
+  font-size: 3.125vw;
+  color: rgba(41, 41, 45, 1);
+}
+.main-category_still {
+  font-size: 0.833vw;
+}
+
+/* Button */
+.btn-blue {
+  background: rgba(19, 75, 175, 1);
+  width: 3.75vw;
+  height: 3.75vw;
+  border: none;
+}
