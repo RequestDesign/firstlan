@@ -1,5 +1,5 @@
-.body {
-  background: lightgray;
+body {
+  background: rgba(230, 230, 230, 0.356) !important;
 }
 .header {
   height: 100hv;
@@ -7,7 +7,7 @@
 }
 .container-fluid {
   margin-left: 160px;
-  margin-right: 160px ;
+  margin-right: 160px;
   width: 83.333vw !important;
   padding: 0 !important;
   margin: 0 auto;
@@ -16,7 +16,10 @@
 .main {
   margin: 180px 0;
 }
-
+/* category */
+.main-category {
+  margin-bottom: 180px;
+}
 .main-category_block {
   display: flex;
   justify-content: space-between;
@@ -40,67 +43,132 @@
 }
 .main-category_still {
   font-size: 0.833vw;
-  font-family: 'Gilroy', sans-serif;;
+  font-family: "Gilroy", sans-serif;
   font-weight: 700;
   font-style: normal;
   color: rgba(41, 41, 45, 1);
   text-transform: uppercase;
 }
-.main-category_items{
+.main-category_items {
   margin-top: 60px;
   display: flex;
   gap: 2.031vw;
+  height: 46vh;
 }
-.category-item_content{
+.category-item_content {
   display: flex;
+  justify-content: space-between;
   gap: 15px;
 }
-.category-item_description{
+.category-item_description {
   margin-bottom: 4vmin;
 }
-.category_item{
+.category_item {
   width: 20vw;
-  height: 44.6vh;
+  height: 46vh;
 }
-.network{
+.network {
   width: 14vw;
   height: 35vh;
 }
-.category-item_numder{
+.category-item_numder {
   display: grid;
   align-content: space-between;
-  justify-items: center;
+  justify-items: end;
 }
-.item_numder{
+.item_numder {
   color: rgba(144, 202, 255, 0.14);
   font-size: 5vmin;
-  font-family: 'Gilroy', sans-serif;
+  font-family: "Gilroy", sans-serif;
   font-weight: 500;
   font-style: normal;
   margin-top: -10px;
 }
-.category-item_title{
-  font-family: 'Gilroy', sans-serif;
+.category-item_title {
+  font-family: "Gilroy", sans-serif;
   font-size: 1.25vw;
   font-weight: 600;
   font-style: normal;
   margin-top: 0;
   margin-bottom: 0;
 }
-.category-item_text{
-  font-family: 'Gilroy', sans-serif;
+.category-item_text {
+  font-family: "Gilroy", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.938vw;
 }
-
-
-
-
-
-
-
-
+/* Продажи */
+.main-sales_items {
+  display: flex;
+  gap: 40px;
+  margin-top: 60px;
+}
+.sales-item_description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-sales_button {
+  display: flex;
+  gap: 16px;
+}
+.sales_item {
+  width: 19.271vw;
+  height: 50.8vh;
+  background: white;
+  padding: 2.2vh 0 2.2vh 1.458vw;
+  position: relative;
+}
+.sales-item_text {
+  font-family: "Gilroy", sans-serif;
+  font-size: 1.042vw;
+  font-weight: 600;
+  font-style: normal;
+  width: 12vw;
+  height: 10vh;
+}
+.sales-prise {
+  margin-top: 5vh;
+  width: 5.156vw;
+  height: 8vh;
+  display: grid;
+  align-items: end;
+}
+.position {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.sales {
+  width: 16.406vw;
+  height: 22.9vh;
+}
+.old-price {
+  color: rgba(28, 28, 31, 0.3);
+  font-family: "Gilroy", sans-serif;
+  font-size: 1.042vw;
+  font-weight: 500;
+  font-style: normal;
+  text-decoration: line-through;
+}
+.price {
+  font-family: "Gilroy", sans-serif;
+  font-size: 1.25vw;
+  font-weight: 600;
+  color: rgba(41, 41, 45, 1);
+}
+.heart {
+  width: 1.25vw; /* 24px */
+  height: 2.5vh; /* 22px */
+  background-image: url("/image/sales/heard-normal.png");
+  background-size: cover;
+  cursor: pointer;
+  margin-right: 1.25vw;
+}
+.heart.active {
+  background-image: url("/image/sales/heart-active.png");
+}
 
 /* Button */
 .btn-blue {
@@ -112,7 +180,7 @@
   align-items: center;
   justify-content: center;
 }
-.btn-gray{
+.btn-gray {
   background: rgba(233, 233, 233, 1);
   width: 8vmin;
   height: 8vmin;
@@ -121,9 +189,9 @@
   align-items: center;
   justify-content: center;
 }
-.btn-gray:focus{
+.btn-gray:focus {
   background: rgba(19, 75, 175, 1);
-  .btn-gray-arrow{
+  .btn-gray-arrow {
     color: white;
   }
 }
@@ -131,10 +199,35 @@
   border: none;
 }
 .btn-arrow {
-  font-size: 3vmin;
+  font-size: 3.5vmin;
   color: white;
 }
-.btn-gray-arrow{
+.btn-gray-arrow {
   font-size: 3vmin;
   color: black;
-} 
+}
+.basket-button {
+  width: 1.25vw;
+  height: 2.5vh;
+  background-image: url("/image/sales/basket-normal.png"); 
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.btn-blue-basket{
+  background: rgba(19, 75, 175, 1);
+  border: 2px solid rgba(19, 75, 175, 1);
+  width: 8vmin;
+  height: 8vmin;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.btn-blue-basket.active {
+  background-color: white; 
+  border: 2px solid rgba(19, 75, 175, 1); 
+}
+.btn-blue-basket.active .basket-button {
+  background-image: url('/image/sales/basket-active.png');
+}
