@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const clientWidth = container.clientWidth;
 
         prevButton.disabled = scrollLeft === 0;
-        nextButton.disabled = scrollLeft + clientWidth >= scrollWidth;
+        nextButton.disabled = scrollLeft + clientWidth >= scrollWidth - 1; // Оставляем небольшой зазор для точности
     }
 
     function showItemsInView() {
@@ -41,12 +41,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     prevButton.addEventListener('click', () => {
         container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-        updateButtonState();
+        setTimeout(updateButtonState, 300); // Задержка для учета времени прокрутки
     });
 
     nextButton.addEventListener('click', () => {
         container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-        updateButtonState();
+        setTimeout(updateButtonState, 300); // Задержка для учета времени прокрутки
     });
 
     container.addEventListener('scroll', () => {

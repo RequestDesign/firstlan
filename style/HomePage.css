@@ -99,7 +99,7 @@ body {
   font-size: 0.938vw;
 }
 /* Продажи */
-.main-sales{
+.main-sales {
   margin-bottom: 180px;
 }
 .main-sales_items {
@@ -107,13 +107,15 @@ body {
   gap: 2.083vw;
   margin-top: 60px;
   overflow: hidden;
-  scroll-behavior: smooth; 
-  transition: transform 0.3s ease; 
+  scroll-behavior: smooth;
+  transition: transform 0.3s ease;
 }
 .sales-item_description {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-around;
+  align-items: start;
+  /* margin-right: 1vw; */
+  margin-left: -2.2vh;
 }
 .main-sales_button {
   display: flex;
@@ -127,7 +129,7 @@ body {
   padding: 2.2vh 0 2.2vh 1.458vw;
   position: relative;
   opacity: 0;
-  transition: opacity 0.3s ease; 
+  transition: opacity 0.3s ease;
 }
 .show {
   opacity: 1;
@@ -159,7 +161,7 @@ body {
 .old-price {
   color: rgba(28, 28, 31, 0.3);
   font-family: "Gilroy", sans-serif;
-  font-size: 1.042vw;
+  font-size: 1.042vw; /* 20 */
   font-weight: 500;
   font-style: normal;
   text-decoration: line-through;
@@ -171,48 +173,93 @@ body {
   color: rgba(41, 41, 45, 1);
 }
 .heart {
-  width: 1.25vw; /* 24px */
-  height: 2.5vh; /* 22px */
+  width: 2vw;
+  height: 3.8vh;
   background-image: url("/image/sales/heard-normal.png");
   background-size: cover;
   cursor: pointer;
-  margin-right: 1.28vw;
 }
 .heart.active {
   background-image: url("/image/sales/heart-active.png");
 }
 
 /* about */
-.main-about{
+.main-about {
   margin-bottom: 180px;
 }
-.main-about_box-white{
+.main-about_box-white {
   width: 65.26vw;
-  height: 64.6vh;
+  height: 100%;
+  /* height: 64.6vh; */
   background: rgba(255, 255, 255, 1);
 }
-.main-about_box-blue{
-  width: 34.792vw;
-  height: 64.6vh;
-  background: rgba(19, 75, 175, 1);
-}
-.main-about_box{
+.main-about_box {
   display: flex;
 }
-.box-white_content{
-  padding-top: 15vh;
-  padding-left: 8.333vw;
-  width: 30vw;
-  height: 352px;
+.box-white_content {
+  margin-top: 15vh;
+  margin-left: 8.333vw;
+  margin-bottom: 14.4vh;
+  /* width: 30vw;
+  height: 35.2vh; */
+  box-sizing: border-box;
 }
-.box-white_button{
+.box-white_button {
   display: flex;
   align-items: center;
   gap: 28px;
-  margin-top: 4vh;
+  margin-top: 4.5vh;
+  width: 12.5vw;
 }
-
-
+.box-white_title {
+  font-family: "Gilroy", sans-serif;
+  font-size: 3.125vw;
+  font-weight: 400;
+  margin-bottom: 4vh;
+  width: 30vw;
+}
+.box-white_text {
+  font-family: "Gilroy", sans-serif;
+  font-size: 1.042vw; /* 20 */
+  font-weight: 500;
+  width: 26.979vw;
+  line-height: 1.8vw;
+  margin-bottom: 4vh;
+}
+.main-about_box-blue {
+  width: 34.792vw;
+  /* height: 64.6vh; */
+  background: rgba(19, 75, 175, 1);
+}
+.box-blue_text {
+  display: flex;
+  flex-direction: column;
+  font-family: "Gilroy", sans-serif;
+  font-size: 14.271vw;
+  font-weight: 900;
+  color: rgba(144, 202, 255, 0.14);
+  line-height: 12vw;
+  text-transform: uppercase;
+  width: 39.323vw;
+  text-align: left;
+  margin-left: -12.5vw;
+  margin-top: 5vh;
+  z-index: -1;
+}
+.text-first {
+  text-align: left;
+}
+.text-second {
+  text-align: right;
+  margin-top: 0;
+}
+.termenal {
+  width: 35.417vw;
+  height: 33.9vh;
+  z-index: 2;
+  margin-left: -23vw;
+  margin-top: -15vmax;
+}
 
 /* Button */
 .btn-blue {
@@ -243,7 +290,7 @@ body {
   border: none;
 }
 .btn-blue:hover {
-  background: #0056b3; 
+  background: #0056b3;
 }
 .btn-arrow {
   font-size: 3.5vmin;
@@ -256,11 +303,11 @@ body {
 .basket-button {
   width: 1.25vw;
   height: 2.5vh;
-  background-image: url("/image/sales/basket-normal.png"); 
+  background-image: url("/image/sales/basket-normal.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
-.btn-blue-basket{
+.btn-blue-basket {
   background: rgba(19, 75, 175, 1);
   border: 2px solid rgba(19, 75, 175, 1);
   width: 8vmin;
@@ -272,17 +319,17 @@ body {
   box-sizing: border-box;
 }
 .btn-blue-basket.active {
-  background-color: white; 
-  border: 2px solid rgba(19, 75, 175, 1); 
+  background-color: white;
+  border: 2px solid rgba(19, 75, 175, 1);
 }
 .btn-blue-basket.active .basket-button {
-  background-image: url('/image/sales/basket-active.png');
+  background-image: url("/image/sales/basket-active.png");
 }
 .btn-blue:disabled {
-  background: rgba(233, 233, 233, 1); 
+  background: rgba(233, 233, 233, 1);
   cursor: not-allowed;
   pointer-events: none; /* Отключает все события клика */
 }
 .btn-blue:disabled:hover {
-  background: #d6d6d6; /* Цвет для заблокированных кнопок при наведении */
+  background: rgba( 233, 233, 233, 1); /* Цвет для заблокированных кнопок при наведении */
 }
