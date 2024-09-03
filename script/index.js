@@ -58,3 +58,28 @@ document.addEventListener('DOMContentLoaded', () => {
     updateButtonState();
     showItemsInView();
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const items = document.querySelectorAll('.main-advantages_item');
+    const wrapD3Cube = document.querySelector('#wrapD3Cube');
+    const D3Cube = document.querySelector('#D3Cube');
+  
+    items.forEach(item => {
+      item.addEventListener('click', () => {
+        // Удаляем активный класс у всех элементов
+        items.forEach(i => {
+          i.classList.remove('active');
+          // Отключаем анимацию для всех кубов
+          D3Cube.classList.add('no-animation');
+        });
+  
+        // Добавляем активный класс к текущему элементу
+        item.classList.add('active');
+  
+        // Включаем анимацию для куба
+        D3Cube.classList.remove('no-animation');
+      });
+    });
+  });
+    
+  
