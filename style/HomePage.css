@@ -6,8 +6,8 @@ body {
   width: 100%;
 }
 .container-fluid {
-  margin-left: 160px;
-  margin-right: 160px;
+  margin-left: 8.333vw;
+  margin-right: 16vh;
   width: 83.333vw !important;
   padding: 0 !important;
   margin: 0 auto;
@@ -99,10 +99,16 @@ body {
   font-size: 0.938vw;
 }
 /* Продажи */
+.main-sales{
+  margin-bottom: 180px;
+}
 .main-sales_items {
   display: flex;
-  gap: 40px;
+  gap: 2.083vw;
   margin-top: 60px;
+  overflow: hidden;
+  scroll-behavior: smooth; 
+  transition: transform 0.3s ease; 
 }
 .sales-item_description {
   display: flex;
@@ -111,14 +117,20 @@ body {
 }
 .main-sales_button {
   display: flex;
-  gap: 16px;
+  gap: 0.833vw;
 }
 .sales_item {
+  flex: 0 0 auto;
   width: 19.271vw;
   height: 50.8vh;
   background: white;
   padding: 2.2vh 0 2.2vh 1.458vw;
   position: relative;
+  opacity: 0;
+  transition: opacity 0.3s ease; 
+}
+.show {
+  opacity: 1;
 }
 .sales-item_text {
   font-family: "Gilroy", sans-serif;
@@ -164,11 +176,43 @@ body {
   background-image: url("/image/sales/heard-normal.png");
   background-size: cover;
   cursor: pointer;
-  margin-right: 1.25vw;
+  margin-right: 1.28vw;
 }
 .heart.active {
   background-image: url("/image/sales/heart-active.png");
 }
+
+/* about */
+.main-about{
+  margin-bottom: 180px;
+}
+.main-about_box-white{
+  width: 65.26vw;
+  height: 64.6vh;
+  background: rgba(255, 255, 255, 1);
+}
+.main-about_box-blue{
+  width: 34.792vw;
+  height: 64.6vh;
+  background: rgba(19, 75, 175, 1);
+}
+.main-about_box{
+  display: flex;
+}
+.box-white_content{
+  padding-top: 15vh;
+  padding-left: 8.333vw;
+  width: 30vw;
+  height: 352px;
+}
+.box-white_button{
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-top: 4vh;
+}
+
+
 
 /* Button */
 .btn-blue {
@@ -197,6 +241,9 @@ body {
 }
 .btn-blue:focus {
   border: none;
+}
+.btn-blue:hover {
+  background: #0056b3; 
 }
 .btn-arrow {
   font-size: 3.5vmin;
@@ -230,4 +277,12 @@ body {
 }
 .btn-blue-basket.active .basket-button {
   background-image: url('/image/sales/basket-active.png');
+}
+.btn-blue:disabled {
+  background: rgba(233, 233, 233, 1); 
+  cursor: not-allowed;
+  pointer-events: none; /* Отключает все события клика */
+}
+.btn-blue:disabled:hover {
+  background: #d6d6d6; /* Цвет для заблокированных кнопок при наведении */
 }
