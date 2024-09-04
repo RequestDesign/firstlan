@@ -26,7 +26,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 7.2vh;
 }
 .main-category_button {
   display: flex;
@@ -533,7 +532,7 @@ body {
   left: 0;
   transform: translateY(-50%);
   color: rgba(233, 29, 29, 1);
-  font-family: Gilroy, sans-serif;
+  font-family: "Gilroy", sans-serif;
   font-weight: 400;
   font-size: 0.8125rem; /* 13px */
   margin-left: 32px;
@@ -547,7 +546,70 @@ body {
 .main-specialoffers{
   margin: 180px 0;
 }
-
+/* projects */
+.main-projects_box{
+  display: flex;
+  gap: 1.667vw;
+  align-items: center;
+}
+.main-projects_text p{
+  margin-bottom: 0;
+}
+.main-projects_text{
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+  font-size: 0.938vw;
+  line-height: 3.3vh;
+}
+.projects-border_text{
+  border: 2px solid rgba(19, 75, 175, 1);
+  padding: 8px 14px 8px 14px;
+  text-align: center;
+  color: rgba(19, 75, 175, 1);
+  font-family: "Gilroy", sans-serif;
+  font-weight: 600;
+  font-size: 0.729vw;
+  height: 5.6vh;
+}
+.main-projects_white{
+  width: 40.625vw;
+  background: white;
+  padding: 32px;
+}
+.main-projects_image{
+  display: flex;
+  justify-content: space-between;
+}
+.projects-content_number{
+  color: rgba(144, 202, 255, 0.14);
+  font-family: "Gilroy", sans-serif;
+  font-weight: 700;
+  font-size: 6.375vw;
+  height: 140px;
+}
+.projects-content_box{
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.projects-content_title{
+  font-family: "Gilroy", sans-serif;
+  font-weight: 600;
+  font-size: 1.667vw;
+  margin-bottom: 2vh;
+  color: rgba(41, 41, 45, 1);
+}
+.projects-content_text{
+  width: 28.229vw; 
+  font-size: 1.042vw;
+  font-family: "Gilroy", sans-serif;
+  font-weight: 500;
+  color: rgba(41, 41, 45, 1);
+  
+}
+.main-projects_content{
+  margin-top: 6.6vh;
+}
 
 
 /* Button */
