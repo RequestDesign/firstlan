@@ -383,8 +383,8 @@ body {
 /* Button */
 .btn-blue {
   background: rgba(19, 75, 175, 1);
-  width: 8vmin;
-  height: 8vmin;
+  width: 8mix;
+  height: 8vmix;
   border: none;
   display: flex;
   align-items: center;
@@ -392,8 +392,8 @@ body {
 }
 .btn-gray {
   background: rgba(233, 233, 233, 1);
-  width: 8vmin;
-  height: 8vmin;
+  width: 8vmix;
+  height: 8vmix;
   border: none;
   display: flex;
   align-items: center;
@@ -447,13 +447,8 @@ body {
 .btn-blue:disabled {
   background: rgba(233, 233, 233, 1);
   cursor: not-allowed;
-  pointer-events: none; /* Отключает все события клика */
+  pointer-events: none;
 }
 .btn-blue:disabled:hover {
-  background: rgba(
- 233,
-    233,
-    233,
-    1
-  ); /* Цвет для заблокированных кнопок при наведении */
+  background: rgba(233,233,233,1 ); 
 }

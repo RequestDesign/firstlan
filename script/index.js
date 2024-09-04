@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const clientWidth = container.clientWidth;
 
         prevButton.disabled = scrollLeft === 0;
-        nextButton.disabled = scrollLeft + clientWidth >= scrollWidth - 1; // Оставляем небольшой зазор для точности
+        nextButton.disabled = scrollLeft + clientWidth >= scrollWidth - 1; 
     }
 
     function showItemsInView() {
@@ -41,20 +41,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     prevButton.addEventListener('click', () => {
         container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-        setTimeout(updateButtonState, 300); // Задержка для учета времени прокрутки
+        setTimeout(updateButtonState, 300); 
     });
 
     nextButton.addEventListener('click', () => {
         container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-        setTimeout(updateButtonState, 300); // Задержка для учета времени прокрутки
+        setTimeout(updateButtonState, 300); 
     });
 
     container.addEventListener('scroll', () => {
         updateButtonState();
         showItemsInView();
     });
-
-    // Изначально обновляем состояние кнопок и видимость элементов
     updateButtonState();
     showItemsInView();
 });
@@ -66,17 +64,15 @@ document.addEventListener('DOMContentLoaded', () => {
   
     items.forEach(item => {
       item.addEventListener('click', () => {
-        // Удаляем активный класс у всех элементов
+        
         items.forEach(i => {
           i.classList.remove('active');
-          // Отключаем анимацию для всех кубов
+       
           D3Cube.classList.add('no-animation');
         });
   
-        // Добавляем активный класс к текущему элементу
         item.classList.add('active');
   
-        // Включаем анимацию для куба
         D3Cube.classList.remove('no-animation');
       });
     });
