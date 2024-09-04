@@ -58,8 +58,7 @@ body {
 }
 .category-item_content {
   display: flex;
-  justify-content: space-between;
-  gap: 15px;
+  gap: 0.781vw;
 }
 .category-item_description {
   margin-bottom: 4vmin;
@@ -75,11 +74,10 @@ body {
 .category-item_numder {
   display: grid;
   align-content: space-between;
-  justify-items: end;
 }
 .item_numder {
   color: rgba(144, 202, 255, 0.14);
-  font-size: 5vmin;
+  font-size: 1.823vmax;
   font-family: "Gilroy", sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -383,8 +381,8 @@ body {
 /* Button */
 .btn-blue {
   background: rgba(19, 75, 175, 1);
-  width: 8mix;
-  height: 8vmix;
+  width: 3vmax;
+  height: 3vmax;
   border: none;
   display: flex;
   align-items: center;
@@ -392,8 +390,8 @@ body {
 }
 .btn-gray {
   background: rgba(233, 233, 233, 1);
-  width: 8vmix;
-  height: 8vmix;
+  width: 3vmax;
+  height: 3vmax;
   border: none;
   display: flex;
   align-items: center;
@@ -412,11 +410,11 @@ body {
   background: #0056b3;
 }
 .btn-arrow {
-  font-size: 3.5vmin;
+  font-size: 1.3vmax;
   color: white;
 }
 .btn-gray-arrow {
-  font-size: 3vmin;
+  font-size: 1.3vmax;
   color: black;
 }
 .basket-button {

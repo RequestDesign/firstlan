@@ -14,16 +14,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const prevButton = document.querySelector('.prev');
     const nextButton = document.querySelector('.next');
     const items = Array.from(container.querySelectorAll('.sales_item'));
-    const itemWidth = items[0].offsetWidth;
-    const scrollAmount = itemWidth + parseInt(getComputedStyle(container).gap);
+
+    function getItemWidth() {
+        return items[0].offsetWidth + parseInt(getComputedStyle(container).gap);
+    }
+
+    let scrollAmount = getItemWidth();
     
     function updateButtonState() {
         const scrollLeft = container.scrollLeft;
         const scrollWidth = container.scrollWidth;
         const clientWidth = container.clientWidth;
-
+    
+        console.log(`scrollLeft: ${scrollLeft}, scrollWidth: ${scrollWidth}, clientWidth: ${clientWidth}`);
+        
         prevButton.disabled = scrollLeft === 0;
-        nextButton.disabled = scrollLeft + clientWidth >= scrollWidth - 1; 
+        nextButton.disabled = scrollLeft + clientWidth >= scrollWidth - 1.7;
     }
 
     function showItemsInView() {
@@ -53,9 +59,18 @@ document.addEventListener('DOMContentLoaded', () => {
         updateButtonState();
         showItemsInView();
     });
+
+    
+    window.addEventListener('resize', () => {
+        scrollAmount = getItemWidth();
+        updateButtonState();
+    });
+
     updateButtonState();
     showItemsInView();
 });
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const items = document.querySelectorAll('.main-advantages_item');
