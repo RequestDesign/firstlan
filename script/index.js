@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(`scrollLeft: ${scrollLeft}, scrollWidth: ${scrollWidth}, clientWidth: ${clientWidth}`);
         
         prevButton.disabled = scrollLeft === 0;
-        nextButton.disabled = scrollLeft + clientWidth >= scrollWidth - 1.7;
+        nextButton.disabled = scrollLeft + clientWidth >= scrollWidth - 1.6;
     }
 
     function showItemsInView() {

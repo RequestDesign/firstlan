@@ -586,6 +586,13 @@ body {
 .btn-blue:hover .btn-arrow {
   transform: translateX(5px); 
 }
+.btn-blue.prev:hover .btn-arrow {
+  transform: translateX(-5px); 
+}
+.btn-blue.next:hover .btn-arrow {
+  transform: translateX(5px); 
+}
+
 .btn-gray-arrow {
   font-size: 1.3vmax;
   color: black;
