@@ -257,22 +257,28 @@
                             <form action="" class="form">
                                 <div class="form-content">
                                     <div class="form-content_box">
-                                        <input type="text">
-                                        <input type="text">
+                                        <input id="name" class="form-input" type="text" placeholder="Имя" required>
+                                        <div class="error-message">Поле заполнено неверно</div>
+                                        <input id="phone" class="form-input" type="text" placeholder="Телефон" required>
+                                        <div class="error-message">Поле заполнено неверно</div>
                                     </div>
                                     <div class="form-content_box">
-                                        <input type="text">
-                                        <input type="text">
+                                        <input id="email" class="form-input" type="text" placeholder="Электронная почта" required>
+                                        <div class="error-message">Поле заполнено неверно</div>
+                                        <input id="inn" class="form-input" type="text" placeholder="ИНН" required>
+                                        <div class="error-message">Поле заполнено неверно</div>
                                     </div>
                                 </div>
                                 <div class="form-agreement_button">
                                     <div class="box-agreement">
-                                        <input type="checkbox" name="" id="">
-                                        <div class="box-agreement_text">Нажимая на кнопку, Вы соглашаетесь с Политикой конфиденциальности</div>
+                                        <input type="checkbox" name="" id="" required>
+                                        <label class="box-agreement_text">Нажимая на кнопку, Вы соглашаетесь с Политикой конфиденциальности</д>
                                     </div>
                                     <div class="box_button">
                                         <div class="main-category_still">отправить</div>
-                                        <button type="submit" class="btn-blue"><span class="btn-arrow">&#129106;</span></button>
+                                        <button type="submit" class="btn-blue">
+                                            <span class="btn-arrow">&#129106;</span>
+                                        </button>
                                     </div>
                                 </div>
                             </form>

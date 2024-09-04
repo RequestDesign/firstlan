@@ -8,6 +8,7 @@ document.querySelectorAll('.btn-blue-basket').forEach(function(button) {
         this.classList.toggle('active');
     });
 });
+
 // слайдер
 document.addEventListener('DOMContentLoaded', () => {
     const container = document.querySelector('.main-sales_items');
@@ -70,8 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
     showItemsInView();
 });
 
-
-
 document.addEventListener('DOMContentLoaded', () => {
     const items = document.querySelectorAll('.main-advantages_item');
     const wrapD3Cube = document.querySelector('#wrapD3Cube');
@@ -87,10 +86,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
   
         item.classList.add('active');
-  
         D3Cube.classList.remove('no-animation');
       });
     });
-  });
-    
+});
+
+//input
+// document.querySelectorAll('.form-input').forEach(input => {
+//     input.addEventListener('input', function() {
+//         if (this.value === '') {
+//             this.classList.add('error');
+//         } else {
+//             this.classList.remove('error');
+//         }
+//     });
+// });
   
