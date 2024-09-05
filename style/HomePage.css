@@ -29,9 +29,8 @@ body {
 }
 .main-category_button {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 28px;
+  gap: 1.458vw;
 }
 .main-category_title {
   font-size: 3.125vw;
@@ -283,7 +282,7 @@ body {
   /* align-items: end; */
   /* justify-content: space-between; */
   width: 26vw;
-  height: 20.5vh;
+  height: 10vmax;
 }
 .item_number {
   color: rgba(144, 202, 255, 0.14);
@@ -303,8 +302,9 @@ body {
   width: 13.438vw;
 }
 .advantages-item_content {
-  height: 35vh;
+  /* height: 35vh; */
   margin-bottom: 3vh;
+  margin-top: 3vh;
 }
 .content_text {
   font-family: "Gilroy", sans-serif;
@@ -312,7 +312,8 @@ body {
   font-size: 1.042vw;
   margin-left: 7.3vw;
   width: 15vw;
-  height: 20.3vh;
+  /* height: 20.3vh; */
+  padding-bottom: 30px;
 }
 
 #wrapD3Cube {
@@ -559,33 +560,44 @@ body {
   font-family: "Gilroy", sans-serif;
   font-weight: 400;
   font-size: 0.938vw;
-  line-height: 3.3vh;
+  line-height: 1.6vmax;
 }
-.projects-border_text{
+.projects-border{
   border: 2px solid rgba(19, 75, 175, 1);
   padding: 8px 14px 8px 14px;
+  height: 1.6vmax;
+  display: grid;
+  align-content: center;
+}
+.projects-border_text{
   text-align: center;
   color: rgba(19, 75, 175, 1);
   font-family: "Gilroy", sans-serif;
   font-weight: 600;
   font-size: 0.729vw;
-  height: 5.6vh;
+  /* width: 4.688vw; */
 }
 .main-projects_white{
   width: 40.625vw;
   background: white;
-  padding: 32px;
+  padding: 1.667vw;
 }
 .main-projects_image{
   display: flex;
   justify-content: space-between;
+  /* width: 37.292vw; */
+  /* height: 20vmax; */
+}
+.projects_image{
+  width: 20vmax;
+  height: 10vmax;
 }
 .projects-content_number{
   color: rgba(144, 202, 255, 0.14);
   font-family: "Gilroy", sans-serif;
   font-weight: 700;
   font-size: 6.375vw;
-  height: 140px;
+  height: 7vmax;
 }
 .projects-content_box{
   display: flex;
@@ -596,7 +608,7 @@ body {
   font-family: "Gilroy", sans-serif;
   font-weight: 600;
   font-size: 1.667vw;
-  margin-bottom: 2vh;
+  margin-bottom: 0.881vmax;
   color: rgba(41, 41, 45, 1);
 }
 .projects-content_text{
@@ -605,11 +617,15 @@ body {
   font-family: "Gilroy", sans-serif;
   font-weight: 500;
   color: rgba(41, 41, 45, 1);
-  
 }
 .main-projects_content{
-  margin-top: 6.6vh;
+  margin-top: 3vmax;
 }
+/* .projects_image{
+  width: 18.229vw;
+  height: 20vh;
+} */
+
 
 
 /* Button */
