@@ -138,6 +138,9 @@ body {
   font-style: normal;
   width: 12vw;
   height: 5vmax;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-clamp: 3; 
 }
 .sales-price {
   margin-top: 2vmax;
@@ -225,7 +228,6 @@ body {
 }
 .main-about_box-blue {
   width: 34.792vw;
-  /* height: 64.6vh; */
   background: rgba(19, 75, 175, 1);
   display: grid;
   justify-content: center;
@@ -241,9 +243,8 @@ body {
   text-transform: uppercase;
   width: 39.323vw;
   text-align: left;
-  margin-left: -12.5vw;
+  margin-left: -20vw;
   margin-top: 5vh;
-  z-index: -1;
 }
 .text-first {
   text-align: left;
@@ -254,10 +255,9 @@ body {
 }
 .termenal {
   width: 35.417vw;
-  height: 33.9vh;
   z-index: 2;
-  margin-left: -23vw;
-  margin-top: -15vmax;
+  margin-left: -31vw;
+  margin-top: -20vmax;
 }
 /* advantages */
 .main-advantages_title {
