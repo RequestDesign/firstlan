@@ -91,6 +91,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
+const clientItems = document.querySelectorAll('.main-client_item');
+
+clientItems.forEach(item => {
+  item.addEventListener('click', () => {
+    // Проверяем, есть ли уже открытый блок
+    const isOpen = document.querySelector('.main-client_item.active');
+
+    if (isOpen) {
+      // Если есть, закрываем его
+      isOpen.classList.remove('active');
+    }
+
+    // Открываем или закрываем текущий блок
+    item.classList.toggle('active');
+  });
+});
+
+
 //input
 // document.querySelectorAll('.form-input').forEach(input => {
 //     input.addEventListener('input', function() {

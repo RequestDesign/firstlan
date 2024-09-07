@@ -212,7 +212,7 @@ body {
   font-family: "Gilroy", sans-serif;
   font-size: 3.125vw;
   font-weight: 400;
-  margin-bottom: 4vh;
+  margin-bottom: 2vmax;
   /* width: 30vw; */
 }
 .box-white_text {
@@ -221,12 +221,14 @@ body {
   font-weight: 500;
   width: 29vw;
   line-height: 1.8vw;
-  margin-bottom: 4vh;
+  margin-bottom: 2vmax;
 }
 .main-about_box-blue {
   width: 34.792vw;
   /* height: 64.6vh; */
   background: rgba(19, 75, 175, 1);
+  display: grid;
+  justify-content: center;
 }
 .box-blue_text {
   display: flex;
@@ -400,16 +402,16 @@ body {
   line-height: 10vw;
   text-transform: uppercase;
   width: 58vw;
+  height: 20vmax;
   text-align: right;
   margin-left: -25vw;
   margin-top: 5vh;
-  z-index: -1;
 }
 .equipment {
   width: 27vw;
-  height: 62vh;
+  /* height: 62vh; */
   margin-left: -11vw;
-  margin-top: -16vmax;
+  margin-top: -20vmax;
   z-index: 2;
 }
 .project-box_content {
@@ -448,7 +450,7 @@ body {
   font-size: 0.729vw;
   font-family: "Gilroy", sans-serif;
   font-weight: 400;
-  line-height: 2vh;
+  line-height: 1.2vmax;
   color: rgba(41, 41, 45, 1);
 }
 .box_button {
@@ -464,7 +466,7 @@ body {
   color: rgba(136, 140, 142, 1);
   border: 2px solid rgba(28, 28, 31, 0.2);
   width: 19.167vw;
-  height: 7.2vh;
+  height: 3.5vmax;
   padding: 2.2vh 1.667vw 2.2vh 1.667vw;
   transition: border-color 0.3s, color 0.3s;
   box-sizing: border-box;
@@ -631,6 +633,98 @@ body {
   display: flex;
   gap: 2.083vw;
 }
+
+/* client */
+.main-client {
+  margin-top: 180px;
+  perspective: 1000px; 
+}
+
+.main-client_items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6vh;
+  gap: 2.083vw;
+}
+
+.main-client_item {
+  position: relative;
+  width: 19.271vw;
+  height: 16vmax;
+  background: rgba(255, 255, 255, 1);
+  transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out; 
+  cursor: pointer; 
+}
+.main-client_item.active {
+  transform: rotateY(180deg); 
+  background-color: rgba(19, 75, 175, 1); 
+}
+.front, .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.front {
+  z-index: 2; 
+  backface-visibility: hidden; 
+}
+.back {
+  padding: 5.3vh 1.927vw;
+  transform: rotateY(180deg); 
+  opacity: 0; 
+  transition: opacity 0.5s ease-in-out; 
+  display: grid;
+  justify-items: center;
+}
+
+.main-client_item.active .back {
+  opacity: 1; 
+}
+.front .rostec {  
+  width: 6.551vw;
+  /* height: 2.638vmax; */
+  display: block;
+  transition: opacity 0.5s ease-in-out; 
+}
+.front .roctel{
+  width: 13.438vw;
+  display: block;
+  transition: opacity 0.5s ease-in-out; 
+}
+.front .mechel{
+  width: 12.396vw;
+  display: block;
+  transition: opacity 0.5s ease-in-out;
+}
+.group{
+  width: 9.614vw;
+  display: block;
+  transition: opacity 0.5s ease-in-out;
+}
+.main-client_item.active .front .client-logo{ 
+  opacity: 0;
+}
+.rostec-small {
+  width: 3.276vw; 
+  height: 3vmax; 
+}
+.text {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+  font-size: 0.938vw; 
+  text-align: center;
+  color: rgba(255, 255, 255, 1); 
+}
+
+
+
+
 
 
 /* Button */
