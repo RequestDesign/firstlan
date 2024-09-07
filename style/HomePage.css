@@ -711,8 +711,20 @@ body {
   opacity: 0;
 }
 .rostec-small {
-  width: 3.276vw; 
-  height: 3vmax; 
+  width: 4vw; 
+  height: 4vmax; 
+}
+.roctel-small{
+  width: 10.625vw;
+  height: 8vh;
+}
+.mechel-small{
+  width: 8vw;
+  height: 7vh;
+}
+.group-small{
+  width: 7vw;
+  height: 10vh;
 }
 .text {
   font-family: "Gilroy", sans-serif;
