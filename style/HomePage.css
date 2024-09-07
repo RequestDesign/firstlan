@@ -69,7 +69,6 @@ body {
 }
 .network {
   width: 14vw;
-  height: 35vh;
 }
 .category-item_numder {
   display: grid;
@@ -138,10 +137,10 @@ body {
   font-weight: 600;
   font-style: normal;
   width: 12vw;
-  height: 10vh;
+  height: 5vmax;
 }
 .sales-price {
-  margin-top: 5vh;
+  margin-top: 2vmax;
   width: 5.156vmax;
   height: 3vmax;
   display: grid;
@@ -655,7 +654,7 @@ body {
   align-items: center;
   justify-content: center;
 }
-.btn-gray:focus {
+.btn-gray:hover {
   background: rgba(19, 75, 175, 1);
   .btn-gray-arrow {
     color: white;
