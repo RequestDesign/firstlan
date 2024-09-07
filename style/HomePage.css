@@ -635,10 +635,9 @@ body {
 
 /* client */
 .main-client {
-  margin-top: 180px;
+  margin: 180px 0;
   perspective: 1000px; 
 }
-
 .main-client_items {
   display: flex;
   justify-content: center;
@@ -646,7 +645,6 @@ body {
   margin-top: 6vh;
   gap: 2.083vw;
 }
-
 .main-client_item {
   position: relative;
   width: 19.271vw;
@@ -681,7 +679,6 @@ body {
   display: grid;
   justify-items: center;
 }
-
 .main-client_item.active .back {
   opacity: 1; 
 }
@@ -734,9 +731,52 @@ body {
   color: rgba(255, 255, 255, 1); 
 }
 
-
-
-
+/* footer */
+.footer-content{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8vh;
+}
+.footer-content_logo{
+  display: flex;
+  justify-content: space-between;
+  width: 37.604vw;
+  /* height: 16.344vh; */
+}
+.footer-content_contacts{
+  display: flex;
+  justify-content: space-between;
+  width: 33.49vw;
+}
+.footer-content_items{
+  display: grid;
+  /* gap: 0.1vmax; */
+  height: 7vmax;
+}
+.footer-content_item{
+  text-decoration: none;
+  color: rgba(41, 41, 45, 1);
+  font-family: "Gilroy", sans-serif;
+  font-weight: 500;
+  font-size: 1.042vw;
+  height: 1.5vmax;
+}
+.FL_logo{
+  width: 9.531vw;
+  height: 3vmax;
+  margin-bottom: 3.5vh;
+}
+.footer-content_mail{
+  font-family: "Gilroy", sans-serif;
+  font-weight: 500;
+  font-size: 1.042vw;
+  margin-bottom: 1.4vmax;
+}
+.footer-content_tel{
+  font-family: "Gilroy", sans-serif;
+  font-weight: 500;
+  font-size: 1.042vw;
+}
 
 
 /* Button */
