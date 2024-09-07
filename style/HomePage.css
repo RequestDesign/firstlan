@@ -408,8 +408,7 @@ body {
   margin-top: 5vh;
 }
 .equipment {
-  width: 27vw;
-  /* height: 62vh; */
+  width: 24vw;
   margin-left: -11vw;
   margin-top: -20vmax;
   z-index: 2;
@@ -675,7 +674,7 @@ body {
   backface-visibility: hidden; 
 }
 .back {
-  padding: 5.3vh 1.927vw;
+  padding: 2vmax 1.927vw;
   transform: rotateY(180deg); 
   opacity: 0; 
   transition: opacity 0.5s ease-in-out; 
@@ -712,19 +711,20 @@ body {
 }
 .rostec-small {
   width: 4vw; 
-  height: 4vmax; 
+  height: 4vmax;
+  margin-bottom: 1vmax; 
 }
 .roctel-small{
   width: 10.625vw;
-  height: 8vh;
+  height: 2.5vmax;
 }
 .mechel-small{
-  width: 8vw;
-  height: 7vh;
+  width: 10.625vw;
+  height: 2.5vmax;
 }
 .group-small{
   width: 7vw;
-  height: 10vh;
+  height: 2.7vmax;
 }
 .text {
   font-family: "Gilroy", sans-serif;
