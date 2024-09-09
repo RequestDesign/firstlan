@@ -278,21 +278,25 @@ body {
   /* height: 40vh; */
   overflow: hidden;
 }
+
+
+
 .advantages-item_number {
   display: flex;
-  /* align-items: end; */
-  /* justify-content: space-between; */
-  width: 26vw;
-  height: 10vmax;
-  margin-top: -5.6vmax;
+  align-items: end;
+  justify-content: space-between;
+  /* width: 24vmax; */
+  height: 12vmax;
   margin-left: 0.521vw;
+  padding-right: 3.333vw;
+  margin-top: -5.6vmax;
 }
 .item_number {
   color: rgba(144, 202, 255, 0.14);
   font-family: "Gilroy", sans-serif;
   font-weight: 500;
   font-size: 10.677vw;
-  /* margin-top: -5.6vmax; */
+  height: 12vmax;
 }
 .content_box {
   font-family: "Gilroy", sans-serif;
@@ -318,105 +322,49 @@ body {
   /* height: 20.3vh; */
   padding-bottom: 30px;
 }
+.blockchain{
+  width: 2.9vw;
+}
 
-#wrapD3Cube {
-  width: 24px;
-  height: 24px;
-  margin: 11vh auto;
-  float: right;
-  perspective: 1000px;
-  display: block;
-}
-#D3Cube {
-  width: 24px;
-  height: 24px;
-  transform-style: preserve-3d;
-  transform: rotateX(-22deg) rotateY(-38deg) rotateZ(0deg);
-  margin: auto;
-  position: relative;
-  transition: all 0.5s ease-in-out;
-}
-@keyframes cubeRotation {
-  0% {
-    transform: rotateX(-22deg) rotateY(-38deg) rotateZ(0deg);
-  }
-  100% {
-    transform: rotateX(-22deg) rotateY(-398deg) rotateZ(0deg);
-  }
-}
-#D3Cube.no-animation {
-  animation: none;
-}
-.main-advantages_item.active #D3Cube {
-  animation: cubeRotation 1s forwards;
-}
-.main-advantages_item.active {
-  background: rgba(19, 75, 175, 1);
-}
-#D3Cube > div {
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  overflow: hidden;
-  border: 1px solid #111;
-}
-#side1 {
-  transform: rotateX(90deg) translateZ(12px);
-}
-#side2 {
-  transform: rotateY(-90deg) translateZ(12px);
-}
-#side3 {
-  transform: translateZ(12px);
-}
-#side4 {
-  transform: rotateY(90deg) translateZ(12px);
-}
-#side5 {
-  transform: rotateY(180deg) translateZ(12px);
-}
-#side6 {
-  transform: rotateX(-90deg) translateZ(12px);
-}
 
 /* services */
-.main-services{
+.main-services {
   margin: 18vh 0;
   display: flex;
   gap: 2.083vw;
 }
-.main-services_content{
+.main-services_content {
   margin-right: 8.333vw;
   width: 54.844vw;
 }
-.services{
+.services {
   width: 34.74vw;
   height: 38vmax;
 }
-.item-box{
+.item-box {
   display: flex;
 }
-.services-content_title{
+.services-content_title {
   display: flex;
   justify-content: space-between;
-  margin-top: 5.3vh;
-  margin-bottom: 6.5vh;
+  margin-top: 2vmax;
+  margin-bottom: 2.6vmax;
 }
-.services-content_items{
+.services-content_items {
   display: grid;
   gap: 2.6vmax;
 }
-.services-content_item{
+.services-content_item {
   display: flex;
   justify-content: space-between;
   height: 3vmax;
 }
-.services_title{
+.services_title {
   font-family: "Gilroy", sans-serif;
   font-weight: 400;
   font-size: 3.125vw;
 }
-.services_text{
+.services_text {
   font-family: "Gilroy", sans-serif;
   font-weight: 400;
   font-size: 0.938vw;
@@ -425,26 +373,23 @@ body {
   display: grid;
   align-items: center;
 }
-.item-box{
+.item-box {
   display: flex;
   align-items: center;
 }
-.item_title{
+.item_title {
   font-family: "Gilroy", sans-serif;
   font-weight: 700;
   font-size: 1.25vw;
   margin-left: -1.8vw;
 }
-.services_numder{
+.services_numder {
   font-family: "Gilroy", sans-serif;
   font-weight: 600;
   font-size: 3.4vmax;
   color: rgba(144, 202, 255, 0.14);
   width: 7.083vw;
 }
-
-
-
 
 /* project */
 .main-project {
@@ -626,7 +571,7 @@ body {
   font-family: "Gilroy", sans-serif;
   font-weight: 400;
   font-size: 0.938vw;
-  line-height: 1.6vmax;
+  line-height: 1.3vmax;
 }
 .projects-border {
   border: 2px solid rgba(19, 75, 175, 1);
@@ -634,6 +579,7 @@ body {
   height: 1.6vmax;
   display: grid;
   align-content: center;
+  justify-content: center;
 }
 .projects-border_text {
   text-align: center;
@@ -642,6 +588,7 @@ body {
   font-weight: 600;
   font-size: 0.729vmax;
   /* width: 4.688vw; */
+  height: auto;
 }
 .main-projects_white {
   width: 40.625vw;
@@ -866,13 +813,13 @@ body {
 .footer-content_agreement p {
   margin-bottom: 0;
 }
-.footer-content_text{
+.footer-content_text {
   color: rgba(48, 48, 48, 0.5);
   font-family: "Gilroy", sans-serif;
   font-weight: 400;
   font-size: 0.729vw;
 }
-.footer-content_agency{
+.footer-content_agency {
   display: grid;
   align-items: center;
 }
@@ -880,17 +827,6 @@ body {
   width: 9vmax;
   height: 1.7vmax;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 /* Button */
 .btn-blue {
