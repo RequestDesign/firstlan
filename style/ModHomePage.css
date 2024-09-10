@@ -1,0 +1,8 @@
+@media (max-width: 379px ) {
+    .footer-content{
+        display: grid;
+    }
+    .footer_button{
+        display: none;
+    }
+}

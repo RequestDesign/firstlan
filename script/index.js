@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(`scrollLeft: ${scrollLeft}, scrollWidth: ${scrollWidth}, clientWidth: ${clientWidth}`);
         
         prevButton.disabled = scrollLeft === 0;
-        nextButton.disabled = scrollLeft + clientWidth >= scrollWidth - 1.6;
+        nextButton.disabled = scrollLeft + clientWidth >= scrollWidth - 2.4;
     }
 
     function showItemsInView() {
@@ -117,3 +117,146 @@ clientItems.forEach(item => {
 //         }
 //     });
 // });
+
+document.addEventListener('DOMContentLoaded', function() {
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const slideNumber = document.querySelector('.slide-number');
+    const arrowUp = document.querySelector('.arrow.up');
+    const arrowDown = document.querySelector('.arrow.down');
+    const slider = document.querySelector('.slider');
+    const totalSlides = slides.length;
+
+    // Полоса прогресса
+    const progressIndicator = document.querySelector('.progress-indicator');
+
+    function updateSlides() {
+        slides.forEach((slide, index) => {
+            slide.classList.remove('active');
+            if (index === currentSlide) {
+                slide.classList.add('active');
+            }
+        });
+        slideNumber.textContent = (currentSlide + 1).toString().padStart(3, '0');
+        slider.style.transform = `translateX(-${currentSlide * 77.969}vw)`;
+        updateSlideVisibility();
+        updateProgressBar(); 
+    }
+
+    function updateSlideVisibility() {
+        slides.forEach((slide, index) => {
+            const slideTextElements = slide.querySelectorAll('.slide-text, .slide_signature, .slide_title, .slide_title-small, .slide-social');
+            if (index === currentSlide) {
+                slideTextElements.forEach(element => {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                });
+            } else {
+                slideTextElements.forEach(element => {
+                    element.style.opacity = '0';
+                    element.style.transform = 'translateY(20px)';
+                });
+            }
+        });
+    }
+
+    function updateProgressBar() {
+        // Пропорция ширины прогресс-бара по отношению к слайдам
+        const progressWidth = (100 / totalSlides) * (currentSlide + 1);
+        progressIndicator.style.width = `${progressWidth}%`;
+    }
+
+    arrowDown.addEventListener('click', function() {
+        if (currentSlide > 0) {
+          currentSlide--;
+        } else {
+          currentSlide = totalSlides - 1;
+        }
+        updateSlides();
+        localStorage.setItem('currentSlide', currentSlide);
+    });
+      
+    arrowUp.addEventListener('click', function() {
+        if (currentSlide < totalSlides - 1) {
+          currentSlide++;
+        } else {
+          currentSlide = 0;
+        }
+        updateSlides();
+        localStorage.setItem('currentSlide', currentSlide);
+      });
+    const savedSlide = localStorage.getItem('currentSlide');
+    if (savedSlide !== null) {
+        currentSlide = parseInt(savedSlide);
+    }
+    updateSlides();
+
+    // Обновляем видимость текста при скролле
+    window.addEventListener('scroll', function() {
+        slides.forEach((slide, index) => {
+            const slideRect = slide.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+
+            // Проверяем, что текущий слайд видим в окне браузера
+            if (slideRect.top < windowHeight && slideRect.bottom >= 0) {
+                if (index === currentSlide) {
+                    const slideTextElements = slide.querySelectorAll('.slide-text, .slide_signature, .slide_title, .slide_title-small, .slide-social');
+                    slideTextElements.forEach(element => {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    });
+                }
+            } else {
+                if (index === currentSlide) {
+                    const slideTextElements = slide.querySelectorAll('.slide-text, .slide_signature, .slide_title, .slide_title-small, .slide-social');
+                    slideTextElements.forEach(element => {
+                        element.style.opacity = '0';
+                        element.style.transform = 'translateY(20px)';
+                    });
+                }
+            }
+        });
+    });
+});
+
+document.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    const logo = document.querySelector('.logo_white');
+    const search = document.querySelector('.search');
+    const heart = document.querySelector('.heart-icon');
+    const shopping = document.querySelector('.shopping');
+    const scrollPosition = window.scrollY;
+  
+    if (scrollPosition > 10) { 
+      header.classList.add('header-scrolled');
+      search.src = 'image/header/search_black.png';
+      heart.src = 'image/header/heart_black.png';
+      shopping.src = 'image/header/shopping_black.png';
+      if (logo) {
+        logo.src = 'image/footer/FL_logo.png'; 
+        console.log('Logo updated to new image.');
+      }
+    } else {
+      header.classList.remove('header-scrolled');
+      search.src = 'image/header/24.png';
+      heart.src = 'image/header/heart.png';
+      shopping.src = 'image/header/shopping.png';
+      if (logo) {
+        logo.src = 'image/header/FL_logowhite.png'; 
+        console.log('Logo reverted to original image.');
+      }
+    }
+  });
+  
+
+
+
+
+
+
+
+
+  
+  
+  
+  
