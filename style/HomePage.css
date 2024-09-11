@@ -236,7 +236,9 @@ body {
   width: 6.51vw; 
   transition: width 0.5s ease; 
 }
-
+.progress-baro{
+  display: none;
+}
 
 
 
@@ -880,6 +882,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  
+}
+.swiper-wrapper {
+  display: flex;
+  transition: transform 0.5s ease;
   margin-top: 6vh;
   gap: 2.083vw;
 }
@@ -1053,6 +1060,11 @@ body {
   width: 9vmax;
   height: 1.7vmax;
 }
+.footer_model-open{
+  display: none;
+}
+
+
 
 /* Button */
 .btn-blue {

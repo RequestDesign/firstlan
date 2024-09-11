@@ -250,6 +250,111 @@ document.addEventListener('scroll', function() {
   
 
 
+  document.addEventListener('DOMContentLoaded', function() {
+    const swiperContainer = document.querySelector('.swiper-container');
+    const progressBar = document.querySelector('.progress-indicators');
+    let swiper;
+
+    function initializeSwiper() {
+        if (window.innerWidth <= 379) {
+            swiperContainer.style.overflow = 'auto';
+            if (!swiper) {
+                swiper = new Swiper('.swiper-container', {
+                    slidesPerView: 1,        
+                    spaceBetween: 0,         
+                    slidesPerGroup: 1,       
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,   
+                    },
+                    navigation: {
+                        nextEl: null,
+                        prevEl: null,
+                    },
+                    on: {
+                        slideChange: function () {
+                            updateProgressBar();
+                        }
+                    }
+                });
+                updateProgressBar();
+            }
+        } else {
+            if (swiper) {
+                swiper.destroy(); 
+                swiper = null;
+            }
+            swiperContainer.style.overflow = 'hidden'; в
+        }
+    }
+
+    function updateProgressBar() {
+        if (swiper) {
+            const totalSlides = swiper.slides.length;
+            const currentSlide = swiper.activeIndex + 1; 
+
+            const progress = (currentSlide / totalSlides) * 100;
+            progressBar.style.width = `${progress}%`;
+        }
+    }
+
+    initializeSwiper();
+    
+    window.addEventListener('resize', function() {
+        initializeSwiper();
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const sliderWrapper = document.querySelector('.custom-slider-wrapper');
+    const progressBar = document.querySelector('.progres-indicator');
+    const slides = document.querySelectorAll('.custom-slide');
+    const totalSlides = slides.length;
+    let currentSlide = 0;
+    let startX = 0;
+
+    function updateProgressBar() {
+        const progress = ((currentSlide + 1) / totalSlides) * 100;
+        progressBar.style.width = `${progress}%`;
+    }
+
+    function goToSlide(index) {
+        if (index < 0 || index >= totalSlides) return;
+        sliderWrapper.style.transform = `translateX(-${index * 100}%)`;
+        currentSlide = index;
+        updateProgressBar();
+    }
+
+    // Обработка события начала свайпа
+    sliderWrapper.addEventListener('mousedown', function(event) {
+        startX = event.pageX;
+        sliderWrapper.addEventListener('mousemove', onMouseMove);
+    });
+
+    // Обработка события окончания свайпа
+    document.addEventListener('mouseup', function(event) {
+        const endX = event.pageX;
+        if (startX > endX + 50) {
+            // Свайп влево
+            currentSlide = (currentSlide + 1) % totalSlides;
+        } else if (startX + 50 < endX) {
+            // Свайп вправо
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        }
+        goToSlide(currentSlide);
+        sliderWrapper.removeEventListener('mousemove', onMouseMove);
+    });
+
+    function onMouseMove(event) {
+        // Обработка перемещения мыши во время свайпа
+    }
+
+    // Инициализация прогресс-бара
+    updateProgressBar();
+});
+
+
+
 
 
 
