@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style/ModHomePage.css" />
     <link rel="stylesheet" href="font/stylesheet.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <script src="script/index.js" defer></script>
     <title>Document</title>
@@ -65,7 +64,7 @@
           <div class="arrow down">&#129104;</div>
         </div>
         <div class="slider">
-          <div class="slide active">
+          <div class="slide active first">
             <img
               class="slide-image"
               src="image/slides/nobody.png"
@@ -427,6 +426,13 @@
         </div>
       </div>
       <div class="main-services">
+        <div class="services-content_title footer_model-open ">
+          <div class="services_title">Услуги</div>
+          <div class="services_text">
+            Предоставляем услуги в области системной интеграции,
+            проектирования и построения IT-инфраструктуры организаций.
+          </div>
+        </div>
         <div class="main-services_image">
           <img
             class="services"
@@ -437,7 +443,7 @@
           <!-- <div class="image_text">с First Lan всё становится возможным</div> -->
         </div>
         <div class="main-services_content">
-          <div class="services-content_title">
+          <div class="services-content_title footer_model">
             <div class="services_title">Услуги</div>
             <div class="services_text">
               Предоставляем услуги в области системной интеграции,
@@ -515,40 +521,19 @@
               <form action="" class="form">
                 <div class="form-content">
                   <div class="form-content_box">
-                    <input
-                      id="name"
-                      class="form-input"
-                      type="text"
-                      placeholder="Имя"
-                      required
-                    />
-                    <div class="error-message">Поле заполнено неверно</div>
-                    <input
-                      id="phone"
-                      class="form-input"
-                      type="text"
-                      placeholder="Телефон"
-                      required
-                    />
-                    <div class="error-message">Поле заполнено неверно</div>
+                    <input id="name" class="form-input" type="text" placeholder="Имя" required/>
+                    
+                    <input id="phone" class="form-input" type="text"  placeholder="Телефон" required/>
+                   
                   </div>
-                  <div class="form-content_box">
-                    <input
-                      id="email"
-                      class="form-input"
-                      type="text"
-                      placeholder="Электронная почта"
-                      required
-                    />
-                    <div class="error-message">Поле заполнено неверно</div>
-                    <input
-                      id="inn"
-                      class="form-input"
-                      type="text"
-                      placeholder="ИНН"
-                      required
-                    />
-                    <div class="error-message">Поле заполнено неверно</div>
+                  <div class=" form-input_comment footer_model-open">
+                    <textarea class="form-control footer_model-open"  placeholder="Комментарий" required></textarea>
+                  </div>
+                  <div class="form-content_box footer_model">
+                    <input id="email" class="form-input" type="text" placeholder="Электронная почта" required />
+                    
+                    <input id="inn" class="form-input" type="text" placeholder="ИНН" required />
+                    
                   </div>
                 </div>
                 <div class="form-agreement_button">
@@ -589,245 +574,230 @@
               </button>
             </div>
           </div>
-          <div class="main-sales_items">
-            <div class="sales_item">
-              <div class="sales-item_description">
-                <div class="sales-item_text">
-                  Станционный терминал OLT 8 портов EPON(SFP), 8 портов
-                  Ge(Cooper)
+          
+              <div class="main-sales_items">
+               
+                <div class="sales_item">
+                  <div class="sales-item_description">
+                    <div class="sales-item_text">
+                      Станционный терминал OLT 8 портов EPON(SFP), 8 портов
+                      Ge(Cooper)
+                    </div>
+                    <div class="heart"></div>
+                  </div>
+                  <img class="sales" src="image/sales/cooper.png" alt="" />
+                  <div class="sales-price">
+                    <div class="old-price">125 699 ₽</div>
+                    <div class="price">122 699 ₽</div>
+                  </div>
+                  <button class="btn-blue-basket position">
+                    <span class="basket-button"></span>
+                  </button>
                 </div>
-                <div class="heart"></div>
-              </div>
-              <img class="sales" src="image/sales/cooper.png" alt="" />
-              <div class="sales-price">
-                <div class="old-price">125 699 ₽</div>
-                <div class="price">122 699 ₽</div>
-              </div>
-              <button class="btn-blue-basket position">
-                <span class="basket-button"></span>
-              </button>
-            </div>
-            <div class="sales_item">
-              <div class="sales-item_description">
-                <div class="sales-item_text">
-                  Станционный терминал OLT 8 портов EPON(SFP)
+                <div class="sales_item">
+                  <div class="sales-item_description">
+                    <div class="sales-item_text">
+                      Станционный терминал OLT 8 портов EPON(SFP)
+                    </div>
+                    <div class="heart"></div>
+                  </div>
+                  <img class="sales" src="image/sales/cooper2.png" alt="" />
+                  <div class="sales-price">
+                    <div class="old-price"></div>
+                    <div class="price">122 699 ₽</div>
+                  </div>
+                  <button class="btn-blue-basket position">
+                    <span class="basket-button"></span>
+                  </button>
                 </div>
-                <div class="heart"></div>
-              </div>
-              <img class="sales" src="image/sales/cooper2.png" alt="" />
-              <div class="sales-price">
-                <div class="old-price"></div>
-                <div class="price">122 699 ₽</div>
-              </div>
-              <button class="btn-blue-basket position">
-                <span class="basket-button"></span>
-              </button>
-            </div>
-            <div class="sales_item">
-              <div class="sales-item_description">
-                <div class="sales-item_text">
-                  Станционный терминал OLT 8 портов EPON(SFP)
+                <div class="sales_item">
+                  <div class="sales-item_description">
+                    <div class="sales-item_text">
+                      Станционный терминал OLT 8 портов EPON(SFP)
+                    </div>
+                    <div class="heart"></div>
+                  </div>
+                  <img class="sales" src="image/sales/cooper3.png" alt="" />
+                  <div class="sales-price">
+                    <div class="old-price"></div>
+                    <div class="price">122 699 ₽</div>
+                  </div>
+                  <button class="btn-blue-basket position">
+                    <span class="basket-button"></span>
+                  </button>
                 </div>
-                <div class="heart"></div>
-              </div>
-              <img class="sales" src="image/sales/cooper3.png" alt="" />
-              <div class="sales-price">
-                <div class="old-price"></div>
-                <div class="price">122 699 ₽</div>
-              </div>
-              <button class="btn-blue-basket position">
-                <span class="basket-button"></span>
-              </button>
-            </div>
-            <div class="sales_item">
-              <div class="sales-item_description">
-                <div class="sales-item_text">
-                  Станционный терминал OLT 8 портов EPON(SFP), 8 портов
-                  Ge(Cooper)
+                <div class="sales_item">
+                  <div class="sales-item_description">
+                    <div class="sales-item_text">
+                      Станционный терминал OLT 8 портов EPON(SFP), 8 портов
+                      Ge(Cooper)
+                    </div>
+                    <div class="heart"></div>
+                  </div>
+                  <img class="sales" src="image/sales/cooper4.png" alt="" />
+                  <div class="sales-price">
+                    <div class="old-price"></div>
+                    <div class="price">122 699 ₽</div>
+                  </div>
+                  <button class="btn-blue-basket position">
+                    <span class="basket-button"></span>
+                  </button>
                 </div>
-                <div class="heart"></div>
-              </div>
-              <img class="sales" src="image/sales/cooper4.png" alt="" />
-              <div class="sales-price">
-                <div class="old-price"></div>
-                <div class="price">122 699 ₽</div>
-              </div>
-              <button class="btn-blue-basket position">
-                <span class="basket-button"></span>
-              </button>
-            </div>
-            <div class="sales_item">
-              <div class="sales-item_description">
-                <div class="sales-item_text">
-                  Станционный терминал OLT 8 портов EPON(SFP), 8 портов
-                  Ge(Cooper)
+                <div class="sales_item">
+                  <div class="sales-item_description">
+                    <div class="sales-item_text">
+                      Станционный терминал OLT 8 портов EPON(SFP), 8 портов
+                      Ge(Cooper)
+                    </div>
+                    <div class="heart"></div>
+                  </div>
+                  <img class="sales" src="image/sales/cooper.png" alt="" />
+                  <div class="sales-price">
+                    <div class="old-price"></div>
+                    <div class="price">122 699 ₽</div>
+                  </div>
+                  <button class="btn-blue-basket position">
+                    <span class="basket-button"></span>
+                  </button>
                 </div>
-                <div class="heart"></div>
               </div>
-              <img class="sales" src="image/sales/cooper.png" alt="" />
-              <div class="sales-price">
-                <div class="old-price"></div>
-                <div class="price">122 699 ₽</div>
-              </div>
-              <button class="btn-blue-basket position">
-                <span class="basket-button"></span>
-              </button>
             </div>
           </div>
         </div>
       </div>
       <div class="main-projects">
         <div class="container-fluid">
-          <div class="main-category_block">
-            <div class="main-projects_box">
-              <h1 class="main-category_title">Проекты</h1>
-              <div class="main-projects_text">
-                К сожалению, мы не можем показать
-                <p>всю информацию, т.к. скованы коммерческой тайной</p>
-              </div>
-            </div>
-
-            <div class="main-category_button">
-              <div class="main-category_still">услуги</div>
-              <button class="btn-blue">
-                <span class="btn-arrow">&#129106;</span>
-              </button>
-            </div>
-          </div>
-          <div class="custom-slider">
-            <div class="custom-slider-wrapper">
-              <div class="main-projects_box-white">
-                <div class="custom-slide">
-                  <div class="main-projects_white">
-                    <div class="main-projects_image">
-                      <div class="projects-border">
-                        <span class="projects-border_text">поставка</span>
-                      </div>
-                      <img  class="projects_image"  src="image/project/shipment.png"  alt=""/>
+            <div class="main-category_block">
+                <div class="main-projects_box">
+                    <h1 class="main-category_title">Проекты</h1>
+                    <div class="main-projects_text">
+                        К сожалению, мы не можем показать
+                        <p>всю информацию, т.к. скованы коммерческой тайной</p>
                     </div>
-                    <div class="main-projects_content">
-                      <div class="projects-content_title">
-                        Поставка серверного оборудования
-                      </div>
-                      <div class="projects-content_box">
-                        <div class="projects-content_text">
-                          Регулярные проекты по поставке серверного,
-                          компьютерного оборудования для проведения массовых
-                          мероприятий. Рендеринг изображений высочайшего
-                          разрешения в онлайн режиме. Проекты, где оборудование
-                          работает в экстремальных условиях (Вплоть до +45°).
-                        </div>
-                        <div class="projects-content_number">01</div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
-                <div class="custom-slide">
-                  <div class="main-projects_white">
-                    <div class="main-projects_image">
-                      <div class="projects-border">
-                        <span class="projects-border_text">обслуживание</span>
-                      </div>
-                      <img
-                        class="projects_image"
-                        src="image/project/shipmenttwo.png"
-                        alt=""
-                      />
-                    </div>
-                    <div class="main-projects_content">
-                      <div class="projects-content_title">
-                        Поддержка и обслуживание оборудования
-                      </div>
-                      <div class="projects-content_box">
-                        <div class="projects-content_text">
-                          Годовые контракты на поставку ЗИП для серверного и
-                          сетевого оборудования для филиала Центральный. Большое
-                          количество редких и снятых с производства позиций
-                        </div>
-                        <div class="projects-content_number">02</div>
-                      </div>
-                    </div>
-                  </div>
+                <div class="main-category_button">
+                    <div class="main-category_still">услуги</div>
+                    <button class="btn-blue ">
+                        <span class="btn-arrow">&#129106;</span>
+                    </button>
                 </div>
-              </div>
-              
             </div>
-            <div class="progres-bar">
-                <div class="progres-indicator"></div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="main-projects_white">
+                            <div class="main-projects_image">
+                                <div class="projects-border">
+                                    <span class="projects-border_text">поставка</span>
+                                </div>
+                                <div >
+                                  <img class="projects_image" src="image/project/shipment.png" alt=""/>
+                              </div>
+                            </div>
+                            <div class="main-projects_content">
+                                <div class="projects-content_title">Поставка серверного оборудования</div>
+                                <div class="projects-content_box">
+                                    <div class="projects-content_text">
+                                      Регулярные проекты по поставке серверного, компьютерного оборудования для проведения массовых мероприятий. Рендеринг изображений высочайшего разрешения в онлайн режиме. Проекты, где оборудование работает в экстремальных условиях (Вплоть до +45°).
+                                    </div>
+                                    <div class="projects-content_number">01</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="main-projects_white">
+                            <div class="main-projects_image">
+                                <div class="projects-border">
+                                    <span class="projects-border_text">обслуживание</span>
+                                </div>
+                                <img class="projects_image" src="image/project/shipmenttwo.png" alt=""/>
+                            </div>
+                            <div class="main-projects_content">
+                                <div class="projects-content_title">Поддержка и обслуживание оборудования</div>
+                                <div class="projects-content_box">
+                                    <div class="projects-content_text">
+                                        Годовые контракты на поставку ЗИП для серверного и сетевого оборудования для филиала Центральный.
+                                    </div>
+                                    <div class="projects-content_number">02</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
             </div>
-          </div>
-          
         </div>
-      </div>
+    </div>
       <div class="main-client">
         <div class="container-fluid">
           <h1 class="main-category_title">Наши клиенты</h1>
           <div class="swiper-container">
             <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="main-client_item">
-                  <div class="front">
-                    <img class="client-logo rostec" src="image/client/Rostec_logo.png" alt=""/>
-                  </div>
-                  <div class="back">
-                    <img class="rostec-small" src="image/client/luxa.png" alt=""/>
-                    <div class="text">
-                      Годовые контракты на поставку ЗИП для серверного и
-                      сетевого оборудования для филиала Центральный. Большое
-                      количество редких позиций
+                <div class="swiper-slide">
+                  <div class="main-client_item">
+                    <div class="front">
+                      <img class="client-logo rostec" src="image/client/Rostec_logo.png" alt=""/>
+                    </div>
+                    <div class="back">
+                      <img class="rostec-small" src="image/client/luxa.png" alt=""/>
+                      <div class="text">
+                        Годовые контракты на поставку ЗИП для серверного и
+                        сетевого оборудования для филиала Центральный. Большое
+                        количество редких позиций
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="main-client_item">
-                  <div class="front">
-                    <img class="client-logo roctel" src="image/client/RGB_RT_logo.png" alt=""/>
-                  </div>
-                  <div class="back">
-                    <img class="client-logo-small roctel-small" src="image/client/RGB_RT_logo-h.png" alt="" />
-                    <div class="text">
-                      Годовые контракты на поставку ЗИП для серверного и
-                      сетевого оборудования для филиала Центральный. Большое
-                      количество редких позиций
+                <div class="swiper-slide">
+                  <div class="main-client_item">
+                    <div class="front">
+                      <img class="client-logo roctel" src="image/client/RGB_RT_logo.png" alt=""/>
+                    </div>
+                    <div class="back">
+                      <img class="client-logo-small roctel-small" src="image/client/RGB_RT_logo-h.png" alt="" />
+                      <div class="text">
+                        Годовые контракты на поставку ЗИП для серверного и
+                        сетевого оборудования для филиала Центральный. Большое
+                        количество редких позиций
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="main-client_item">
-                  <div class="front">
-                    <img class="client-logo mechel" src="image/client/Mechel.png" alt=""/>
-                  </div>
-                  <div class="back">
-                    <img class="client-logo-small mechel-small" src="image/client/luxa.org-color-Mechel.png" alt="" />
-                    <div class="text">
-                      Годовые контракты на поставку ЗИП для серверного и
-                      сетевого оборудования для филиала Центральный. Большое
-                      количество редких позиций
+                <div class="swiper-slide">
+                  <div class="main-client_item">
+                    <div class="front">
+                      <img class="client-logo mechel" src="image/client/Mechel.png" alt=""/>
+                    </div>
+                    <div class="back">
+                      <img class="client-logo-small mechel-small" src="image/client/luxa.org-color-Mechel.png" alt="" />
+                      <div class="text">
+                        Годовые контракты на поставку ЗИП для серверного и
+                        сетевого оборудования для филиала Центральный. Большое
+                        количество редких позиций
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="main-client_item">
-                  <div class="front">
-                    <img class="client-logo group" src="image/client/Group.png" alt=""/>
-                  </div>
-                  <div class="back">
-                    <img class="client-logo-small group-small" src="image/client/luxa.org-color-Group.png" alt=""/>
-                    <div class="text">
-                      Годовые контракты на поставку ЗИП для серверного и
-                      сетевого оборудования для филиала Центральный. Большое
-                      количество редких позиций
+                <div class="swiper-slide">
+                  <div class="main-client_item">
+                    <div class="front">
+                      <img class="client-logo group" src="image/client/Group.png" alt=""/>
+                    </div>
+                    <div class="back">
+                      <img class="client-logo-small group-small" src="image/client/luxa.org-color-Group.png" alt=""/>
+                      <div class="text">
+                        Годовые контракты на поставку ЗИП для серверного и
+                        сетевого оборудования для филиала Центральный. Большое
+                        количество редких позиций
+                      </div>
                     </div>
                   </div>
                 </div>
+            
               </div>
-            </div>
-            <!-- Прогресс-бар -->
-            <div class="progress-baro">
-              <div class="progress-indicators"></div>
+            
+            <div class="swiper-pagination">
             </div>
           </div>
         </div>
@@ -882,5 +852,6 @@
       </div>
     </footer>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>

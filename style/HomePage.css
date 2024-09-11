@@ -12,7 +12,8 @@ body {
 /* header */
 
 .header-scrolled {
-  background-color: #ffffff; 
+  background-color: #ffffff;
+  z-index: 10; 
 }
 .header-scrolled .header-link,
 .header-scrolled .header-number {
@@ -126,7 +127,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 2.8vmax 1.2vw;
-  z-index: 1000;
+  z-index: 1;
 }
 .slide-number {
   font-size: 0.8vmax;
@@ -221,22 +222,8 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
-.progress-bar {
-  position: absolute;
-  bottom: 4.1vh; 
-  right:  26vw;
-  width: 16.406vw; 
-  height: 0.2vh; 
-  background-color: rgba(255, 255, 255, 0.5) !important;
-  z-index: 10; 
-}
-.progress-indicator {
-  height: 100%;
-  background-color: rgba(255, 255, 255, 1); 
-  width: 6.51vw; 
-  transition: width 0.5s ease; 
-}
-.progress-baro{
+
+.progress-bar{
   display: none;
 }
 
@@ -762,6 +749,12 @@ body {
   color: black;
   outline: none;
 }
+.form-control:focus::placeholder,
+.form-control:not(:placeholder-shown)::placeholder {
+  transform: translateY(0.3vh);
+  font-size: 0.729vw;
+  color: rgba(28, 28, 31, 0.5);
+}
 
 /* input-error */
 .form-input.error {
@@ -783,6 +776,7 @@ body {
 .form-input.error + .error-message {
   display: block;
 }
+
 /* specialoffers*/
 .main-specialoffers {
   margin: 18vh 0;
@@ -801,6 +795,7 @@ body {
   font-weight: 400;
   font-size: 0.938vw;
   line-height: 1.3vmax;
+  color: rgba(41, 41, 45, 1);
 }
 .projects-border {
   border: 2px solid rgba(19, 75, 175, 1);
@@ -882,7 +877,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 .swiper-wrapper {
   display: flex;

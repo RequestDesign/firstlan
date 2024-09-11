@@ -71,40 +71,26 @@ document.addEventListener('DOMContentLoaded', () => {
     showItemsInView();
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    const items = document.querySelectorAll('.main-advantages_item');
-    const wrapD3Cube = document.querySelector('#wrapD3Cube');
-    const D3Cube = document.querySelector('#D3Cube');
-  
-    items.forEach(item => {
-      item.addEventListener('click', () => {
-        
-        items.forEach(i => {
-          i.classList.remove('active');
-       
-          D3Cube.classList.add('no-animation');
-        });
-  
-        item.classList.add('active');
-        D3Cube.classList.remove('no-animation');
-      });
-    });
-});
+
 
 
 const clientItems = document.querySelectorAll('.main-client_item');
 
 clientItems.forEach(item => {
   item.addEventListener('click', () => {
-    const isOpen = document.querySelector('.main-client_item.active');
+    const activeItem = document.querySelector('.main-client_item.active');
 
-    if (isOpen) {
-      isOpen.classList.remove('active');
+    if (item.classList.contains('active')) {
+      item.classList.remove('active');
+    } else {
+      if (activeItem) {
+        activeItem.classList.remove('active');
+      }
+      item.classList.add('active');
     }
-
-    item.classList.toggle('active');
   });
 });
+
 
 
 //input
@@ -126,6 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const arrowDown = document.querySelector('.arrow.down');
     const slider = document.querySelector('.slider');
     const totalSlides = slides.length;
+    const firstSlide = document.querySelector('.first');
 
     // Полоса прогресса
     const progressIndicator = document.querySelector('.progress-indicator');
@@ -139,6 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         slideNumber.textContent = (currentSlide + 1).toString().padStart(3, '0');
         slider.style.transform = `translateX(-${currentSlide * 77.969}vw)`;
+        slider.style.transform = `translateX(+${firstSlide * 77.969}vw)`;
         updateSlideVisibility();
         updateProgressBar(); 
     }
@@ -161,7 +149,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function updateProgressBar() {
-        // Пропорция ширины прогресс-бара по отношению к слайдам
         const progressWidth = (100 / totalSlides) * (currentSlide + 1);
         progressIndicator.style.width = `${progressWidth}%`;
     }
@@ -179,7 +166,7 @@ document.addEventListener('DOMContentLoaded', function() {
     arrowUp.addEventListener('click', function() {
         if (currentSlide < totalSlides - 1) {
           currentSlide++;
-        } else {
+        }else {
           currentSlide = 0;
         }
         updateSlides();
@@ -248,8 +235,6 @@ document.addEventListener('scroll', function() {
     }
   });
   
-
-
   document.addEventListener('DOMContentLoaded', function() {
     const swiperContainer = document.querySelector('.swiper-container');
     const progressBar = document.querySelector('.progress-indicators');
@@ -260,98 +245,51 @@ document.addEventListener('scroll', function() {
             swiperContainer.style.overflow = 'auto';
             if (!swiper) {
                 swiper = new Swiper('.swiper-container', {
-                    slidesPerView: 1,        
-                    spaceBetween: 0,         
-                    slidesPerGroup: 1,       
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                    slidesPerGroup: 1,
+                    loop: false,
+                    speed: 300,
                     pagination: {
-                        el: '.swiper-pagination',
-                        clickable: true,   
-                    },
+                        el: ".swiper-pagination",
+                        type: "progressbar",
+                      },
                     navigation: {
                         nextEl: null,
                         prevEl: null,
                     },
                     on: {
-                        slideChange: function () {
-                            updateProgressBar();
-                        }
+                        slideChange: updateProgressBar,
+                        init: updateProgressBar,  
                     }
                 });
-                updateProgressBar();
             }
         } else {
             if (swiper) {
-                swiper.destroy(); 
+                swiper.destroy();
                 swiper = null;
             }
-            swiperContainer.style.overflow = 'hidden'; в
+            swiperContainer.style.overflow = 'hidden';
         }
     }
 
     function updateProgressBar() {
-        if (swiper) {
+        if (swiper && swiper.slides) { 
             const totalSlides = swiper.slides.length;
-            const currentSlide = swiper.activeIndex + 1; 
+            const currentSlide = swiper.activeIndex + 1;
 
-            const progress = (currentSlide / totalSlides) * 100;
+            const progress = ((currentSlide - 1) / (totalSlides - 1)) * 100; 
             progressBar.style.width = `${progress}%`;
         }
     }
 
     initializeSwiper();
-    
+
     window.addEventListener('resize', function() {
         initializeSwiper();
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    const sliderWrapper = document.querySelector('.custom-slider-wrapper');
-    const progressBar = document.querySelector('.progres-indicator');
-    const slides = document.querySelectorAll('.custom-slide');
-    const totalSlides = slides.length;
-    let currentSlide = 0;
-    let startX = 0;
-
-    function updateProgressBar() {
-        const progress = ((currentSlide + 1) / totalSlides) * 100;
-        progressBar.style.width = `${progress}%`;
-    }
-
-    function goToSlide(index) {
-        if (index < 0 || index >= totalSlides) return;
-        sliderWrapper.style.transform = `translateX(-${index * 100}%)`;
-        currentSlide = index;
-        updateProgressBar();
-    }
-
-    // Обработка события начала свайпа
-    sliderWrapper.addEventListener('mousedown', function(event) {
-        startX = event.pageX;
-        sliderWrapper.addEventListener('mousemove', onMouseMove);
-    });
-
-    // Обработка события окончания свайпа
-    document.addEventListener('mouseup', function(event) {
-        const endX = event.pageX;
-        if (startX > endX + 50) {
-            // Свайп влево
-            currentSlide = (currentSlide + 1) % totalSlides;
-        } else if (startX + 50 < endX) {
-            // Свайп вправо
-            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-        }
-        goToSlide(currentSlide);
-        sliderWrapper.removeEventListener('mousemove', onMouseMove);
-    });
-
-    function onMouseMove(event) {
-        // Обработка перемещения мыши во время свайпа
-    }
-
-    // Инициализация прогресс-бара
-    updateProgressBar();
-});
 
 
 
