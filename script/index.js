@@ -242,7 +242,7 @@ document.addEventListener('scroll', function() {
 
     function initializeSwiper() {
         if (window.innerWidth <= 379) {
-            swiperContainer.style.overflow = 'auto';
+            
             if (!swiper) {
                 swiper = new Swiper('.swiper-container', {
                     slidesPerView: 1,

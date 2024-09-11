@@ -15,8 +15,9 @@
     overflow: hidden;
   }
   .swiper-container {
-    width: 100%;
-    height: auto;
+    display: flex;
+    flex-direction: column; 
+    height: 100%;
   }
   .swiper-wrapper {
     display: flex;
@@ -33,12 +34,13 @@
   .main-category_still {
     font-size: 2.7vw;
   }
-  .box-white_button{
+  .box-white_button {
     width: 50vw;
+    gap: 4.267vw;
   }
   .btn-blue {
-    width: 9vmax;
-    height: 9vmax;
+    width: 12vw;
+    height: 12vmin;
   }
   .btn-arrow {
     font-size: 3.8vw;
@@ -54,19 +56,38 @@
     margin-top: 3.148vh;
   }
   .swiper-pagination-progressbar-fill{
-  
     height: 0.2vh;
     background-color: rgba(19, 75, 175, 1);
     width: 100%;
     transition: width 0.5s ease;
+    transform-origin: left;
+  }
+  .main-category_title{
+    font-size: 9.067vw;
   }
   /* about */
-  .box-white_content{
+  .box-white_content {
     margin: 11.994vh 4.267vw;
   }
-
+  .termenal{
+    width: 84vw;
+    margin-left: 0;
+    margin-top: -35vmax;
+  }
+  .box-blue_text{
+    font-size: 36.267vw;
+    margin-left: 0;
+    width: 99.2vw;
+    line-height: 23vh;
+    margin-top: 1vh;
+    margin-bottom: 3vh;
+  }
+  .main-about_box-blue{
+    justify-items: center;
+  }
+ 
   /* advantages */
-  .main-advantages_title{
+  .main-advantages_title {
     font-size: 9.067vw;
     margin-bottom: 5.997vh;
   }
@@ -95,9 +116,13 @@
     text-align: left;
     color: rgba(41, 41, 45, 1);
   }
-  .main-services_content{
+  .main-services_content {
+    margin: 0;
+    margin-top: 4.798vh;
+    margin-left: 4.267vw !important;
+    margin-right: 4.267vw !important;
     margin-right: 0;
-    width: 100%;
+    width: 91.467vw;
   }
   .item-box {
     display: grid;
@@ -106,27 +131,28 @@
     width: 75.467vw;
     font-size: 5.067vw;
     margin-left: 0;
-    margin-top: -13.6vh;
-    line-height: 6vh;
+    line-height: 4vh;
+    height: 100%;
   }
-  .services-content_item{
+  .services-content_item {
+    width: 91.467vw;
     height: 100%;
     align-items: end;
   }
   .services-content_items {
     height: 100%;
-    padding: 0 4.267vw;
   }
-  .services_numder{
+  .services_numder {
+    margin-bottom: -8vh;
     font-size: 16.533vw;
     width: 100%;
   }
-  .btn-gray{
-    width: 10vmax;
-    height: 10vmax;
+  .btn-gray {
+    width: 12vw;
+    height: 12vmin;
   }
-  .btn-gray-arrow{
-    font-size: 5.333vw;
+  .btn-gray-arrow {
+    font-size: 4.3vw;
   }
 
   /* project */
@@ -141,7 +167,7 @@
   }
   .main-about_box-blue {
     width: 100%;
-    height: 86.667vw;
+    height: 100%;
   }
   .form-input {
     width: 100%;
@@ -214,16 +240,17 @@
     height: 5vmax;
   }
   .equipment {
+    margin-left: 0;
+    margin-top: -23vmax;
     width: 63.467vw;
     display: grid;
     justify-self: center;
-    margin-top: -40vh;
+    margin-bottom: 2vh;
   }
   .box-blue_content {
     font-size: 20.571vw;
     width: 100vw;
     height: 100%;
-    margin-top: 7.346vh;
     margin-left: 0vh;
     line-height: 18vw;
   }
@@ -239,21 +266,23 @@
     }
     .main-category_block {
       display: grid;
+      margin:0;
     }
     .main-projects_text {
       font-size: 3.733vw;
       width: 77.6vw;
-      line-height: 5vh;
+      line-height: 3vh;
     }
     .main-projects_text p {
       margin-top: 0;
     }
-   
+
     .main-projects_white {
       width: 91.467vw;
       height: 100%;
       padding: 2.099vh 3.733vw 2.999vh 3.733vw;
       overflow: hidden;
+      position: relative;
     }
     .main-projects_image {
       display: grid;
@@ -274,18 +303,14 @@
     .projects-border_text {
       font-size: 3.2vw;
     }
-    
     .projects-content_title {
       font-size: 6.2vw;
-      line-height: 6vh;
-    }
-    .projects-content_box {
-      position: relative;
+      line-height: 4vh;
     }
     .projects-content_text {
       font-size: 4.267vw;
       width: 84vw;
-      height: 49vh;
+      height: 100%;
       margin-top: 2.099vh;
     }
     .projects-content_number {
@@ -293,9 +318,8 @@
       height: 22.789vh;
       font-size: 32.64vw;
       position: absolute;
-      bottom: 1.499vh;
-      right: -0.8vw;
-      bottom: 15vh;
+      right: 1vw;
+      bottom: -2vh;
     }
   }
   /* client */
