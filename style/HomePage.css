@@ -13,7 +13,7 @@ body {
 
 .header-scrolled {
   background-color: #ffffff;
-  z-index: 10; 
+  z-index: 5; 
 }
 .header-scrolled .header-link,
 .header-scrolled .header-number {
@@ -24,8 +24,9 @@ body {
   position: fixed;
   top: 0;
   width: 100% !important;
-  z-index: 1000 !important; 
+  z-index: 2 !important; 
   transition: background-color 0.3s, color 0.3s !important;
+  pointer-events: none;
 }
 .header-content {
   display: flex;
@@ -33,6 +34,7 @@ body {
   align-items: center;
   padding: 2.2vh 0;
   transition: color 0.3s;
+
 }
 .logo_white {
   width: 9.531vw;
@@ -120,7 +122,7 @@ body {
   top: 0;
   left: 0;
   width: 4.5vw;
-  height: 100vh;
+  /* height: 100vh; */
   background-color: rgba(255, 255, 255, 1);
   display: flex;
   flex-direction: column;
@@ -128,6 +130,9 @@ body {
   align-items: center;
   padding: 2.8vmax 1.2vw;
   z-index: 1;
+}
+.up{
+  z-index: 3!important;
 }
 .slide-number {
   font-size: 0.8vmax;
@@ -148,6 +153,17 @@ body {
   position: absolute;
   top: 50vh;
   right: 18vw;
+  width: 3.5vmax;
+  height: 3.5vmax;
+  background: rgba(255, 255, 255, 1);
+}
+.prevBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50vh;
+  right: 22vw;
   width: 3.5vmax;
   height: 3.5vmax;
   background: rgba(255, 255, 255, 1);
@@ -222,10 +238,25 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
-
 .progress-bar{
-  display: none;
+  position: absolute;
+  bottom: 6.147vh;
+  right: 20vw;
+  display: flex;
+  width: 14vw;
+  height: 0.2vh;
+  background: rgba(255, 255, 255, 0.5) !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+  overflow: visible !important;
 }
+.progress-indicator {
+  height: 100%;
+  background: rgba(255, 255, 255, 1) !important;
+  width: 32.2vw;
+  transition: width 0.5s ease, white!important;
+  overflow: visible !important;
+} 
+
 
 
 
@@ -475,7 +506,7 @@ body {
 }
 .termenal {
   width: 35.417vw;
-  z-index: 2;
+  z-index: 1;
   margin-left: -31vw;
   margin-top: -20vmax;
 }
@@ -636,7 +667,7 @@ body {
   width: 24vw;
   margin-left: -11vw;
   margin-top: -20vmax;
-  z-index: 2;
+  z-index: 1;
 }
 .project-box_content {
   margin-top: 15vh;

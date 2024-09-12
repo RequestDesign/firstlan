@@ -112,7 +112,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const arrowDown = document.querySelector('.arrow.down');
     const slider = document.querySelector('.slider');
     const totalSlides = slides.length;
-    const firstSlide = document.querySelector('.first');
+    const NextBtn = document.querySelector('.nextBtn');
+    const PrevBtn = document.querySelector('.prevBtn');
 
     // Полоса прогресса
     const progressIndicator = document.querySelector('.progress-indicator');
@@ -126,7 +127,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         slideNumber.textContent = (currentSlide + 1).toString().padStart(3, '0');
         slider.style.transform = `translateX(-${currentSlide * 77.969}vw)`;
-        slider.style.transform = `translateX(+${firstSlide * 77.969}vw)`;
         updateSlideVisibility();
         updateProgressBar(); 
     }
@@ -149,29 +149,51 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function updateProgressBar() {
-        const progressWidth = (100 / totalSlides) * (currentSlide + 1);
+        const progressWidth = (100 / (totalSlides - 1)) * (currentSlide + 1);
         progressIndicator.style.width = `${progressWidth}%`;
     }
-
+    
     arrowDown.addEventListener('click', function() {
         if (currentSlide > 0) {
           currentSlide--;
         } else {
-          currentSlide = totalSlides - 1;
+          currentSlide = totalSlides - 2;
         }
         updateSlides();
         localStorage.setItem('currentSlide', currentSlide);
     });
       
     arrowUp.addEventListener('click', function() {
-        if (currentSlide < totalSlides - 1) {
+        if (currentSlide < totalSlides - 2) {
           currentSlide++;
-        }else {
+        } else {
           currentSlide = 0;
-        }
+        };
         updateSlides();
         localStorage.setItem('currentSlide', currentSlide);
       });
+
+      PrevBtn.addEventListener('click', function() {
+        if (currentSlide > 0) {
+            currentSlide--;
+          } else {
+            currentSlide = totalSlides - 2;
+          }
+          updateSlides();
+          localStorage.setItem('currentSlide', currentSlide);
+      });
+
+      NextBtn.addEventListener('click', function() {
+        if (currentSlide < totalSlides - 2) {
+            currentSlide++;
+          } else {
+            currentSlide = 0;
+          };
+          updateSlides();
+          localStorage.setItem('currentSlide', currentSlide);
+        });
+
+      
     const savedSlide = localStorage.getItem('currentSlide');
     if (savedSlide !== null) {
         currentSlide = parseInt(savedSlide);

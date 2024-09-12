@@ -65,6 +65,13 @@
   .main-category_title{
     font-size: 9.067vw;
   }
+
+
+
+
+
+
+
   /* about */
   .box-white_content {
     margin: 11.994vh 4.267vw;
@@ -91,6 +98,9 @@
     font-size: 9.067vw;
     margin-bottom: 5.997vh;
   }
+  
+
+
   /* services */
   .main-services {
     display: grid;
