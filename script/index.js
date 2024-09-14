@@ -91,7 +91,21 @@ clientItems.forEach(item => {
   });
 });
 
+const advantagesItems = document.querySelectorAll('.main-advantages_item');
 
+advantagesItems.forEach(item => {
+    item.addEventListener('click', () => {
+        const advantagesActive = document.querySelector('.main-advantages_item.active');
+        if(item.classList.contains('active')) {
+            item.classList.remove('active'); 
+        }else {
+            if (advantagesActive) {
+                advantagesActive.classList.remove('active');
+            }
+            item.classList.add('active');
+          }
+    });
+});
 
 //input
 // document.querySelectorAll('.form-input').forEach(input => {
@@ -174,32 +188,63 @@ document.addEventListener('DOMContentLoaded', function() {
       });
 
       PrevBtn.addEventListener('click', function() {
-        if (currentSlide > 0) {
+        if (currentSlide > 0) {           
             currentSlide--;
+            
+            NextBtn.style.opacity ="1";
           } else {
-            currentSlide = totalSlides - 2;
+            console.log(currentSlide);
+                
           }
           updateSlides();
           localStorage.setItem('currentSlide', currentSlide);
       });
 
+        
+
+
       NextBtn.addEventListener('click', function() {
         if (currentSlide < totalSlides - 2) {
-            currentSlide++;
+            currentSlide++;     
+            PrevBtn.style.display = "flex";     
           } else {
-            currentSlide = 0;
+            currentSlide = totalSlides - 2;
           };
           updateSlides();
           localStorage.setItem('currentSlide', currentSlide);
         });
 
+           NextBtn.addEventListener('click',function(){
+            if (currentSlide == totalSlides - 2){
+                NextBtn.style.opacity ="0.5";
+            }
+           });
+           PrevBtn.addEventListener('click',function(){
+            if (currentSlide == 0){
+                PrevBtn.style.display = "none";
+            } else {
+                PrevBtn.style.display = "flex";
+            }
+           })
+       
       
     const savedSlide = localStorage.getItem('currentSlide');
     if (savedSlide !== null) {
         currentSlide = parseInt(savedSlide);
-    }
+        
+    };
+    
     updateSlides();
-
+//исчезновение кнопки назад
+if (currentSlide == 0){
+    PrevBtn.style.display = "none";
+} else {
+    PrevBtn.style.display = "flex";
+}
+//прозрачность кнопки вперед
+if (currentSlide == totalSlides - 2){
+    NextBtn.style.opacity ="0.5";
+}
     // Обновляем видимость текста при скролле
     window.addEventListener('scroll', function() {
         slides.forEach((slide, index) => {
@@ -263,7 +308,7 @@ document.addEventListener('scroll', function() {
     let swiper;
 
     function initializeSwiper() {
-        if (window.innerWidth <= 379) {
+        if (window.innerWidth <= 414) {
             
             if (!swiper) {
                 swiper = new Swiper('.swiper-container', {
@@ -311,7 +356,6 @@ document.addEventListener('scroll', function() {
         initializeSwiper();
     });
 });
-
 
 
 
