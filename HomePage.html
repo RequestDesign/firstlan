@@ -29,21 +29,28 @@
             src="image/header/FL_logowhite.png"
             alt="Логоти"/>
           </a>
-            <!-- <div class="menu footer_model-open burger-box">
-              
+            <div class="menu footer_model-open burger-box">
                 <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
                 <label for="burger-checkbox" class="burger"></label>
-    
-              <ul class="menu-list">
-                <img class="logo_white" src="image/footer/FL_logo.png" alt="">
-                  <li><a href="#" class="menu-item">Каталог</a><li>
-                  <li><a href="#" class="menu-item">Услуги</a><li>
-                  <li><a href="#" class="menu-item">О компании</a><li>
-                  <li><a href="#" class="menu-item">Доставка и оплата</a><li>
-                  <li><a href="#" class="menu-item">Бренды</a><li>
-                  <li><a href="#" class="menu-item">Контакты</a><li>
-              </ul>
-            </div> -->
+              
+              <div class="menu-list">
+                <img class="logo_white" src="image/footer/FL_logo.png" alt=""> 
+                  <div id="searchBox" class="search-boxs">
+                    <img class="search-icon" src="image/header/Icons.png" alt="">
+                    <input type="text" id="searchInputs" placeholder="Поиск" />
+                    <div id="searchResults" class="search-results"></div>
+                  </div>
+                  <a href="#" class="menu-item">Каталог</a>
+                  <a href="#" class="menu-item">Услуги</a>
+                 <a href="#" class="menu-item">О компании</a>
+                  <a href="#" class="menu-item">Доставка и оплата</a>
+                  <a href="#" class="menu-item">Бренды</a>
+                  <a href="#" class="menu-item">Контакты</a>
+                    
+              </div>
+            </div>
+            
+      
           <div class="header-links footer_model">
             <a href="#" class="header-link">Каталог</a>
             <a href="#" class="header-link">Услуги</a>
@@ -54,11 +61,26 @@
           </div>
           <a href="tel:+74956496962" class="header-number footer_model">+7(495) 649-69-62</a>
           <div class="header-elements footer_model">
-            <div class="header-element">
-              <img
-                class="element search"
-                src="image/header/24.png"
-                alt="Иконка"/>
+            <div class="header-element search-wrapper">
+              <img class="element search"
+              src="image/header/24.png"
+              alt="Иконка"
+              id="searchIcon"/>
+              <div class="search-box" id="searchBox">
+                <div class="search-image">
+                  <img class="search-icon"  src="image/header/search_black.png" alt="Иконка" id="searchIcon" />
+                  <input type="text" id="searchInput" placeholder="Поиск" />
+                </div>
+                
+                <span class="close-btn" id="closeSearch">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1.5L6.625 7.125M6.625 7.125L12.25 1.5M6.625 7.125L1 12.75M6.625 7.125L12.25 12.75" stroke="#888C8E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </div>
+              <div class="search-results" id="searchResults">
+                <p>К сожалению, по вашему запросу ничего не найдено</p>
+              </div>
             </div>
             <a href="#" class="header-element">
               <img
@@ -67,13 +89,11 @@
                 alt="Иконка"/>
             </a>
             <a href="#" class="header-element">
-              <img
-                class="element shopping"
-                src="image/header/shopping.png"
-                alt="Иконка"/>
+              <img class="element shopping" src="image/header/shopping.png"  alt="Иконка"/>
             </a>
           </div>
         </div>
+        
       </div>
     </header>
 
@@ -89,8 +109,14 @@
             <img
               class="slide-image"
               src="image/slides/nobody.png"
-              alt="Фотография 1"
+              alt="Фотография 1" 
             />
+            <div id="searchBox" class="search-box footer_model-open">
+              <img class="search-icon"  src="image/header/24.png" alt="Иконка" id="searchIcon" />
+              <input type="text" id="searchInput" placeholder="Поиск" />
+              <div id="searchResults" class="search-results"></div>
+            </div>
+            
             <div class="slide-text">
               Наша компания предоставляет услуги в области системной интеграции,
               проектирования и построения IT-инфраструктуры российских
@@ -187,6 +213,14 @@
             </div>
           </div>
         </div>
+        <!-- <div id="smallButton" class="small-button">
+          <img src="button-image.jpg" alt="Кнопка изображение" class="button-image" />
+        </div>
+        <div id="photoContainer" class="photo-container">
+          
+           <a href=""><img src="photo1.jpg" alt="Фото 1" class="photo" /></a>
+           <a href=""><img src="photo1.jpg" alt="Фото 1" class="photo" /></a>
+        </div> -->
 
         <div class="progress-bar">
           <div class="progress-indicator"></div>
@@ -205,12 +239,12 @@
         <div class="main-category">
           <div class="main-category_block">
             <h1 class="main-category_title model-title">Популярные категории</h1>
-            <div class="main-category_button footer_model">
+            <a href="" class="main-category_button footer_model">
               <div class="main-category_still">Смотреть все</div>
               <button class="btn-blue">
                 <span class="btn-arrow">&#129106;</span>
               </button>
-            </div>
+            </a>
           </div>
           <div class="swiper-container">
             <div class="swiper-wrapper">
@@ -320,11 +354,7 @@
                         Станционный терминал OLT 8 портов EPON(SFP), 8 портов
                         Ge(Cooper)
                       </div>
-                      <div class="heart">
-                        <!-- <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M26.2931 6.76466C28.4928 9.03868 28.577 12.6978 26.4844 15.0775L15.9993 27L5.51555 15.0774C3.42299 12.6978 3.50727 9.0386 5.70694 6.76458C8.16301 4.22549 12.208 4.45751 14.3778 7.26146L16 9.357L17.6208 7.26122C19.7907 4.45727 23.837 4.22557 26.2931 6.76466Z" stroke="#134BAF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                          </svg> -->
-                      </div>
+                      <div class="heart"></div>
                     </div>
                     <img class="sales" src="image/sales/cooper.png" alt="" />
                     <div class="sales-price">
@@ -427,12 +457,12 @@
                 заводами-производителями позволяют нам осуществлять поставки
                 сетевого и серверного оборудования напрямую без лишних наценок.
               </div>
-              <div class="box-white_button">
+              <a href="" class="box-white_button">
                 <div class="main-category_still">узнать больше</div>
                 <button class="btn-blue">
                   <span class="btn-arrow">&#129106;</span>
                 </button>
-              </div>
+              </a>
             </div>
           </div>
           <div class="main-about_box-blue">
@@ -451,16 +481,15 @@
           <div class="swiper-container">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <div class="main-advantages_item">
-                  <div class="advantages-item_number">
+                <div class="main-advantages_item" >
                     <div class="item_number">01</div>
-
                     <img
-                      class="blockchain"
-                      src="image/advantages/blockchain-black-01.png"
-                      alt="Изображение"
-                    />
-                  </div>
+                    class="blockchain"
+                    src="image/advantages/blockchain-black-01.png"
+                    alt="Изображение"
+                    data-default-src="image/advantages/blockchain-black-01.png"
+                    data-active-src="image/advantages/blockchain-01.png"/>
+
                   <div class="advantages-item_content">
                     <div class="content_box">
                       <div class="content_number">01</div>
@@ -475,15 +504,16 @@
               </div>
               <div class="swiper-slide">
                 <div class="main-advantages_item">
-                  <div class="advantages-item_number">
+                  
                     <div class="item_number">02</div>
 
-                    <img
-                      class="blockchain"
-                      src="image/advantages/blockchain-02.png"
-                      alt="Изображение"
-                    />
-                  </div>
+                   <img
+                    class="blockchain"
+                    src="image/advantages/blockchain-black-02.png"
+                    alt="Изображение"
+                    data-default-src="image/advantages/blockchain-black-02.png"
+                    data-active-src="image/advantages/blockchain-02-white.png"/>
+                  
                   <div class="advantages-item_content">
                     <div class="content_box">
                       <div class="content_number">02</div>
@@ -497,16 +527,16 @@
                 </div>
               </div>
               <div class="swiper-slide">
-                <div class="main-advantages_item">
-                  <div class="advantages-item_number">
+                <div class="main-advantages_item" >
+                  
                     <div class="item_number">03</div>
-
                     <img
-                      class="blockchain"
-                      src="image/advantages/blockchain-03.png"
-                      alt="Изображение"
-                    />
-                  </div>
+                    class="blockchain"
+                    src="image/advantages/blockchain-black-03.png"
+                    alt="Изображение"
+                    data-default-src="image/advantages/blockchain-black-03.png"
+                    data-active-src="image/advantages/blockchain-03-white.png"/>
+
                   <div class="advantages-item_content">
                     <div class="content_box">
                       <div class="content_number">03</div>
@@ -669,12 +699,12 @@
                       конфиденциальности</label
                     >
                   </div>
-                  <div class="box_button">
+                  <a class="box_button main-category_button">
                     <div class="main-category_still">отправить</div>
                     <button type="submit" class="btn-blue">
                       <span class="btn-arrow">&#129106;</span>
                     </button>
-                  </div>
+                  </a>
                 </div>
               </form>
             </div>
@@ -692,12 +722,12 @@
         <div class="container-fluid">
           <div class="main-category_block">
             <h1 class="main-category_title">Спецпредложения</h1>
-            <div class="main-category_button footer_model">
+            <a class="main-category_button footer_model">
               <div class="main-category_still">в каталог</div>
               <button class="btn-blue">
                 <span class="btn-arrow">&#129106;</span>
               </button>
-            </div>
+            </a>
           </div>
           <div class="swiper-container">
             <div class="swiper-wrapper">
@@ -816,14 +846,14 @@
                 <p>всю информацию, т.к. скованы коммерческой тайной</p>
               </div>
             </div>
-            <div class="main-category_button">
+            <a href="#" class="main-category_button">
               <div class="main-category_still">услуги</div>
-              <a href="">
+              
                 <button class="btn-blue">
                   <span class="btn-arrow">&#129106;</span>
                 </button>
-              </a>
-            </div>
+              
+            </a>
           </div>
           <div class="swiper-container">
             <div class="swiper-wrapper">
@@ -899,15 +929,13 @@
                     <img
                       class="client-logo rostec"
                       src="image/client/Rostec_logo.png"
-                      alt=""
-                    />
+                      alt="" />
                   </div>
                   <div class="back">
                     <img
                       class="rostec-small"
                       src="image/client/luxa.png"
-                      alt=""
-                    />
+                      alt=""/>
                     <div class="text">
                       Годовые контракты на поставку ЗИП для серверного и
                       сетевого оборудования для филиала Центральный. Большое
@@ -922,15 +950,13 @@
                     <img
                       class="client-logo roctel"
                       src="image/client/RGB_RT_logo.png"
-                      alt=""
-                    />
+                      alt=""/>
                   </div>
                   <div class="back">
                     <img
                       class="client-logo-small roctel-small"
                       src="image/client/RGB_RT_logo-h.png"
-                      alt=""
-                    />
+                      alt="" />
                     <div class="text">
                       Годовые контракты на поставку ЗИП для серверного и
                       сетевого оборудования для филиала Центральный. Большое
@@ -945,15 +971,13 @@
                     <img
                       class="client-logo mechel"
                       src="image/client/Mechel.png"
-                      alt=""
-                    />
+                      alt=""/>
                   </div>
                   <div class="back">
                     <img
                       class="client-logo-small mechel-small"
                       src="image/client/luxa.org-color-Mechel.png"
-                      alt=""
-                    />
+                      alt=""/>
                     <div class="text">
                       Годовые контракты на поставку ЗИП для серверного и
                       сетевого оборудования для филиала Центральный. Большое
@@ -968,15 +992,13 @@
                     <img
                       class="client-logo group"
                       src="image/client/Group.png"
-                      alt=""
-                    />
+                      alt="" />
                   </div>
                   <div class="back">
                     <img
                       class="client-logo-small group-small"
                       src="image/client/luxa.org-color-Group.png"
-                      alt=""
-                    />
+                      alt="" />
                     <div class="text">
                       Годовые контракты на поставку ЗИП для серверного и
                       сетевого оборудования для филиала Центральный. Большое

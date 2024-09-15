@@ -62,11 +62,13 @@
     height: 50px;
   }
   .btn-arrow {
-    font-size: 3.8vw;
+    font-size: 7vw;
   }
   .main-category_button {
     gap: 4.267vw;
     height: 50px;
+    width: 150px;
+    text-decoration: none;
   }
   .swiper-pagination-progressbar {
     display: flex;
@@ -84,22 +86,26 @@
   }
   .main-category_title {
     font-size: 9.067vw;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     height: 34px;
   }
+  .box_button {
+  }
+
   /* header */
-  /* .header-scrolled {
+  .header-scrolled {
     background-color: #ffffff;
     z-index: 5; 
   }
-  .header-scrolled .burger::before,
-  .header-scrolled .burger::after { 
+  .burger::before,.burger::after,
+  .header-scrolled .burger::after, 
+  .header-scrolled .burger::before { 
     background: #000;
-  } */
-  .header{
-    pointer-events:all;
   }
-  .logo_white{
+  .header {
+    pointer-events: all;
+  }
+  .logo_white {
     width: 31.903vw;
     height: 48px;
   }
@@ -109,7 +115,7 @@
   }
   .burger {
     position: relative;
-    z-index: 1;
+    z-index: 4;
     cursor: pointer;
     display: block;
     position: relative;
@@ -121,7 +127,7 @@
   }
   .burger::before,
   .burger::after {
-    content: '';
+    content: "";
     left: 0;
     position: absolute;
     display: block;
@@ -133,27 +139,27 @@
   .burger::before {
     top: 0;
     box-shadow: 0 11px 0 rgba(19, 75, 175, 1);
-    transition: box-shadow .3s .15s, top .3s .15s, transform .3s;
+    transition: box-shadow 0.3s 0.15s, top 0.3s 0.15s, transform 0.3s;
   }
   .burger::after {
     bottom: 0;
-    transition: bottom .3s .15s, transform .3s;
+    transition: bottom 0.3s 0.15s, transform 0.3s;
   }
   .burger-checkbox:checked + .burger::before {
     top: 11px;
     transform: rotate(45deg);
-    box-shadow: 0 6px 0 rgba(0,0,0,0);
-    transition: box-shadow .15s, top .3s, transform .3s .15s;
+    box-shadow: 0 6px 0 rgba(0, 0, 0, 0);
+    transition: box-shadow 0.15s, top 0.3s, transform 0.3s 0.15s;
     background: black;
   }
   .burger-checkbox:checked + .burger::after {
     bottom: 11px;
     transform: rotate(-45deg);
-    transition: bottom .3s, transform .3s .15s;
+    transition: bottom 0.3s, transform 0.3s 0.15s;
     background: black;
   }
- 
-  .burger-box{
+
+  .burger-box {
     width: 50px;
     height: 50px;
     background: white;
@@ -169,11 +175,11 @@
     background: white;
     list-style-type: none;
     transform: translateX(-100%);
-    transition: .3s;
+    transition: 0.3s;
     width: 100vw;
     height: 100vh;
   }
-  .menu-list ul{
+  .menu-list ul {
     padding-left: 16px;
   }
   .menu-item {
@@ -183,13 +189,59 @@
     font-size: 18px;
     text-align: left;
     text-decoration: none;
+    height: 30px;
   }
   .menu-item:hover {
-    background: rgba(255,255,255,.2)
+    background: rgba(255, 255, 255, 0.2);
   }
   .burger-checkbox:checked ~ .menu-list {
     transform: translateX(0);
   }
+  .small-button {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 606px;
+    left: 309px;
+    padding: 16px 12px;
+    background-color: rgba(255, 255, 255, 1);
+    cursor: pointer; /* Указывает, что элемент кликабелен */
+    border-radius: 8px; /* Добавляет скруглённые углы */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* Изображение внутри маленькой кнопки */
+  .button-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Чтобы изображение хорошо вписывалось в блок */
+    border-radius: 8px; /* Скругление изображения */
+  }
+  /* Открывающийся блок с фотографиями */
+  .photo-container {
+    width: 50px;
+    height: 116px; /* Высота по умолчанию */
+    position: absolute;
+    top: 486px; /* Расположение на 4px выше маленькой кнопки */
+    left: 309px;
+    padding: 16px 12px;
+    background-color: rgba(255, 255, 255, 1);
+    gap: 20px;
+    display: none; /* По умолчанию скрыт */
+    flex-direction: column; /* Размещаем фотографии вертикально */
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 8px; /* Скругление углов */
+  }
+  /* Стили для фотографий */
+  .photo {
+    width: 100%;
+    height: auto;
+    max-height: 50px; /* Максимальная высота для фото */
+  }
+
+
 
   /* slide */
   .slide-image {
@@ -287,7 +339,7 @@
     padding: 14px;
   }
   .sales {
-    width: 314px;
+    width: 83.733vw;
     height: 198px;
   }
   .price {
@@ -354,6 +406,8 @@
       margin-bottom: 4vh;
     }
     .main-advantages_item {
+      display: grid;
+      justify-content: center;
       width: 91.467vw;
       /* height: 45.27vh; */
     }
@@ -370,11 +424,12 @@
       font-size: 38.4vw;
       margin-left: 1vw;
       font-weight: 700;
-      top: -70px;
+      top: -74px;
     }
     .advantages-item_content {
-      margin-top: 15px;
-      /* height: 40vh; */
+      margin-top: 0px;
+      /* height: 35vmax; */
+      height: 100%;
       width: 81.867vw;
     }
     .content_box {
@@ -391,12 +446,12 @@
       font-size: 4.267vw;
       width: 69.067vw;
       height: 100%;
-      margin-left: 9.4vh;
+      margin-left: 62px;
     }
     .blockchain {
       width: 14vw !important;
-      position: relative;
-      top: -40px;
+      top: 20px;
+      right: 20px;
     }
   }
 
@@ -407,7 +462,7 @@
     margin-bottom: 0;
   }
   .services {
-    width: 100%;
+    width: 100vw;
     height: 240px;
     object-fit: cover;
     overflow: hidden;
@@ -509,6 +564,7 @@
   .box-white_title {
     font-size: 9.067vw;
     margin-bottom: 2.999vh;
+    line-height: 34px;
   }
   .box-white_text {
     font-size: 4.267vw;
@@ -551,7 +607,7 @@
   .box-agreement_text {
     font-size: 3.467vw;
     width: 64.533vw;
-    line-height: 3.5vmax;
+    line-height: 18.2px;
   }
   .box-agreement {
     gap: 4.267vw;
@@ -582,7 +638,7 @@
     line-height: 18vw;
   }
   .main-specialoffers {
-    margin-bottom: 80px ;
+    margin-bottom: 80px;
   }
   /* projects */
   .main-projects {
@@ -713,8 +769,8 @@
       margin-bottom: 34px;
     }
     .group-small {
-      width: 37vw;
-      height: 65px;
+      width: 43vw;
+      height: 60px;
       margin-bottom: 30px;
     }
     .text {
@@ -789,7 +845,7 @@
       width: 49.067vw;
       height: 100%;
     }
-    .social{
+    .social {
       width: 52px;
       height: 52px;
     }
@@ -798,10 +854,103 @@
     display: none;
   }
   .footer_model-open {
-    display: flex;
+    display: grid;
   }
   .model-mr {
     display: flex;
     margin-top: 20px;
   }
+
+  .search-icon{
+    width: 24px;
+    height: 24px;
+  }
+  .search-box {
+    width: 91.467vw;
+    height: 7.796vh;
+    padding: 14px 20px;
+    border: 2px solid rgba(255, 255, 255, 1);
+    background-color: transparent; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; 
+    top: -753px;
+    right: -18px;
+    z-index: 1;
+  }
+  /* Стили для поля ввода */
+  #searchInput {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent; 
+    color: white; 
+    font-size: 16px;
+    font-family: "Gilroy", sans-serif;
+    font-weight: 400;
+    text-align: left;
+    padding-left: 10px; 
+  }
+  /* Скрытие текстового курсора, когда поле пустое */
+  #searchInput::placeholder {
+    color: white; 
+    text-align: left; 
+  }
+  /* Стили для результатов поиска */
+  .search-results {
+    position: absolute;
+    top: 100%; /* Чтобы результаты появлялись сразу под полем ввода */
+    left: 0;
+    width: 100%;
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.8
+    ); /* Пример прозрачного фона для блока результатов */
+    color: white;
+    display: none; /* Изначально скрыт */
+    padding: 2.667vw;
+    border-radius: 4px;
+  }
+  .search-results.active {
+    display: block;
+  }
+  /* Стили для текста в результатах */
+  .search-results p {
+    margin: 0;
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+
+
+  .search-boxs{
+    width: 91.467vw;
+    height: 7.796vh;
+    padding: 14px 20px;
+    border: 2px solid rgba(28, 28, 31, 0.2);
+    background-color: transparent; /* Прозрачный фон */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -18px;
+  }
+  #searchInputs {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent; 
+    color: black; 
+    font-size: 16px;
+    font-family: "Gilroy", sans-serif;
+    font-weight: 400;
+    text-align: left;
+    padding-left: 10px; 
+  }
+  
 }
