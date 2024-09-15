@@ -144,13 +144,13 @@
     transform: rotate(45deg);
     box-shadow: 0 6px 0 rgba(0,0,0,0);
     transition: box-shadow .15s, top .3s, transform .3s .15s;
-    background: rgba(255, 255, 255, 1);
+    background: black;
   }
   .burger-checkbox:checked + .burger::after {
     bottom: 11px;
     transform: rotate(-45deg);
     transition: bottom .3s, transform .3s .15s;
-    background: rgba(255, 255, 255, 1);
+    background: black;
   }
  
   .burger-box{
@@ -164,7 +164,7 @@
     position: absolute;
     display: grid;
     /* gap: 12px; */
-    /* padding: 42px 0; */
+    padding: 2.2vh 0 0 16px;
     margin: 0;
     background: white;
     list-style-type: none;
@@ -172,6 +172,9 @@
     transition: .3s;
     width: 100vw;
     height: 100vh;
+  }
+  .menu-list ul{
+    padding-left: 16px;
   }
   .menu-item {
     display: block;
@@ -578,7 +581,9 @@
     margin-left: 0vh;
     line-height: 18vw;
   }
-
+  .main-specialoffers {
+    margin-bottom: 80px ;
+  }
   /* projects */
   .main-projects {
     .main-projects_box {
@@ -669,7 +674,10 @@
       transition: width 0.5s ease;
     } */
     .back {
-      padding: 0 24px;
+      padding: 0 32px;
+      display: grid;
+      align-content: center;
+      /* justify-content: center; */
     }
     .main-client_item {
       width: 91.467vw;
@@ -688,24 +696,29 @@
       width: 48vw;
     }
     .roctel-small {
+      margin-top: 10px;
       width: 204px;
-      height: px;
+      height: 51px;
+      margin-bottom: 32px;
     }
     .rostec-small {
       width: 30%;
-      height: 60%;
+      height: 70%;
       margin-bottom: 0;
     }
     .mechel-small {
-      width: 42vw;
-      height: 8vh;
+      margin-top: 10px;
+      width: 45vw;
+      height: 45px;
+      margin-bottom: 34px;
     }
     .group-small {
-      width: 38vw;
-      height: 10vh;
+      width: 37vw;
+      height: 65px;
+      margin-bottom: 30px;
     }
     .text {
-      font-size: 4.267vw;
+      font-size: 14px;
     }
   }
   /* footer */
@@ -727,19 +740,18 @@
     .footer-content_end {
       display: grid;
       gap: 2.2vmin;
+      width: 91.467vw;
+      margin-top: 0;
+      margin-bottom: 0;
     }
     .footer-content_agreement {
       display: grid;
-      gap: 2.2vmin;
+      gap: 32px;
       width: 91.467vw;
     }
     .logo_black {
       width: 48.8vw;
       margin-bottom: 3.2vh;
-    }
-    .footer-content_end {
-      width: 91.467vw;
-      margin-top: 0;
     }
     .footer-content_items {
       width: 48.267vw;
@@ -753,7 +765,8 @@
       height: 3.298vh;
     }
     .footer-content_contact {
-      margin-bottom: 24px;
+      margin-bottom: 40px;
+      gap: 1vh;
     }
     .footer-content_mail {
       font-size: 4.267vw;
@@ -770,15 +783,15 @@
     }
     .footer-content_agency {
       width: 49.067vw;
-      margin-top: 2vh;
+      margin-top: 32px;
     }
     .request {
       width: 49.067vw;
       height: 100%;
     }
-    .network {
-      width: 48vw;
-      margin-bottom: 2vh;
+    .social{
+      width: 52px;
+      height: 52px;
     }
   }
   .footer_model {

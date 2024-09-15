@@ -22,14 +22,16 @@ body {
 .header-scrolled .header-number {
   color: #000000; 
 }
-
+.header-scrolled .header{
+  pointer-events:painted;
+}
 .header {
   position: fixed;
   top: 0;
   width: 100% !important;
   z-index: 2 !important; 
   transition: background-color 0.3s, color 0.3s !important;
-  pointer-events: none;
+  pointer-events:none;
 }
 .header-content {
   display: flex;
@@ -37,7 +39,7 @@ body {
   align-items: center;
   padding: 2.2vh 0;
   transition: color 0.3s;
-
+  pointer-events:all;
 }
 .logo_white {
   width: 9.531vw;
@@ -69,6 +71,7 @@ body {
   font-size: 1.042vmax;
   color: rgba(255, 255, 255, 1);
   margin-left: 6vmax;
+  text-decoration: none;
 }
 
 /* slider */
@@ -273,7 +276,6 @@ body {
   margin-bottom: 18vh;
 }
 .main-category_block {
-  margin-bottom: 3vmax;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -304,18 +306,24 @@ body {
 }
 .main-category_items {
   display: flex;
+  
   gap: 2.031vw;
   /* height: 46vh; */
 }
+.main-category .swiper-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6vh;
+}
 .category-item_content {
   display: flex;
-  gap: 0.781vw;
+  gap: 1vw;
 }
 .category-item_description {
   margin-bottom: 4vmin;
 }
 .category_item {
-  width: 20vw;
+  /* width: 20vw; */
   /* height: 46vh; */
 }
 .network-soa{
@@ -363,7 +371,6 @@ body {
   display: flex;
   justify-content: start;
   align-items: start;
- 
 }
 .main-sales_button {
   display: flex;
@@ -463,7 +470,7 @@ body {
   align-items: center;
   gap: 1.458vw;
   margin-top: 4.5vh;
-  width: 12.5vw;
+  width: 13vw;
 }
 .box-white_title {
   font-family: "Gilroy", sans-serif;
@@ -836,7 +843,7 @@ body {
 
 /* specialoffers*/
 .main-specialoffers {
-  margin: 80px 0;
+  margin-bottom: 18vh;
 }
 .model-mr{
   display: none;
@@ -1052,6 +1059,10 @@ body {
   justify-content: space-between;
   width: 33.49vw;
 }
+.footer-content_contact{
+  display: grid;
+  gap: 24px;
+}
 .footer-content_items {
   display: grid;
   /* gap: 0.1vmax; */
@@ -1074,11 +1085,15 @@ body {
   font-weight: 500;
   font-size: 1.042vw;
   margin-bottom: 1.4vmax;
+  text-decoration: none;
+  color: rgba(41, 41, 45, 1);
 }
 .footer-content_tel {
   font-family: "Gilroy", sans-serif;
   font-weight: 500;
   font-size: 1.042vw;
+  text-decoration: none;
+  color: rgba(41, 41, 45, 1);
 }
 .footer-content_end {
   margin-top: 8vh;
@@ -1118,14 +1133,17 @@ body {
 .footer_model-open{
   display: none;
 }
-
+.social{
+  width: 2.6vw;
+  height: 5.1vh;
+}
 
 
 /* Button */
 .btn-blue {
   background: rgba(19, 75, 175, 1);
-  width: 3vmax;
-  height: 3vmax;
+  width: 3.5vmax;
+  height: 3.5vmax;
   border: none;
   display: flex;
   align-items: center;
@@ -1135,8 +1153,8 @@ body {
 }
 .btn-gray {
   background: rgba(233, 233, 233, 1);
-  width: 3vmax;
-  height: 3vmax;
+  width: 3.5vmax;
+  height: 3.5vmax;
   border: none;
   display: flex;
   align-items: center;
@@ -1158,6 +1176,7 @@ body {
   font-size: 1.2vmax;
   color: white;
   transition: transform 0.3s;
+  text-decoration: none;
 }
 .btn-blue:hover .btn-arrow {
   transform: translateX(5px);
@@ -1171,6 +1190,7 @@ body {
 .btn-gray-arrow {
   font-size: 1.3vmax;
   color: black;
+  text-decoration: none;
 }
 .basket-button {
   width: 1vmax;
