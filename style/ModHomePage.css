@@ -43,6 +43,9 @@
     transition: transform 0.5s ease;
     margin-top: 0;
   }
+  .swip-gap {
+    gap: 3px;
+  }
   .swiper-slide {
     width: 100%;
     display: flex;
@@ -188,22 +191,27 @@
     font-family: "Gilroy", sans-serif;
     font-weight: 600;
   }
-  
+  .menu-list_content {
+    margin-top: 20px;
+  }
+  .link_image {
+    width: 32px;
+    height: 32px;
+  }
   .menu-list_link {
     display: grid;
     gap: 32px;
     margin-top: 40px;
   }
-  .menu-list_end{
+  .menu-list_end {
     display: grid;
     gap: 40px;
     align-content: end;
   }
-  .list-box{
-    display: contents;
+  .list-box {
     height: 90px;
   }
-  .menu-list_box{
+  .menu-list_box {
     display: grid;
     justify-content: space-between;
   }
@@ -301,7 +309,7 @@
     height: 88px;
     font-size: 4.29vw;
     line-height: 22.4px;
-    top: 371px;
+    top: 390px;
     left: 4.29vw;
   }
   .slide_signature {
@@ -309,21 +317,23 @@
     height: 32px;
     font-size: 3.485vw;
     line-height: 15.77px;
-    top: 205px;
+    top: 225px;
     left: 4.29vw;
+    font-weight: 500;
+    letter-spacing: 2px;
   }
   .slide_title {
     width: 91.957vw;
     font-size: 9.115vw;
     line-height: 34px;
-    top: 249px;
+    top: 270px;
     left: 4.29vw;
   }
   .slide_title-small {
     width: 39.946vw;
     height: 16px;
     font-size: 3.485vw;
-    top: 479px;
+    top: 499px;
     left: 4.29vw;
   }
   /* category */

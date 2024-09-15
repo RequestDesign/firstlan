@@ -54,68 +54,111 @@ document.querySelectorAll(".btn-blue-basket").forEach(function (button) {
   });
 });
 
+
+
 // слайдер
 document.addEventListener("DOMContentLoaded", () => {
-  const container = document.querySelector(".main-sales_items");
-  const prevButton = document.querySelector(".prev");
-  const nextButton = document.querySelector(".next");
-  const items = Array.from(container.querySelectorAll(".sales_item"));
+    const container = document.querySelector(".main-sales_items");
+    const prevButton = document.querySelector(".prev");
+    const nextButton = document.querySelector(".next");
+    const items = Array.from(container.querySelectorAll(".sales_item"));
+    const paginationContainer = document.querySelector(".swiper-pagination");
   
-
-  function getItemWidth() {
-    return items[0].offsetWidth + parseInt(getComputedStyle(container).gap);
-  }
-  let scrollAmount = getItemWidth();
-
-  function updateButtonState() {
-    const scrollLeft = container.scrollLeft;
-    const scrollWidth = container.scrollWidth;
-    const clientWidth = container.clientWidth;
-
-    prevButton.disabled = scrollLeft === 0;
-    nextButton.disabled = scrollLeft + clientWidth >= scrollWidth - 2.4;
-  }
-
-  function showItemsInView() {
-    const containerRect = container.getBoundingClientRect();
-    items.forEach((item) => {
-      const itemRect = item.getBoundingClientRect();
-      const isInView =
-        itemRect.left < containerRect.right &&
-        itemRect.right > containerRect.left;
-      if (isInView) {
-        item.classList.add("show");
-      } else {
-        item.classList.remove("show");
+    // Функция для получения ширины одного элемента (включая gap)
+    function getItemWidth() {
+      return items[0].offsetWidth + parseInt(getComputedStyle(container).gap);
+    }
+  
+    let scrollAmount = getItemWidth();
+    let currentIndex = 0; // Индекс текущего слайда
+  
+    // Функция для обновления кнопок "prev" и "next"
+    function updateButtonState() {
+      prevButton.disabled = currentIndex === 0;
+      nextButton.disabled = currentIndex === items.length - 1;
+    }
+  
+    // Функция для отображения пагинации
+    function updatePagination() {
+      paginationContainer.innerHTML = ""; // Очищаем пагинацию
+      items.forEach((item, index) => {
+        const dot = document.createElement("div");
+        dot.classList.add("swiper-pagination-progressbar");
+        if (index === currentIndex) {
+          dot.classList.add("active");
+        }
+        // Добавляем возможность клика по точке
+        dot.addEventListener("click", () => {
+          currentIndex = index;
+          container.scrollTo({
+            left: currentIndex * scrollAmount,
+            behavior: "smooth",
+          });
+          updateButtonState();
+          updatePagination();
+        });
+        paginationContainer.appendChild(dot);
+      });
+    }
+  
+    // Прокрутка назад
+    prevButton.addEventListener("click", () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+        container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+        setTimeout(() => {
+          updateButtonState();
+          updatePagination();
+        }, 300); // Ожидание для плавного скролла
       }
     });
-  }
   
-  prevButton.addEventListener("click", () => {
-    container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-    setTimeout(updateButtonState, 300);
-  });
-
-  nextButton.addEventListener("click", () => {
-    container.scrollBy({ left: scrollAmount, behavior: "smooth" });
-    setTimeout(updateButtonState, 300);
-  });
-
-  container.addEventListener("scroll", () => {
+    // Прокрутка вперед
+    nextButton.addEventListener("click", () => {
+      if (currentIndex < items.length - 1) {
+        currentIndex++;
+        container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+        setTimeout(() => {
+          updateButtonState();
+          updatePagination();
+        }, 300);
+      }
+    });
+  
+    // Функция для обновления состояния видимости элементов (опционально)
+    function showItemsInView() {
+      const containerRect = container.getBoundingClientRect();
+      items.forEach((item) => {
+        const itemRect = item.getBoundingClientRect();
+        const isInView =
+          itemRect.left < containerRect.right && itemRect.right > containerRect.left;
+        if (isInView) {
+          item.classList.add("show");
+        } else {
+          item.classList.remove("show");
+        }
+      });
+    }
+  
+    // Обновление кнопок и пагинации при скролле
+    container.addEventListener("scroll", () => {
+      showItemsInView();
+      updateButtonState();
+      updatePagination();
+    });
+  
+    // Обновление ширины слайдов при изменении размера окна
+    window.addEventListener("resize", () => {
+      scrollAmount = getItemWidth();
+      updateButtonState();
+    });
+  
+    // Инициализация кнопок и пагинации
     updateButtonState();
+    updatePagination();
     showItemsInView();
   });
-
-  window.addEventListener("resize", () => {
-    scrollAmount = getItemWidth();
-    updateButtonState();
-  });
-
-  updateButtonState();
-  showItemsInView();
   
-});
-
 const clientItems = document.querySelectorAll(".main-client_item");
 clientItems.forEach((item) => {
   item.addEventListener("click", () => {
