@@ -54,111 +54,173 @@ document.querySelectorAll(".btn-blue-basket").forEach(function (button) {
   });
 });
 
-
-
 // слайдер
 document.addEventListener("DOMContentLoaded", () => {
-    const container = document.querySelector(".main-sales_items");
-    const prevButton = document.querySelector(".prev");
-    const nextButton = document.querySelector(".next");
-    const items = Array.from(container.querySelectorAll(".sales_item"));
-    const paginationContainer = document.querySelector(".swiper-pagination");
-  
-    // Функция для получения ширины одного элемента (включая gap)
-    function getItemWidth() {
-      return items[0].offsetWidth + parseInt(getComputedStyle(container).gap);
-    }
-  
-    let scrollAmount = getItemWidth();
-    let currentIndex = 0; // Индекс текущего слайда
-  
-    // Функция для обновления кнопок "prev" и "next"
-    function updateButtonState() {
-      prevButton.disabled = currentIndex === 0;
-      nextButton.disabled = currentIndex === items.length - 1;
-    }
-  
-    // Функция для отображения пагинации
-    function updatePagination() {
-      paginationContainer.innerHTML = ""; // Очищаем пагинацию
-      items.forEach((item, index) => {
-        const dot = document.createElement("div");
-        dot.classList.add("swiper-pagination-progressbar");
-        if (index === currentIndex) {
-          dot.classList.add("active");
-        }
-        // Добавляем возможность клика по точке
-        dot.addEventListener("click", () => {
-          currentIndex = index;
-          container.scrollTo({
-            left: currentIndex * scrollAmount,
-            behavior: "smooth",
-          });
-          updateButtonState();
-          updatePagination();
-        });
-        paginationContainer.appendChild(dot);
-      });
-    }
-  
-    // Прокрутка назад
-    prevButton.addEventListener("click", () => {
-      if (currentIndex > 0) {
-        currentIndex--;
-        container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-        setTimeout(() => {
-          updateButtonState();
-          updatePagination();
-        }, 300); // Ожидание для плавного скролла
+  const container = document.querySelector(".main-sales_items");
+  const prevButton = document.querySelector(".prev");
+  const nextButton = document.querySelector(".next");
+  const items = Array.from(container.querySelectorAll(".sales_item"));
+  // const progressBarIndicator = document.querySelector(".progress-indicator");
+  function getItemWidth() {
+    return items[0].offsetWidth + parseInt(getComputedStyle(container).gap);
+  }
+
+  function updateButtonState() {
+    const scrollLeft = container.scrollLeft;
+    const scrollWidth = container.scrollWidth;
+    const clientWidth = container.clientWidth;
+
+    prevButton.disabled = scrollLeft === 0;
+    nextButton.disabled = scrollLeft + clientWidth >= scrollWidth - 3;
+  }
+
+  function showItemsInView() {
+    const containerRect = container.getBoundingClientRect();
+    items.forEach((item) => {
+      const itemRect = item.getBoundingClientRect();
+      const isInView =
+        itemRect.left < containerRect.right &&
+        itemRect.right > containerRect.left;
+      if (isInView) {
+        item.classList.add("show");
+      } else {
+        item.classList.remove("show");
       }
     });
-  
-    // Прокрутка вперед
-    nextButton.addEventListener("click", () => {
-      if (currentIndex < items.length - 1) {
-        currentIndex++;
-        container.scrollBy({ left: scrollAmount, behavior: "smooth" });
-        setTimeout(() => {
-          updateButtonState();
-          updatePagination();
-        }, 300);
-      }
-    });
-  
-    // Функция для обновления состояния видимости элементов (опционально)
-    function showItemsInView() {
-      const containerRect = container.getBoundingClientRect();
-      items.forEach((item) => {
-        const itemRect = item.getBoundingClientRect();
-        const isInView =
-          itemRect.left < containerRect.right && itemRect.right > containerRect.left;
-        if (isInView) {
-          item.classList.add("show");
-        } else {
-          item.classList.remove("show");
-        }
-      });
-    }
-  
-    // Обновление кнопок и пагинации при скролле
-    container.addEventListener("scroll", () => {
-      showItemsInView();
-      updateButtonState();
-      updatePagination();
-    });
-  
-    // Обновление ширины слайдов при изменении размера окна
-    window.addEventListener("resize", () => {
-      scrollAmount = getItemWidth();
-      updateButtonState();
-    });
-  
-    // Инициализация кнопок и пагинации
+  }
+
+  prevButton.addEventListener("click", () => {
+    container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+    setTimeout(updateButtonState, 300);
+  });
+
+  nextButton.addEventListener("click", () => {
+    container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    setTimeout(updateButtonState, 300);
+  });
+
+  container.addEventListener("scroll", () => {
     updateButtonState();
-    updatePagination();
     showItemsInView();
   });
-  
+
+  window.addEventListener("resize", () => {
+    scrollAmount = getItemWidth();
+    updateButtonState();
+  });
+
+  let currentIndex = 0;
+  let scrollAmount = getItemWidth();
+  let isDragging = false;
+  let startX;
+  //   let scrollLeft;
+  let deltaX = 0;
+
+  function getItemWidth() {
+    const itemStyle = getComputedStyle(items[0]);
+    const itemWidth = items[0].offsetWidth;
+    const itemGap = parseInt(itemStyle.marginRight);
+    return itemWidth + itemGap;
+  }
+
+  //   Функция для обновления прогресс-бара
+  // function updateProgressBar() {
+  //   const progress = ((currentIndex + 1) / items.length) * 100;
+  //   progressBarIndicator.style.width = `${progress}%`;
+  // }
+
+  function scrollToSlide(index) {
+    currentIndex = Math.max(0, Math.min(index, items.length - 1));
+    const scrollPosition = currentIndex * scrollAmount;
+    container.scrollTo({ left: scrollPosition, behavior: "smooth" });
+    setTimeout(() => {
+      updateButtonState();
+      updateProgressBar();
+    }, 300);
+  }
+
+  function handleMouseDown(e) {
+    isDragging = true;
+    startX = e.pageX - container.offsetLeft;
+    scrollLeft = container.scrollLeft;
+    container.classList.add("active");
+  }
+
+  function handleMouseMove(e) {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - container.offsetLeft;
+    deltaX = x - startX;
+    container.scrollLeft = scrollLeft - deltaX;
+  }
+
+  function handleMouseUp() {
+    isDragging = false;
+    container.classList.remove("active");
+    const movedBy = Math.abs(deltaX);
+
+    if (movedBy > scrollAmount / 4) {
+      if (deltaX < 0) {
+        scrollToSlide(currentIndex + 1);
+      } else {
+        scrollToSlide(currentIndex - 1);
+      }
+    } else {
+      scrollToSlide(currentIndex);
+    }
+  }
+  function handleTouchStart(e) {
+    startX = e.touches[0].clientX;
+    scrollLeft = container.scrollLeft;
+  }
+
+  function handleTouchMove(e) {
+    const x = e.touches[0].clientX;
+    deltaX = x - startX;
+    container.scrollLeft = scrollLeft - deltaX;
+  }
+
+  function handleTouchEnd() {
+    const movedBy = Math.abs(deltaX);
+
+    if (movedBy > scrollAmount / 4) {
+      if (deltaX < 0) {
+        scrollToSlide(currentIndex + 1);
+      } else {
+        scrollToSlide(currentIndex - 1);
+      }
+    } else {
+      scrollToSlide(currentIndex);
+    }
+  }
+
+  container.addEventListener("mousedown", handleMouseDown);
+  container.addEventListener("mousemove", handleMouseMove);
+  container.addEventListener("mouseup", handleMouseUp);
+  container.addEventListener("mouseleave", handleMouseUp);
+
+  container.addEventListener("touchstart", handleTouchStart);
+  container.addEventListener("touchmove", handleTouchMove);
+  container.addEventListener("touchend", handleTouchEnd);
+
+  window.addEventListener("resize", () => {
+    scrollAmount = getItemWidth();
+    updateButtonState();
+  });
+  function isMobile() {
+    return window.innerWidth <= 420;
+  }
+
+  scrollAmount = getItemWidth();
+  updateButtonState();
+  updateProgressBar();
+  showItemsInView();
+
+  if (isMobile()) {
+    container.style.cursor = "grab";
+  }
+});
+
 const clientItems = document.querySelectorAll(".main-client_item");
 clientItems.forEach((item) => {
   item.addEventListener("click", () => {
@@ -300,7 +362,11 @@ document.addEventListener("DOMContentLoaded", function () {
     updateSlides();
     localStorage.setItem("currentSlide", currentSlide);
   });
-
+  NextBtn.addEventListener("click", function () {
+    if (currentSlide == totalSlides - 2) {
+      NextBtn.style.opacity = "0.5";
+    }
+  });
   // Скрытие кнопки назад при необходимости
   PrevBtn.addEventListener("click", function () {
     if (currentSlide == 0) {
@@ -347,6 +413,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Включение скроллинга только на мобильных устройствах
   function toggleSwipeBehavior() {
     if (window.innerWidth <= 420) {
+        PrevBtn.style.display = "none";
       enableSwipe();
     } else {
       slider.removeEventListener("mousedown", startDrag);
@@ -366,6 +433,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   updateSlides();
 
+  //исчезновение кнопки назад
+  if (currentSlide == 0) {
+    PrevBtn.style.display = "none";
+  } else {
+    PrevBtn.style.display = "flex";
+  }
+  //прозрачность кнопки вперед
+  if (currentSlide == totalSlides - 2) {
+    NextBtn.style.opacity = "0.5";
+  }
   toggleSwipeBehavior();
 
   window.addEventListener("resize", toggleSwipeBehavior);
@@ -415,7 +492,6 @@ document.addEventListener("scroll", function () {
     shopping.src = "image/header/shopping_black.png";
     if (logo) {
       logo.src = "image/footer/FL_logo.png";
-      console.log("Logo updated to new image.");
     }
   } else {
     header.classList.remove("header-scrolled");
@@ -424,9 +500,40 @@ document.addEventListener("scroll", function () {
     shopping.src = "image/header/shopping.png";
     if (logo) {
       logo.src = "image/header/FL_logowhite.png";
-      console.log("Logo reverted to original image.");
     }
   }
+});
+
+document.addEventListener("scroll", function () {
+  const burger = document.querySelector(".burger");
+  const burgerBox = document.querySelector(".burger-box");
+  const burgerChk = document.getElementById("burger-checkbox");
+  const scrollPosition = window.scrollY;
+
+  if (scrollPosition > 10) {
+    burgerBox.style.background = "black";
+    burger.style.background = "black";
+    burger.style.content = "url(image/burger_ico/Vector1.svg)";
+  } else {
+    burgerBox.style.background = "white";
+    burger.style.background = "white";
+    burger.style.content = "url(image/burger_ico/Vector.svg)";
+  }
+  burgerChk.addEventListener("change", function () {
+    if (burgerChk.checked == true) {
+      burgerBox.style.background = "black";
+      burger.style.background = "black";
+      burger.style.content = "url(image/burger_ico/Vector2.svg)";
+    } else if (burgerChk.checked == false && scrollPosition > 10) {
+      burgerBox.style.background = "black";
+      burger.style.background = "black";
+      burger.style.content = "url(image/burger_ico/Vector1.svg)";
+    } else if (burgerChk.checked == false && scrollPosition < 10) {
+      burgerBox.style.background = "white";
+      burger.style.background = "white";
+      burger.style.content = "url(image/burger_ico/Vector.svg)";
+    }
+  });
 });
 
 document.addEventListener("DOMContentLoaded", function () {
