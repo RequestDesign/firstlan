@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const searchResults = document.getElementById("searchResults");
   const body = document.querySelector("body");
 
-  // Показать окно поиска при клике на иконку
   searchIcon.addEventListener("click", (event) => {
     searchBox.classList.add("active");
     searchInput.focus();
@@ -33,11 +32,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const query = e.target.value.trim();
 
     if (query.length > 0) {
-      // Если что-то введено, показываем результаты (можно добавить логику поиска)
       searchResults.classList.add("active");
       searchResults.innerHTML = `<p>Результаты поиска по запросу "${query}"</p>`;
     } else {
-      // Если поле пустое, показываем сообщение о том, что ничего не найдено
       searchResults.innerHTML =
         "<p>К сожалению, по вашему запросу ничего не найдено</p>";
     }
@@ -63,21 +60,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const prevButton = document.querySelector(".prev");
   const nextButton = document.querySelector(".next");
   const items = Array.from(container.querySelectorAll(".sales_item"));
+  
 
   function getItemWidth() {
     return items[0].offsetWidth + parseInt(getComputedStyle(container).gap);
   }
-
   let scrollAmount = getItemWidth();
 
   function updateButtonState() {
     const scrollLeft = container.scrollLeft;
     const scrollWidth = container.scrollWidth;
     const clientWidth = container.clientWidth;
-
-    console.log(
-      `scrollLeft: ${scrollLeft}, scrollWidth: ${scrollWidth}, clientWidth: ${clientWidth}`
-    );
 
     prevButton.disabled = scrollLeft === 0;
     nextButton.disabled = scrollLeft + clientWidth >= scrollWidth - 2.4;
@@ -97,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-
+  
   prevButton.addEventListener("click", () => {
     container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
     setTimeout(updateButtonState, 300);
@@ -120,10 +113,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   updateButtonState();
   showItemsInView();
+  
 });
 
 const clientItems = document.querySelectorAll(".main-client_item");
-
 clientItems.forEach((item) => {
   item.addEventListener("click", () => {
     const activeItem = document.querySelector(".main-client_item.active");
@@ -140,7 +133,6 @@ clientItems.forEach((item) => {
 });
 
 const advantagesItems = document.querySelectorAll(".main-advantages_item");
-
 advantagesItems.forEach((item) => {
   item.addEventListener("click", () => {
     const advantagesActive = document.querySelector(
@@ -169,17 +161,6 @@ advantagesItems.forEach((item) => {
   });
 });
 
-//input
-// document.querySelectorAll('.form-input').forEach(input => {
-//     input.addEventListener('input', function() {
-//         if (this.value === '') {
-//             this.classList.add('error');
-//         } else {
-//             this.classList.remove('error');
-//         }
-//     });
-// });
-
 document.addEventListener("DOMContentLoaded", function () {
   let currentSlide = 0;
   const slides = document.querySelectorAll(".slide");
@@ -194,6 +175,12 @@ document.addEventListener("DOMContentLoaded", function () {
   // Полоса прогресса
   const progressIndicator = document.querySelector(".progress-indicator");
 
+  // Переменные для скроллинга мышью/пальцем
+  let startX = 0;
+  let scrollLeft = 0;
+  let isDragging = false;
+
+  // Обновление слайдов
   function updateSlides() {
     slides.forEach((slide, index) => {
       slide.classList.remove("active");
@@ -202,7 +189,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
     slideNumber.textContent = (currentSlide + 1).toString().padStart(3, "0");
-    slider.style.transform = `translateX(-${currentSlide * 77.969}vw)`;
+    slider.style.transform = `translateX(-${currentSlide * 100}%)`;
     updateSlideVisibility();
     updateProgressBar();
   }
@@ -254,10 +241,7 @@ document.addEventListener("DOMContentLoaded", function () {
   PrevBtn.addEventListener("click", function () {
     if (currentSlide > 0) {
       currentSlide--;
-
       NextBtn.style.opacity = "1";
-    } else {
-      console.log(currentSlide);
     }
     updateSlides();
     localStorage.setItem("currentSlide", currentSlide);
@@ -274,11 +258,7 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem("currentSlide", currentSlide);
   });
 
-  NextBtn.addEventListener("click", function () {
-    if (currentSlide == totalSlides - 2) {
-      NextBtn.style.opacity = "0.5";
-    }
-  });
+  // Скрытие кнопки назад при необходимости
   PrevBtn.addEventListener("click", function () {
     if (currentSlide == 0) {
       PrevBtn.style.display = "none";
@@ -287,29 +267,71 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  // Логика скроллинга мышью или пальцем (для мобильных устройств)
+  function enableSwipe() {
+    slider.addEventListener("mousedown", startDrag);
+    slider.addEventListener("touchstart", startDrag);
+
+    slider.addEventListener("mousemove", drag);
+    slider.addEventListener("touchmove", drag);
+
+    slider.addEventListener("mouseup", stopDrag);
+    slider.addEventListener("mouseleave", stopDrag);
+    slider.addEventListener("touchend", stopDrag);
+  }
+
+  function startDrag(e) {
+    isDragging = true;
+    startX = e.pageX || e.touches[0].pageX;
+    scrollLeft = currentSlide * slider.offsetWidth;
+  }
+
+  function drag(e) {
+    if (!isDragging) return;
+    const x = e.pageX || e.touches[0].pageX;
+    const walk = (x - startX) / slider.offsetWidth;
+    currentSlide = Math.round(scrollLeft / slider.offsetWidth - walk);
+    if (currentSlide < 0) currentSlide = 0;
+    if (currentSlide >= totalSlides - 2) currentSlide = totalSlides - 2;
+    updateSlides();
+  }
+
+  function stopDrag() {
+    isDragging = false;
+    localStorage.setItem("currentSlide", currentSlide);
+  }
+
+  // Включение скроллинга только на мобильных устройствах
+  function toggleSwipeBehavior() {
+    if (window.innerWidth <= 420) {
+      enableSwipe();
+    } else {
+      slider.removeEventListener("mousedown", startDrag);
+      slider.removeEventListener("touchstart", startDrag);
+      slider.removeEventListener("mousemove", drag);
+      slider.removeEventListener("touchmove", drag);
+      slider.removeEventListener("mouseup", stopDrag);
+      slider.removeEventListener("mouseleave", stopDrag);
+      slider.removeEventListener("touchend", stopDrag);
+    }
+  }
+
   const savedSlide = localStorage.getItem("currentSlide");
   if (savedSlide !== null) {
     currentSlide = parseInt(savedSlide);
   }
 
   updateSlides();
-  //исчезновение кнопки назад
-  if (currentSlide == 0) {
-    PrevBtn.style.display = "none";
-  } else {
-    PrevBtn.style.display = "flex";
-  }
-  //прозрачность кнопки вперед
-  if (currentSlide == totalSlides - 2) {
-    NextBtn.style.opacity = "0.5";
-  }
-  // Обновляем видимость текста при скролле
+
+  toggleSwipeBehavior();
+
+  window.addEventListener("resize", toggleSwipeBehavior);
+
   window.addEventListener("scroll", function () {
     slides.forEach((slide, index) => {
       const slideRect = slide.getBoundingClientRect();
       const windowHeight = window.innerHeight;
 
-      // Проверяем, что текущий слайд видим в окне браузера
       if (slideRect.top < windowHeight && slideRect.bottom >= 0) {
         if (index === currentSlide) {
           const slideTextElements = slide.querySelectorAll(
@@ -418,14 +440,14 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-    const smallButton = document.getElementById("smallButton");
-    const photoContainer = document.getElementById("photoContainer");
-  
-    // Обработчик клика по маленькой кнопке (изображению)
-    smallButton.addEventListener("click", () => {
-      // Показать или скрыть контейнер с фотографиями
-      photoContainer.style.display = photoContainer.style.display === "block" ? "none" : "block";
-    });
-  });
-  
+// document.addEventListener("DOMContentLoaded", () => {
+//   const smallButton = document.getElementById("smallButton");
+//   const photoContainer = document.getElementById("photoContainer");
+
+//   // Обработчик клика по маленькой кнопке (изображению)
+//   smallButton.addEventListener("click", () => {
+//     // Показать или скрыть контейнер с фотографиями
+//     photoContainer.style.display =
+//       photoContainer.style.display === "block" ? "none" : "block";
+//   });
+// });

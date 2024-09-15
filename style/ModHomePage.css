@@ -95,12 +95,7 @@
   /* header */
   .header-scrolled {
     background-color: #ffffff;
-    z-index: 5; 
-  }
-  .burger::before,.burger::after,
-  .header-scrolled .burger::after, 
-  .header-scrolled .burger::before { 
-    background: #000;
+    z-index: 5;
   }
   .header {
     pointer-events: all;
@@ -170,7 +165,7 @@
     position: absolute;
     display: grid;
     /* gap: 12px; */
-    padding: 2.2vh 0 0 16px;
+    padding: 2.2vh 16px 32px 16px;
     margin: 0;
     background: white;
     list-style-type: none;
@@ -186,10 +181,47 @@
     display: block;
     /* padding: 8px; */
     color: black;
-    font-size: 18px;
+    font-size: 24px;
     text-align: left;
     text-decoration: none;
     height: 30px;
+    font-family: "Gilroy", sans-serif;
+    font-weight: 600;
+  }
+  
+  .menu-list_link {
+    display: grid;
+    gap: 32px;
+    margin-top: 40px;
+  }
+  .menu-list_end{
+    display: grid;
+    gap: 40px;
+    align-content: end;
+  }
+  .list-box{
+    display: contents;
+    height: 90px;
+  }
+  .menu-list_box{
+    display: grid;
+    justify-content: space-between;
+  }
+  .end-link_image {
+    display: flex;
+    gap: 20px;
+  }
+  .end-link {
+    display: flex;
+    justify-content: space-between;
+    height: 32px;
+  }
+  .end-tel {
+    color: rgba(41, 41, 45, 1);
+    font-size: 24px;
+    font-family: "Gilroy", sans-serif;
+    font-weight: 600;
+    text-decoration: none;
   }
   .menu-item:hover {
     background: rgba(255, 255, 255, 0.2);
@@ -197,7 +229,10 @@
   .burger-checkbox:checked ~ .menu-list {
     transform: translateX(0);
   }
-  .small-button {
+  .br {
+    border-top: 2px solid rgba(28, 28, 31, 0.2);
+  }
+  /* .small-button {
     width: 50px;
     height: 50px;
     position: absolute;
@@ -205,43 +240,38 @@
     left: 309px;
     padding: 16px 12px;
     background-color: rgba(255, 255, 255, 1);
-    cursor: pointer; /* Указывает, что элемент кликабелен */
-    border-radius: 8px; /* Добавляет скруглённые углы */
+    cursor: pointer; 
+    border-radius: 8px; 
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  /* Изображение внутри маленькой кнопки */
-  .button-image {
+  } */
+  /* .button-image {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Чтобы изображение хорошо вписывалось в блок */
-    border-radius: 8px; /* Скругление изображения */
+    object-fit: cover; 
+    border-radius: 8px; 
   }
-  /* Открывающийся блок с фотографиями */
   .photo-container {
     width: 50px;
-    height: 116px; /* Высота по умолчанию */
+    height: 116px; 
     position: absolute;
-    top: 486px; /* Расположение на 4px выше маленькой кнопки */
+    top: 486px; 
     left: 309px;
     padding: 16px 12px;
     background-color: rgba(255, 255, 255, 1);
     gap: 20px;
-    display: none; /* По умолчанию скрыт */
-    flex-direction: column; /* Размещаем фотографии вертикально */
+    display: none; 
+    flex-direction: column; 
     align-items: center;
     justify-content: space-around;
-    border-radius: 8px; /* Скругление углов */
+    border-radius: 8px; 
   }
-  /* Стили для фотографий */
   .photo {
     width: 100%;
     height: auto;
-    max-height: 50px; /* Максимальная высота для фото */
-  }
-
-
+    max-height: 50px; 
+  } */
 
   /* slide */
   .slide-image {
@@ -640,6 +670,14 @@
   .main-specialoffers {
     margin-bottom: 80px;
   }
+  .checkbox-input {
+    width: 26px;
+    height: 26px;
+  }
+  .checkbox-input:checked::after {
+    width: 26px;
+    height: 26px;
+  }
   /* projects */
   .main-projects {
     .main-projects_box {
@@ -861,42 +899,42 @@
     margin-top: 20px;
   }
 
-  .search-icon{
+  .search-icon {
     width: 24px;
     height: 24px;
   }
   .search-box {
-    width: 91.467vw;
+    width: 90.501vw;
     height: 7.796vh;
     padding: 14px 20px;
     border: 2px solid rgba(255, 255, 255, 1);
-    background-color: transparent; 
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative; 
-    top: -753px;
-    right: -18px;
+    position: relative;
+    top: 80px;
+    right: 94vw;
     z-index: 1;
   }
   /* Стили для поля ввода */
   #searchInput {
-    width: 100%;
+    width: 90.501vw;
     height: 100%;
     border: none;
     outline: none;
-    background-color: transparent; 
-    color: white; 
+    background-color: transparent;
+    color: white;
     font-size: 16px;
     font-family: "Gilroy", sans-serif;
     font-weight: 400;
     text-align: left;
-    padding-left: 10px; 
+    padding-left: 10px;
   }
   /* Скрытие текстового курсора, когда поле пустое */
   #searchInput::placeholder {
-    color: white; 
-    text-align: left; 
+    color: white;
+    text-align: left;
   }
   /* Стили для результатов поиска */
   .search-results {
@@ -925,9 +963,7 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   }
 
-
-
-  .search-boxs{
+  .search-boxs {
     width: 91.467vw;
     height: 7.796vh;
     padding: 14px 20px;
@@ -937,20 +973,18 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    top: -18px;
   }
   #searchInputs {
     width: 100%;
     height: 100%;
     border: none;
     outline: none;
-    background-color: transparent; 
-    color: black; 
+    background-color: transparent;
+    color: black;
     font-size: 16px;
     font-family: "Gilroy", sans-serif;
     font-weight: 400;
     text-align: left;
-    padding-left: 10px; 
+    padding-left: 10px;
   }
-  
 }
