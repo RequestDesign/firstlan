@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const scrollWidth = container.scrollWidth;
     const clientWidth = container.clientWidth;
 
-    prevButton.disabled = scrollLeft === 0;
+    prevButton.disabled = scrollLeft <= 0;
     nextButton.disabled = scrollLeft + clientWidth >= scrollWidth - 8;
   }
 
@@ -212,9 +212,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Инициализация при загрузке страницы
   scrollAmount = getItemWidth();
-  updateMode();
-  updateButtonState();
-  showItemsInView();
+
+  requestAnimationFrame(() => {
+    updateMode();
+    updateButtonState();
+    showItemsInView();
+  });
 });
 
 
