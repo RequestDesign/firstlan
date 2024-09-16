@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const clientWidth = container.clientWidth;
 
     prevButton.disabled = scrollLeft === 0;
-    nextButton.disabled = scrollLeft + clientWidth >= scrollWidth - 3;
+    nextButton.disabled = scrollLeft + clientWidth >= scrollWidth - 2;
   }
 
   function showItemsInView() {
@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let scrollAmount = getItemWidth();
   let isDragging = false;
   let startX;
-  //   let scrollLeft;
+  let scrollLeft;
   let deltaX = 0;
 
   function getItemWidth() {
@@ -213,7 +213,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   scrollAmount = getItemWidth();
   updateButtonState();
-  updateProgressBar();
+  // updateProgressBar();
   showItemsInView();
 
   if (isMobile()) {
@@ -254,7 +254,7 @@ advantagesItems.forEach((item) => {
         if (advantagesActive) {
           const activeImg = advantagesActive.querySelector("img");
           if (activeImg) {
-            activeImg.src = activeImg.dataset.defaultSrc; 
+            activeImg.src = activeImg.dataset.defaultSrc;
           }
           advantagesActive.classList.remove("active");
         }
@@ -410,7 +410,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Включение скроллинга только на мобильных устройствах
   function toggleSwipeBehavior() {
     if (window.innerWidth <= 420) {
-        PrevBtn.style.display = "none";
+      PrevBtn.style.display = "none";
       enableSwipe();
     } else {
       slider.removeEventListener("mousedown", startDrag);
