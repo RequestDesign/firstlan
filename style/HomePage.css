@@ -507,6 +507,7 @@ body {
   text-align: left;
   margin-left: -20vw;
   margin-top: 5vh;
+  justify-content: center;
 }
 .text-first {
   text-align: left;
@@ -519,7 +520,7 @@ body {
   width: 35.417vw;
   z-index: 1;
   margin-left: -31vw;
-  margin-top: -20vmax;
+  margin-top: -17vmax;
 }
 /* advantages */
 .main-advantages_title {

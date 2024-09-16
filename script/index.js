@@ -60,7 +60,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const prevButton = document.querySelector(".prev");
   const nextButton = document.querySelector(".next");
   const items = Array.from(container.querySelectorAll(".sales_item"));
-  // const progressBarIndicator = document.querySelector(".progress-indicator");
+
+  let scrollAmount = getItemWidth();
+  let isDragging = false;
+  let startX;
+  let scrollLeft;
+  let deltaX = 0;
+
   function getItemWidth() {
     return items[0].offsetWidth + parseInt(getComputedStyle(container).gap);
   }
@@ -71,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const clientWidth = container.clientWidth;
 
     prevButton.disabled = scrollLeft === 0;
-    nextButton.disabled = scrollLeft + clientWidth >= scrollWidth - 2.083;
+    nextButton.disabled = scrollLeft + clientWidth >= scrollWidth - 8;
   }
 
   function showItemsInView() {
@@ -89,54 +95,46 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  prevButton.addEventListener("click", () => {
-    container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+  function scrollToSlide(index) {
+    const scrollPosition = Math.max(0, Math.min(index * scrollAmount, container.scrollWidth - container.clientWidth));
+    container.scrollTo({ left: scrollPosition, behavior: "smooth" });
     setTimeout(updateButtonState, 300);
-  });
-
-  nextButton.addEventListener("click", () => {
-    container.scrollBy({ left: scrollAmount, behavior: "smooth" });
-    setTimeout(updateButtonState, 300);
-  });
-
-  container.addEventListener("scroll", () => {
-    updateButtonState();
-    showItemsInView();
-  });
-
-  window.addEventListener("resize", () => {
-    scrollAmount = getItemWidth();
-    updateButtonState();
-  });
-
-  let currentIndex = 0;
-  let scrollAmount = getItemWidth();
-  let isDragging = false;
-  let startX;
-  let scrollLeft;
-  let deltaX = 0;
-
-  function getItemWidth() {
-    const itemStyle = getComputedStyle(items[0]);
-    const itemWidth = items[0].offsetWidth;
-    const itemGap = parseInt(itemStyle.marginRight);
-    return itemWidth + itemGap;
   }
 
-  //   Функция для обновления прогресс-бара
-  // function updateProgressBar() {
-  //   const progress = ((currentIndex + 1) / items.length) * 100;
-  //   progressBarIndicator.style.width = `${progress}%`;
-  // }
+  // Режим кнопок для прокрутки (экран больше 420px)
+  function enableButtonMode() {
+    prevButton.style.display = "block";
+    nextButton.style.display = "block";
+    prevButton.addEventListener("click", handlePrevClick);
+    nextButton.addEventListener("click", handleNextClick);
+    container.removeEventListener("mousedown", handleMouseDown);
+    container.removeEventListener("mousemove", handleMouseMove);
+    container.removeEventListener("mouseup", handleMouseUp);
+    container.removeEventListener("touchstart", handleTouchStart);
+    container.removeEventListener("touchmove", handleTouchMove);
+    container.removeEventListener("touchend", handleTouchEnd);
+  }
 
-  function scrollToSlide(index) {
-    currentIndex = Math.max(0, Math.min(index, items.length - 1));
-    const scrollPosition = currentIndex * scrollAmount;
-    container.scrollTo({ left: scrollPosition, behavior: "smooth" });
-    setTimeout(() => {
-      updateButtonState();
-      updateProgressBar();
-    }, 300);
+  // Режим прокрутки пальцем/мышью (экран меньше или равен 420px)
+  function enableScrollMode() {
+    prevButton.style.display = "none";
+    nextButton.style.display = "none";
+    container.addEventListener("mousedown", handleMouseDown);
+    container.addEventListener("mousemove", handleMouseMove);
+    container.addEventListener("mouseup", handleMouseUp);
+    container.addEventListener("touchstart", handleTouchStart);
+    container.addEventListener("touchmove", handleTouchMove);
+    container.addEventListener("touchend", handleTouchEnd);
+  }
+
+  function handlePrevClick() {
+    container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+    setTimeout(updateButtonState, 300);
+  }
+
+  function handleNextClick() {
+    container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    setTimeout(updateButtonState, 300);
   }
 
   function handleMouseDown(e) {
@@ -169,6 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
       scrollToSlide(currentIndex);
     }
   }
+
   function handleTouchStart(e) {
     startX = e.touches[0].clientX;
     scrollLeft = container.scrollLeft;
@@ -182,44 +181,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function handleTouchEnd() {
     const movedBy = Math.abs(deltaX);
-
-    if (movedBy > scrollAmount / 4) {
+    if (movedBy > scrollAmount / 4 && innerWidth <= 420) {
       if (deltaX < 0) {
-        scrollToSlide(currentIndex + 1);
+        container.scrollBy({ left: scrollAmount, behavior: "smooth" });
       } else {
-        scrollToSlide(currentIndex - 1);
+        container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
       }
-    } else {
-      scrollToSlide(currentIndex);
     }
   }
 
-  container.addEventListener("mousedown", handleMouseDown);
-  container.addEventListener("mousemove", handleMouseMove);
-  container.addEventListener("mouseup", handleMouseUp);
-  container.addEventListener("mouseleave", handleMouseUp);
-
-  container.addEventListener("touchstart", handleTouchStart);
-  container.addEventListener("touchmove", handleTouchMove);
-  container.addEventListener("touchend", handleTouchEnd);
-
-  window.addEventListener("resize", () => {
-    scrollAmount = getItemWidth();
-    updateButtonState();
-  });
   function isMobile() {
     return window.innerWidth <= 420;
   }
 
-  scrollAmount = getItemWidth();
-  updateButtonState();
-  // updateProgressBar();
-  showItemsInView();
-
-  if (isMobile()) {
-    container.style.cursor = "grab";
+  function updateMode() {
+    if (isMobile()) {
+      enableScrollMode();
+      container.style.cursor = "grab";
+    } else {
+      enableButtonMode();
+      container.style.cursor = "default";
+    }
   }
+
+  window.addEventListener("resize", () => {
+    scrollAmount = getItemWidth();
+    updateMode();
+    updateButtonState();
+  });
+
+  // Инициализация при загрузке страницы
+  scrollAmount = getItemWidth();
+  updateMode();
+  updateButtonState();
+  showItemsInView();
 });
+
 
 const clientItems = document.querySelectorAll(".main-client_item");
 clientItems.forEach((item) => {
