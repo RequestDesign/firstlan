@@ -254,7 +254,7 @@ advantagesItems.forEach((item) => {
         if (advantagesActive) {
           const activeImg = advantagesActive.querySelector("img");
           if (activeImg) {
-            activeImg.src = activeImg.dataset.defaultSrc; // Возвращаем исходное изображение
+            activeImg.src = activeImg.dataset.defaultSrc; 
           }
           advantagesActive.classList.remove("active");
         }
@@ -279,13 +279,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Полоса прогресса
   const progressIndicator = document.querySelector(".progress-indicator");
-
-  // Переменные для скроллинга мышью/пальцем
   let startX = 0;
   let scrollLeft = 0;
   let isDragging = false;
 
-  // Обновление слайдов
   function updateSlides() {
     slides.forEach((slide, index) => {
       slide.classList.remove("active");
