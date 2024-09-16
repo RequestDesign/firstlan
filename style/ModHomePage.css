@@ -898,7 +898,7 @@
     height: 7.796vh;
     padding: 14px 20px;
     border: 2px solid rgba(255, 255, 255, 1);
-    background-color: transparent;
+    background-color: transparent ;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -906,9 +906,13 @@
     top: 80px;
     right: 94vw;
     z-index: 1;
+    color: rgba(255, 255, 255, 1);
+  }
+  .search-box input {
+    background-color: transparent ;
   }
   /* Стили для поля ввода */
-  #searchInput {
+  #searchInput{
     width: 90.501vw;
     height: 100%;
     border: none;

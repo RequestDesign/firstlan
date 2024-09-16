@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const clientWidth = container.clientWidth;
 
     prevButton.disabled = scrollLeft === 0;
-    nextButton.disabled = scrollLeft + clientWidth >= scrollWidth - 2;
+    nextButton.disabled = scrollLeft + clientWidth >= scrollWidth - 2.083;
   }
 
   function showItemsInView() {
