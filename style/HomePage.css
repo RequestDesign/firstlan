@@ -1081,7 +1081,7 @@ body {
 }
 .footer-content_contact {
   display: grid;
-  gap: 24px;
+  height: 3.3vh;
 }
 .footer-content_items {
   display: grid;
@@ -1286,8 +1286,8 @@ body {
 }
 /* Кнопка закрытия поиска */
 .close-btn {
-  width: 2.3vw;
-  height: 2.4vh;
+  width: 5vw;
+  height: 5vh;
   display: grid;
   align-items: center;
   justify-items: center;
@@ -1319,8 +1319,13 @@ body {
   font-family: "Gilroy", sans-serif;
   font-weight: 400;
 }
+.icon-box{
+  width: 30px;
+  display: grid;
+  justify-content: center;
+}
 .search-icon{
-  width: 1.2vw;
+  width: 3vmin;
   height: 2.4vh;
 }
 .search-image{

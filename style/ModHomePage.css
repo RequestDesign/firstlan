@@ -807,7 +807,7 @@
   }
   /* footer */
   .footer {
-    margin-bottom: 15vh;
+    margin-bottom: 6vh;
     .footer-content {
       display: grid;
       width: 91.467vw;
@@ -851,10 +851,12 @@
     .footer-content_contact {
       margin-bottom: 40px;
       gap: 1vh;
+      height: 60px;
     }
     .footer-content_mail {
       font-size: 4.267vw;
       /* margin-bottom: 4vh; */
+      text-transform: uppercase;
     }
     .footer-content_tel {
       font-size: 4.267vw;
