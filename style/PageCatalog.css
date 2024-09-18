@@ -1,0 +1,31 @@
+.main-way {
+  margin-top: 60px;
+  margin-bottom: 24px;
+}
+.main-way_links {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 8px;
+}
+.main-way_square {
+  width: 5px;
+  height: 5px;
+  background-color: black;
+}
+.main-link {
+  text-decoration: none;
+  color: rgba(41, 41, 45, 1);
+  font-size: 14px;
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+}
+.link-active{
+color: rgba(19, 75, 175, 1);
+}
+
+@media (max-width: 420px) {
+  .main-way {
+    margin-top: 34px;
+  }
+}

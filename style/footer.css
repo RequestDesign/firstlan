@@ -1,0 +1,227 @@
+.footer {
+  margin-bottom: 3.7vh;
+}
+.main-category_button {
+  display: flex;
+  align-items: center;
+  gap: 1.458vw;
+  text-decoration: none;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4vmax;
+}
+.footer-content_logo {
+  display: flex;
+  justify-content: space-between;
+  width: 37.604vw;
+  /* height: 16.344vh; */
+}
+.footer-content_contacts {
+  display: flex;
+  justify-content: space-between;
+  width: 33.49vw;
+}
+.footer-content_contact {
+  display: grid;
+  height: 3.3vh;
+}
+.footer-content_items {
+  display: grid;
+  /* gap: 0.1vmax; */
+  height: 7vmax;
+}
+.footer-content_item {
+  text-decoration: none;
+  color: rgba(41, 41, 45, 1);
+  font-family: "Gilroy", sans-serif;
+  font-weight: 500;
+  font-size: 1.042vw;
+  height: 1.5vmax;
+}
+.logo_black {
+  width: 9.531vw;
+  margin-bottom: 3.5vh;
+}
+.footer-content_mail {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 500;
+  font-size: 1.042vw;
+  margin-bottom: 1.4vmax;
+  text-decoration: none;
+  color: rgba(41, 41, 45, 1);
+}
+.footer-content_tel {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 500;
+  font-size: 1.042vw;
+  text-decoration: none;
+  color: rgba(41, 41, 45, 1);
+}
+.footer-content_end {
+  margin-top: 8vh;
+}
+.network {
+  width: 12.708vmax;
+  /* height: 5.2vh; */
+}
+.footer-content_end {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8vh;
+}
+.footer-content_agreement {
+  display: flex;
+  justify-content: space-between;
+  width: 52vmax;
+  align-items: end;
+}
+.footer-content_agreement p {
+  margin-bottom: 0;
+}
+.footer-content_text {
+  color: rgba(48, 48, 48, 0.5);
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+  font-size: 0.729vw;
+}
+.footer-content_agency {
+  display: grid;
+  align-items: center;
+}
+.request {
+  width: 9vmax;
+  height: 1.7vmax;
+}
+.footer_model-open {
+  display: none;
+}
+.footer_model {
+  display: flex;
+}
+.social {
+  width: 2.5vmax;
+  height: 2.5vmax;
+}
+
+/* Button */
+.btn-blue {
+  background: rgba(19, 75, 175, 1);
+  width: 3.5vmax;
+  height: 3.5vmax;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: background-color 0.3s;
+}
+.btn-blue:focus {
+  border: none;
+}
+.btn-blue:hover {
+  background: #0056b3;
+}
+.btn-arrow {
+  font-size: 1.2vmax;
+  color: white;
+  transition: transform 0.3s;
+  text-decoration: none;
+}
+.btn-blue:hover .btn-arrow {
+  transform: translateX(5px);
+}
+@media (max-width: 420px) {
+  .footer {
+    margin-bottom: 6vh;
+    .footer-content {
+      display: grid;
+      width: 91.467vw;
+      margin-bottom: 0;
+    }
+    .footer-content_logo {
+      display: grid;
+      width: 48.267vw;
+    }
+    .footer-content_contacts {
+      display: grid;
+      width: 48.267vw;
+    }
+    .footer-content_end {
+      display: grid;
+      gap: 2.2vmin;
+      width: 91.467vw;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .footer-content_agreement {
+      display: grid;
+      gap: 32px;
+      width: 91.467vw;
+    }
+    .logo_black {
+      width: 48.8vw;
+      margin-bottom: 3.2vh;
+    }
+    .footer-content_items {
+      width: 48.267vw;
+      height: 120px;
+    }
+    .footer-modal_items {
+      height: 70px;
+    }
+    .footer-content_item {
+      font-size: 4.267vw;
+      height: 3.298vh;
+    }
+    .footer-content_contact {
+      margin-bottom: 40px;
+      gap: 1vh;
+      height: 60px;
+    }
+    .footer-content_mail {
+      font-size: 4.267vw;
+      /* margin-bottom: 4vh; */
+      text-transform: uppercase;
+    }
+    .footer-content_tel {
+      font-size: 4.267vw;
+    }
+    .footer-content_text {
+      font-size: 3.467vw;
+      width: 91.467vw;
+      display: grid;
+      gap: 0.8vh;
+    }
+    .footer-content_agency {
+      width: 49.067vw;
+      margin-top: 32px;
+    }
+    .request {
+      width: 49.067vw;
+      height: 100%;
+    }
+    .social {
+      width: 52px;
+      height: 52px;
+    }
+    .btn-blue {
+      width: 50px;
+      height: 50px;
+    }
+    .btn-arrow {
+      font-size: 7vw;
+    }
+  }
+  .footer_model {
+    display: none;
+  }
+  .footer_model-open {
+    display: grid;
+  }
+  .model-mr {
+    display: flex;
+    margin-top: 20px;
+  }
+}

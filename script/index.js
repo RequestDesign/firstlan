@@ -474,64 +474,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document.addEventListener("scroll", function () {
-  const header = document.querySelector("header");
-  const logo = document.querySelector(".logo_white");
-  const search = document.querySelector(".search");
-  const heart = document.querySelector(".heart-icon");
-  const shopping = document.querySelector(".shopping");
-  const scrollPosition = window.scrollY;
 
-  if (scrollPosition > 10) {
-    header.classList.add("header-scrolled");
-    search.src = "image/header/search_black.png";
-    heart.src = "image/header/heart_black.png";
-    shopping.src = "image/header/shopping_black.png";
-    if (logo) {
-      logo.src = "image/footer/FL_logo.png";
-    }
-  } else {
-    header.classList.remove("header-scrolled");
-    search.src = "image/header/24.png";
-    heart.src = "image/header/heart.png";
-    shopping.src = "image/header/shopping.png";
-    if (logo) {
-      logo.src = "image/header/FL_logowhite.png";
-    }
-  }
-});
 
-document.addEventListener("scroll", function () {
-  const burger = document.querySelector(".burger");
-  const burgerBox = document.querySelector(".burger-box");
-  const burgerChk = document.getElementById("burger-checkbox");
-  const scrollPosition = window.scrollY;
-
-  if (scrollPosition > 10) {
-    burgerBox.style.background = "black";
-    burger.style.background = "black";
-    burger.style.content = "url(image/burger_ico/Vector1.svg)";
-  } else {
-    burgerBox.style.background = "white";
-    burger.style.background = "white";
-    burger.style.content = "url(image/burger_ico/Vector.svg)";
-  }
-  burgerChk.addEventListener("change", function () {
-    if (burgerChk.checked == true) {
-      burgerBox.style.background = "black";
-      burger.style.background = "black";
-      burger.style.content = "url(image/burger_ico/Vector2.svg)";
-    } else if (burgerChk.checked == false && scrollPosition > 10) {
-      burgerBox.style.background = "black";
-      burger.style.background = "black";
-      burger.style.content = "url(image/burger_ico/Vector1.svg)";
-    } else if (burgerChk.checked == false && scrollPosition < 10) {
-      burgerBox.style.background = "white";
-      burger.style.background = "white";
-      burger.style.content = "url(image/burger_ico/Vector.svg)";
-    }
-  });
-});
 
 document.addEventListener("DOMContentLoaded", function () {
   const swiperContainer = document.querySelector(".swiper-container");
@@ -587,14 +531,47 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   const smallButton = document.getElementById("smallButton");
-//   const photoContainer = document.getElementById("photoContainer");
+document.addEventListener("DOMContentLoaded", () => {
+  const smallButton = document.getElementById("smallButton");
+  const photoContainer = document.getElementById("photoContainer");
 
-//   // Обработчик клика по маленькой кнопке (изображению)
-//   smallButton.addEventListener("click", () => {
-//     // Показать или скрыть контейнер с фотографиями
-//     photoContainer.style.display =
-//       photoContainer.style.display === "block" ? "none" : "block";
-//   });
-// });
+  // Обработчик клика по маленькой кнопке (изображению)
+  smallButton.addEventListener("click", () => {
+    // Показать или скрыть контейнер с фотографиями
+    photoContainer.style.display =
+      photoContainer.style.display === "grid" ? "none" : "grid";
+  });
+});
+
+// Поиск мобилка
+let searchInp = document.getElementById("searchInputm");
+let searchInps = document.getElementById("searchInputs");
+const burgerChk = document.getElementById("burger-checkbox");
+const menu = document.querySelector(".menu-search");
+let resB = document.getElementById("resInpS");
+
+searchInp.addEventListener("click", function(){
+if (burgerChk.checked != true){
+  burgerChk.checked = true;
+  searchInps.focus();
+  searchInps.addEventListener("input",function(){ 
+      menu.style.display = "flex";
+      menu.style.position = "absolute";
+      menu.style.zindex = "100";
+      menu.style.top = "180px";
+      menu.style.left = "0px";
+      if (searchInps.value == ""){
+        menu.style.display = "none"
+        resB.style.display = "none"
+      } else {
+        resB.style.display = "flex"
+        resB.addEventListener("click", function(){
+          searchInps.value = "";
+          menu.style.display = "none"
+          resB.style.display = "none"
+        })
+      }
+  })
+}}
+
+);

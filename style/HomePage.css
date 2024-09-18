@@ -1272,11 +1272,11 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 8vh;
-  width: 65.833vw; 
+  width: 65.833vw;
 }
 /* Поле ввода в поиске */
 .search-box input {
-  width: 36.458vw; 
+  width: 36.458vw;
   font-size: 16px;
   border: none;
   outline: none;
@@ -1319,17 +1319,21 @@ body {
   font-family: "Gilroy", sans-serif;
   font-weight: 400;
 }
-.icon-box{
+.icon-box {
   width: 30px;
   display: grid;
   justify-content: center;
 }
-.search-icon{
+.search-icon {
   width: 3vmin;
   height: 2.4vh;
 }
-.search-image{
+.search-image {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+
+
+
