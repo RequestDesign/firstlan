@@ -180,7 +180,7 @@
     margin: 12px auto;
   }
   .burger {
-    content: url(../image/burger_ico/Vector1.svg);
+    content: url(../image/HomePage/burger_ico/Vector1.svg);
     background-color: black;
   }
   .burger-box {
@@ -195,7 +195,7 @@
     height: 50px;
     width: 50px;
     padding: 10px;
-    content: url(../image/burger_ico/Vector2.svg);
+    content: url(../image/HomePage/burger_ico/Vector2.svg);
   }
   .menu-list {
     top: 0;
@@ -442,7 +442,7 @@
     top: -6px;
   }
   #resInpS::after {
-    content: url(../image/header/cross.svg);
+    content: url(../image/HomePage/header/cross.svg);
     height: 11px;
     width: 11px;
   }

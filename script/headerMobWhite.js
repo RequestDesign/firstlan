@@ -35,25 +35,25 @@ document.addEventListener("scroll", function () {
   if (scrollPosition > 10) {
     burgerBox.style.background = "black";
     burger.style.background = "black";
-    burger.style.content = "url(image/burger_ico/Vector1.svg)";
+    burger.style.content = "url(image/HomePage/burger_ico/Vector1.svg)";
   } else {
     burgerBox.style.background = "white";
     burger.style.background = "white";
-    burger.style.content = "url(image/burger_ico/Vector.svg)";
+    burger.style.content = "url(image/HomePage/burger_ico/Vector.svg)";
   }
   burgerChk.addEventListener("change", function () {
     if (burgerChk.checked == true) {
       burgerBox.style.background = "black";
       burger.style.background = "black";
-      burger.style.content = "url(image/burger_ico/Vector2.svg)";
+      burger.style.content = "url(image/HomePage/burger_ico/Vector2.svg)";
     } else if (burgerChk.checked == false && scrollPosition > 10) {
       burgerBox.style.background = "black";
       burger.style.background = "black";
-      burger.style.content = "url(image/burger_ico/Vector1.svg)";
+      burger.style.content = "url(image/HomePage/burger_ico/Vector1.svg)";
     } else if (burgerChk.checked == false && scrollPosition < 10) {
       burgerBox.style.background = "white";
       burger.style.background = "white";
-      burger.style.content = "url(image/burger_ico/Vector.svg)";
+      burger.style.content = "url(image/HomePage/burger_ico/Vector.svg)";
     }
   });
 });

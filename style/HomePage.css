@@ -1217,7 +1217,7 @@ body {
 .basket-button {
   width: 1vmax;
   height: 1vmax;
-  background-image: url("/image/sales/basket-white.svg");
+  background-image: url("/image/HomePage/sales/basket-white.svg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -1237,7 +1237,7 @@ body {
   border: 2px solid rgba(19, 75, 175, 1);
 }
 .btn-blue-basket.active .basket-button {
-  background-image: url("/image/sales/basket-blue.svg");
+  background-image: url("/image/HomePage/sales/basket-blue.svg");
 }
 .btn-blue:disabled {
   background: rgba(233, 233, 233, 1);
