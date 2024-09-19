@@ -554,24 +554,27 @@ searchInp.addEventListener("click", function(){
 if (burgerChk.checked != true){
   burgerChk.checked = true;
   searchInps.focus();
-  searchInps.addEventListener("input",function(){ 
-      menu.style.display = "flex";
-      menu.style.position = "absolute";
-      menu.style.zindex = "100";
-      menu.style.top = "180px";
-      menu.style.left = "0px";
-      if (searchInps.value == ""){
-        menu.style.display = "none"
-        resB.style.display = "none"
-      } else {
-        resB.style.display = "flex"
-        resB.addEventListener("click", function(){
-          searchInps.value = "";
-          menu.style.display = "none"
-          resB.style.display = "none"
-        })
-      }
-  })
-}}
-
-);
+}});
+searchInps.addEventListener("input",function(){ 
+  menu.style.display = "flex";
+  menu.style.position = "absolute";
+  menu.style.zindex = "100";
+  menu.style.top = "180px";
+  menu.style.left = "0px";
+  if (searchInps.value == ""){
+    menu.style.display = "none"
+    resB.style.display = "none"
+  } else {
+    resB.style.display = "flex"
+    resB.addEventListener("click", function(){
+      searchInps.value = "";
+      menu.style.display = "none"
+      resB.style.display = "none"
+    })
+  }
+});
+burgerChk.addEventListener("change",function(){
+  menu.style.display = "none";
+  searchInps.value = "";
+  resB.style.display = "none";
+})

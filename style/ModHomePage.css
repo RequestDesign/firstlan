@@ -134,7 +134,7 @@
   .burger-checkbox:checked + .burger {
     background-color: #000;
     position: absolute;
-    top: 6.4px;
+    top: 2px;
     height: 50px;
     width: 50px;
     padding: 10px;

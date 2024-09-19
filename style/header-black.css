@@ -5,6 +5,10 @@
   padding: 0 !important;
   margin: 0 auto;
 }
+.header-scrolled .header{
+  background-color: #ffffff;
+  z-index: 5;
+}
 .header-box {
   height: 80px;
 }
@@ -140,7 +144,9 @@
   justify-content: center;
   align-items: center;
 }
-
+.footer_model-open {
+  display: none;
+}
 
 @media (max-width: 420px) {
   .container-fluid {

@@ -30,6 +30,7 @@ document.addEventListener("scroll", function () {
   const burgerBox = document.querySelector(".burger-box");
   const burgerChk = document.getElementById("burger-checkbox");
   const scrollPosition = window.scrollY;
+  const menu = document.querySelector(".menu-search");
 
   if (scrollPosition > 10) {
     burgerBox.style.background = "black";
