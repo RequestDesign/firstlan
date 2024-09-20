@@ -271,7 +271,7 @@ body {
 
 /* main - way */
 .main-way {
-  margin-top: 5vmax;
+  margin-top: 2.5vmax;
 }
 .main-way_links {
   display: flex;
@@ -353,6 +353,7 @@ body {
   }
   .main-way {
     margin-top: 34px;
+    margin-bottom: 18px;
   }
   /* project */
   .main-project {

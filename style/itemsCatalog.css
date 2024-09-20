@@ -1,0 +1,364 @@
+body {
+  background: rgba(230, 230, 230, 0.356) !important;
+}
+.container-fluid {
+  margin-left: 8.333vw;
+  margin-right: 16vh;
+  width: 83.333vw !important;
+  padding: 0 !important;
+  margin: 0 auto;
+}
+/* main - way */
+.main-way {
+  margin-top: 2.5vmax;
+}
+.main-way_links {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 8px;
+}
+.main-way_square {
+  width: 5px;
+  height: 5px;
+  background-color: black;
+}
+.main-link {
+  text-decoration: none;
+  color: rgba(41, 41, 45, 1);
+  font-size: 14px;
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+}
+.link-active {
+  color: rgba(19, 75, 175, 1);
+}
+.main-catalog_title {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+  font-size: 3.125vw;
+  margin-bottom: 3vmax;
+}
+.main-catalog_content{
+  display: flex;
+  justify-content: space-between;
+  gap: 2.083vw;
+}
+.content-categories{
+  width: 370px;
+}
+.content-products{
+  width: 61.979vw;
+  /* height: 2076px; */
+}
+.main-categories{
+  margin-bottom: 60px;
+}
+.main-categories_title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.categories_title{
+  font-size: 32px;
+  font-family: "Gilroy", sans-serif;
+  font-weight: 600;
+}
+.main-categories_content{
+  display: grid;
+  gap: 16px;
+  margin-top: 32px;
+  padding: 0;
+}
+.catagories-box_element{
+  background-color: rgba(19, 75, 175, 1);
+  width: 5px;
+  height: 5px;
+  display: none;
+}
+.catagories-box_text{
+  font-size: 20px;
+  font-family: "Gilroy", sans-serif;
+  font-weight: 500;
+  color: rgba(41, 41, 45, 1);
+  text-decoration: none;
+}
+.catagories-box{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.box-active{
+  display: grid;
+}
+.active{
+  color: rgba(19, 75, 175, 1);
+}
+.main-categories_price{
+  margin: 32px 0;
+}
+.categories-price_title{
+  font-family: "Gilroy", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  color: rgba(41, 41, 45, 1);
+}
+.price-input{
+  width: 100%;
+  display: flex;
+  margin: 20px 0;
+  height: 57px;
+  gap: 20px;
+  justify-content: space-between;
+}
+.price-input .field{
+  display: flex;
+  width: 100%;
+  height: 57px;
+  align-items: center;
+}
+.field input{
+  width: 100%;
+  height: 100%;
+  outline: none;
+  font-size: 18px;
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+  /* margin-left: 12px; */
+  /* padding: 16px 38px; */
+  border-radius: 1px;
+  text-align: center;
+  border: 1px solid rgba(28, 28, 31, 0.2);
+  -moz-appearance: textfield;
+  background: none;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.price-input .separator{
+  width: 13px;
+  display: flex;
+  font-size: 16px;
+  align-items: center;
+  justify-content: center;
+  color: rgba(136, 140, 142, 1);
+}
+.input-max::placeholder{
+  color: rgba(41, 41, 45, 1);
+}
+.slider{
+  height: 4px;
+  position: relative;
+  background: rgba(233, 233, 233, 1);
+  border-radius: 4px;
+}
+.slider .progress{
+  height: 100%;
+  left: 0;
+  right: 25%;
+  position: absolute;
+  border-radius: 4px;
+  background: rgba(19, 75, 175, 1);
+}
+.range-input{
+  position: relative;
+}
+.range-input input{
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  top: -5px;
+  left: -5px;
+  background: none;
+  pointer-events: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+input[type="range"]::-webkit-slider-thumb{
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: white;
+  border: 3px solid rgba(19, 75, 175, 1);
+  pointer-events: auto;
+  -webkit-appearance: none;
+  box-shadow: 0 0 6px rgba(0,0,0,0.05);
+}
+input[type="range"]::-moz-range-thumb{
+  height: 20px;
+  width: 20px;
+  border: none;
+  border-radius: 50%;
+  background: white;
+  border: 3px solid rgba(19, 75, 175, 1);
+  pointer-events: auto;
+  -moz-appearance: none;
+  box-shadow: 0 0 6px rgba(0,0,0,0.05);
+}
+
+.main-categories_brands{
+  margin-bottom: 32px;
+}
+.box-agreement {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.box-agreement_text {
+  font-size: 20px;
+  font-family: "Gilroy", sans-serif;
+  font-weight: 500;
+  line-height: 1.2vmax;
+  color: rgba(41, 41, 45, 1);
+}
+.brands-content{
+  margin-top: 20px;
+  display: grid;
+  gap: 16px;
+}
+/* input-checkbox */
+.checkbox-input {
+  width: 26px;
+  height: 26px;
+  border: 2px solid rgba(28, 28, 31, 0.2);
+  appearance: none;
+  background-color: none;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  transition: 600ms;
+}
+.checkbox-input:hover {
+  border-color: rgba(28, 28, 31, 0.5);
+}
+.checkbox-input:focus {
+  border-color: rgba(28, 28, 31, 0.5);
+}
+.checkbox-input:checked {
+  background-color: white;
+  border-color: rgba(19, 75, 175, 1);
+}
+.checkbox-input::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0px;
+  height: 0px;
+  font-size: 16px;
+  transition: 500ms;
+  overflow: hidden;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0,0,256,256' width='24px' height='24px' fill-rule='nonzero'%3e%3cg fill='%23134baf' fill-rule='nonzero' stroke='none' stroke-width='1' stroke-linecap='butt' stroke-linejoin='miter' stroke-miterlimit='10' stroke-dasharray='' stroke-dashoffset='0' font-family='none' font-weight='none' font-size='none' text-anchor='none' style='mix-blend-mode: normal'%3e%3cg transform='scale(10.66667,10.66667)'%3e%3cpath d='M20.29297,5.29297l-11.29297,11.29297l-4.29297,-4.29297l-1.41406,1.41406l5.70703,5.70703l12.70703,-12.70703z'%3e%3c/path%3e%3c/g%3e%3c/g%3e%3c/svg%3e");
+}
+.checkbox-input:checked::after{
+  width: 26px;
+  height: 26px;
+  transition: 500ms;
+}
+.checkbox-input:disabled{
+  background: #ccc;
+  border-color: #ccc;
+}
+.checkbox-input:disabled::after{
+  filter: grayscale(100%);
+}
+.btn_border{
+  width: 94px;
+  height: 26px;
+  border-bottom: 2px solid rgba(41, 41, 45, 1);
+  margin-top: 60px;
+}
+.main-btn_clear{
+  font-family: "Gilroy", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  width: 100%;
+  height: 20px;
+  color: rgba(41, 41, 45, 1);
+  letter-spacing: 1.5px;
+  border: none;
+  background: none;
+  padding: 0 0;
+}
+.main-content{
+  margin: 18vh 0;
+  display: flex;
+  justify-content: space-between;
+}
+.definition_title{
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+  font-size: 3.125vw;
+  margin-bottom: 2vh;
+}
+.definition_text{
+  font-family: "Gilroy", sans-serif;
+  font-weight: 500;
+  font-size: 1.042vw;
+}
+.main-content_definition{
+  width: 40.729vw;
+}
+.main-content_achievement{
+  width: 33.49vw;
+}
+.achievement-box_white{
+  width: 33.49vw;
+  background-color: white;
+  padding: 2.3vw 2.084vw;
+}
+.achievement-box_title{
+  font-family: "Gilroy", sans-serif;
+  font-weight: 600;
+  font-size: 1.667vw;
+}
+.achievement-box_text{
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+  color: rgba(41, 41, 45, 1);
+  margin-top: 4vh;
+  width: 26.979vw;
+  font-size: 0.938vw;
+}
+.achievement-box_information{
+  display: flex;
+  margin-top: 4vh;
+  justify-content: space-between;
+  width: 25.313vw;
+}
+.information_numder{
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+  color: rgba(19, 75, 175, 1);
+  font-size: 3.125vw;
+  text-align: center;
+}
+.information_text{
+  font-family: "Gilroy", sans-serif;
+  font-weight: 500;
+  font-size: 1.042vw;
+}
+.achievement_image{
+  width: 33.49vw;
+}
+
+@media (max-width: 420px) {
+  .container-fluid {
+    margin: 0;
+    margin-left: 4.267vw !important;
+    margin-right: 4.267vw !important;
+    width: 91.467vw !important;
+    overflow: hidden;
+  }
+  .main-way {
+    margin-top: 34px;
+    margin-bottom: 18px;
+  }
+  .main-catalog_title {
+    font-size: 9.067vw;
+    margin-bottom: 40px;
+  }
+}
