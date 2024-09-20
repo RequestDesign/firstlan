@@ -361,4 +361,48 @@ input[type="range"]::-moz-range-thumb{
     font-size: 9.067vw;
     margin-bottom: 40px;
   }
+  .main-content{
+    margin: 80px 0;
+    display: grid;
+  }
+  .main-content_definition{
+    width: 100%;
+    margin-bottom: 32px;
+  }
+  .definition_title{
+    font-size: 34px;
+  }
+  .definition_text{
+    font-size: 16px;
+  }
+  .main-content_achievement{
+    width: 100%;
+  }
+  .achievement-box_white{
+    width: 100%;
+    padding: 20px 14px;
+  }
+  .achievement-box_title{
+    font-size: 24px;
+  }
+  .achievement-box_text{
+    font-size: 14px;
+    width: 315px;
+    margin-top: 20px;
+  }
+  .achievement-box_information{
+    width: 100%;
+    margin-top: 40px;
+  }
+  .information_numder{
+    font-size: 34px;
+  }
+  .information_text{
+    font-size: 16px;
+  }
+  .achievement_image{
+    width: 100%;
+    height: 293px;
+    object-fit: cover;
+  }
 }
