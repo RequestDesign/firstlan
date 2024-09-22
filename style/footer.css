@@ -132,6 +132,16 @@
 .btn-blue:hover .btn-arrow {
   transform: translateX(5px);
 }
+.main-category_still {
+  font-size: 0.833vw;
+  font-family: "Gilroy", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: rgba(41, 41, 45, 1);
+  text-transform: uppercase;
+  transition: color 0.3s;
+  letter-spacing: 0.104vw;
+}
 @media (max-width: 420px) {
   .footer {
     margin-bottom: 6vh;
@@ -212,6 +222,9 @@
     }
     .btn-arrow {
       font-size: 7vw;
+    }
+    .main-category_still {
+      font-size: 2.7vw;
     }
   }
   .footer_model {
