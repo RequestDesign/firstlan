@@ -502,7 +502,13 @@ input[type="range"]::-moz-range-thumb {
   height: 5vmax;
   overflow: hidden;
   text-overflow: ellipsis;
-  line-clamp: 3;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 3 !important;
+  -webkit-box-orient: vertical;
+  line-clamp: 3 !important;
+  box-orient: vertical !important;
 }
 .position {
   position: absolute;
@@ -552,7 +558,7 @@ input[type="range"]::-moz-range-thumb {
   text-decoration: line-through;
 } */
 .sales {
- width: 100%;
+  width: 100%;
 }
 .sales-price {
   width: 105px;
@@ -634,7 +640,7 @@ input[type="range"]::-moz-range-thumb {
   height: 3.604vw;
   background-color: white;
 }
-.pagination-arr{
+.pagination-arr {
   width: 1.146vw;
 }
 .page-link:focus {
@@ -658,10 +664,10 @@ input[type="range"]::-moz-range-thumb {
   color: black !important;
   text-decoration: none;
 }
-.main-banner{
+.main-banner {
   display: flex;
 }
-.main-banner_blue{
+.main-banner_blue {
   display: flex;
   align-items: center;
   padding: 40px;
@@ -670,7 +676,7 @@ input[type="range"]::-moz-range-thumb {
   background-color: rgba(19, 75, 175, 1);
   position: relative;
 }
-.banner_titel{
+.banner_titel {
   width: 25.5vw;
   font-family: "Gilroy", sans-serif;
   font-size: 1.25vw;
@@ -678,14 +684,14 @@ input[type="range"]::-moz-range-thumb {
   color: white;
   margin-bottom: 2vh;
 }
-.banner_text{
+.banner_text {
   width: 19.115vw;
   font-family: "Gilroy", sans-serif;
   font-size: 0.938vw;
   font-weight: 400;
   color: white;
 }
-.banner_iamge{
+.banner_iamge {
   /* position: absolute; */
   position: relative;
   right: 0;
@@ -694,7 +700,7 @@ input[type="range"]::-moz-range-thumb {
   object-fit: all;
   padding: 0;
 }
-.main-banner_white{
+.main-banner_white {
   display: flex;
   align-items: center;
   justify-content: right;
@@ -763,11 +769,7 @@ input[type="range"]::-moz-range-thumb {
     height: 293px;
     object-fit: cover;
   }
-  .sales-item_text {
-    font-size: 3.467vw;
-    width: 72vw;
-    height: 75px;
-  }
+
   .sales-price {
     width: 74px;
     height: 40px;
@@ -780,5 +782,133 @@ input[type="range"]::-moz-range-thumb {
   .sales-price {
     width: 74px;
     height: 40px;
+  }
+  .main-catalog_content {
+    display: grid;
+    width: 343px;
+  }
+  .content-categories {
+    display: flex;
+    justify-content: space-between;
+    width: 343px;
+  }
+  .content-products {
+    width: 343px;
+  }
+  .main-products_items {
+    gap: 2.667vw;
+    width: 91.467vw;
+  }
+  .main-products_item {
+    width: 44.35vw;
+    height: 228px;
+    padding: 12px;
+  }
+  .main-banner_blue {
+    display: grid;
+    width: 91.467vw;
+    height: 100%;
+    padding: 20px 17px;
+    justify-items: center;
+  }
+  .banner_titel {
+    font-size: 19px;
+    width: 100%;
+    line-height: 22.8px;
+    margin-bottom: 24px;
+  }
+  .banner_text {
+    font-size: 14px;
+    width: 297px;
+  }
+  .banner_iamge {
+    width: 280px;
+    height: 111px;
+  }
+  .main-banner_white {
+    height: 90px;
+    width: 91.467vw;
+    justify-content: left;
+    padding: 20px 16px;
+  }
+  .main-category_still {
+    font-size: 14px;
+  }
+  .main-category_button {
+    gap: 16px;
+  }
+  .sales-item_text {
+    order: 2;
+    font-size: 13px;
+    width: 143px;
+    height: 55px;
+  }
+  .sales {
+    order: 1;
+    width: 143px;
+  }
+  .sales-price {
+    order: 3;
+    width: 82px;
+    height: 100%;
+    font-size: 16px;
+  }
+  .btn-blue-basket {
+    width: 50px;
+    height: 50px;
+  }
+  .basket-button {
+    width: 18px;
+    height: 18px;
+  }
+  .btn-blue {
+    width: 50px;
+    height: 50px;
+  }
+  .btn-arrow {
+    font-size: 18px;
+  }
+  .price {
+    width: 100%;
+  }
+  .heart {
+    top: 12px;
+    right: 14px;
+    width: 22px;
+    height: 20px;
+  }
+  .main-banner {
+    display: grid;
+    width: 100%;
+  }
+  .broducts-btn_border {
+    margin-top: 32px;
+    margin-bottom: 38px;
+  }
+  .broducts-btn_clear {
+    font-size: 14px;
+  }
+  .pagination{
+    width: 91.467vw;
+    height: 40px;
+  }
+  .pagination-page_item{
+    width: 40px;
+    height: 40px;
+  }
+  .page-items{
+    width: 215px;
+    height: 17px;
+  }
+  .page-item{
+    width: 10px;
+    font-size: 14px;
+  }
+  .pagination-arr{
+    width: 24px;
+    height: 24px;
+  }
+  .footer_model {
+    display: none;
   }
 }
