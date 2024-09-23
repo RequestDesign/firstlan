@@ -437,12 +437,12 @@ body {
   right: 1.458vw;
   width: 1.667vw;
   height: 1.54vw;
-  background-image: url("/image/header/heart-blue.svg");
+  background-image: url(/image/header/heart-blue.svg);
   background-size: cover;
   cursor: pointer;
 }
 .heart.active {
-  background-image: url("/image/header/heart-back.svg");
+  background-image: url(/image/header/heart-back.svg);
 }
 
 /* about */

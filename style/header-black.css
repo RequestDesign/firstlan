@@ -161,7 +161,7 @@
   }
   .logo_white {
     width: 31.903vw;
-    /* height: 48px; */
+    height: 100%;
   }
   .burger-checkbox {
     position: absolute;
@@ -235,8 +235,8 @@
   }
   .menu-list_link {
     display: grid;
-    gap: 32px;
-    margin-top: 40px;
+    gap: 4.969vh;
+    margin-top: 6.211vh;
   }
   .menu-list_end {
     display: grid;
@@ -244,7 +244,7 @@
     align-content: end;
   }
   .list-box {
-    height: 90px;
+    height: 50px;
   }
   .menu-list_box {
     display: grid;
