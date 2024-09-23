@@ -97,6 +97,7 @@ body {
   box-sizing: border-box;
   font-size: 1vw;
   position: relative;
+  border-radius: 0;
 }
 .form-input::placeholder {
   color: rgba(136, 140, 142, 1);
@@ -116,6 +117,7 @@ body {
   outline: none;
   overflow: hidden;
   transition: 600ms;
+  border-radius: 0;
 }
 .checkbox-input:hover {
   border-color: rgba(28, 28, 31, 0.5);
@@ -385,6 +387,7 @@ body {
     height: 50px;
     font-size: 3vw;
     padding: 2.099vh 0 2.099vh 4vw;
+    border-radius: 0;
   }
   .form-input::placeholder {
     font-size: 3vw;
@@ -430,6 +433,7 @@ body {
     font-size: 0;
   }
   .form-control::placeholder {
+    color: rgba(136, 140, 142, 1) !important;
     transition: transform 0.3s, font-size 0.3s;
   }
   .form-control:focus::placeholder,

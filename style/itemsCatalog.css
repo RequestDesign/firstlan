@@ -238,6 +238,7 @@ input[type="range"]::-moz-range-thumb {
   outline: none;
   overflow: hidden;
   transition: 600ms;
+  border-radius: 0;
 }
 .checkbox-input:hover {
   border-color: rgba(28, 28, 31, 0.5);

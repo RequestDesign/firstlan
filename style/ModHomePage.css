@@ -582,6 +582,7 @@
     height: 50px;
     font-size: 3vw;
     padding: 2.099vh 0 2.099vh 4vw;
+    border-radius: 0;
   }
   .form-input::placeholder {
     font-size: 3vw;
@@ -626,6 +627,7 @@
     font-size: 0;
   }
   .form-control::placeholder {
+    color: rgba(136, 140, 142, 1) !important;
     transition: transform 0.3s, font-size 0.3s;
   }
   .form-control:focus::placeholder,
@@ -675,6 +677,7 @@
   .checkbox-input {
     width: 26px;
     height: 26px;
+    border-radius: 0;
   }
   .checkbox-input:checked::after {
     width: 26px;

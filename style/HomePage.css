@@ -766,6 +766,7 @@ body {
   box-sizing: border-box;
   font-size: 1vw;
   position: relative;
+  border-radius: 0;
 }
 .form-input::placeholder {
   color: rgba(136, 140, 142, 1);
@@ -786,6 +787,7 @@ body {
   outline: none;
   overflow: hidden;
   transition: 600ms;
+  border-radius: 0;
 }
 .checkbox-input:hover {
   border-color: rgba(28, 28, 31, 0.5);
