@@ -65,6 +65,7 @@
     height: 50px;
   }
   .btn-arrow {
+    width: 5.2vw;
     font-size: 7vw;
   }
   .main-category_button {
@@ -547,6 +548,7 @@
     height: 50px;
   }
   .btn-gray-arrow {
+    width: 4vw;
     font-size: 6vw;
   }
 

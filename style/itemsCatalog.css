@@ -866,6 +866,7 @@ input[type="range"]::-moz-range-thumb {
     height: 50px;
   }
   .btn-arrow {
+    width: 1.2vw;
     font-size: 18px;
   }
   .price {

@@ -144,7 +144,8 @@ body {
   color: rgba(43, 47, 54, 1);
 }
 .arrow {
-  font-size: 1.5vw;
+  width: 1.2vw;
+  font-size: 1.3vw;
   cursor: pointer;
   color: rgba(43, 47, 54, 0.4);
 }
@@ -174,7 +175,7 @@ body {
   background: rgba(255, 255, 255, 0.696);
 }
 .arrow-black {
-  font-size: 1.4vw;
+  width: 1.2vw;
 }
 .slide-text {
   top: 17vh;
@@ -1167,7 +1168,7 @@ body {
   width: 3.5vmax;
   height: 3.5vmax;
   border: none;
-  display: flex;
+  display: flex !important;
   align-items: center;
   justify-content: center;
   position: relative;
@@ -1181,6 +1182,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
 }
 .btn-gray:hover {
   background: rgba(19, 75, 175, 1);
@@ -1195,7 +1197,9 @@ body {
   background: #0056b3;
 }
 .btn-arrow {
-  font-size: 1.2vmax;
+  width: 1.2vw;
+  /* height: 4vh; */
+  font-size: 0.4vmax;
   color: white;
   transition: transform 0.3s;
   text-decoration: none;
@@ -1210,7 +1214,8 @@ body {
   transform: translateX(5px);
 }
 .btn-gray-arrow {
-  font-size: 1.3vmax;
+  width: 1.2vw;
+  font-size: 1.5vmax;
   color: black;
   text-decoration: none;
 }
