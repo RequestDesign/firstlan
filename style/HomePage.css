@@ -399,7 +399,13 @@ body {
   height: 5vmax;
   overflow: hidden;
   text-overflow: ellipsis;
-  line-clamp: 3;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 3 !important;
+  -webkit-box-orient: vertical;
+  line-clamp: 3 !important;
+  box-orient: vertical !important;
 }
 .sales-price {
   margin-top: 2vmax;
@@ -431,19 +437,19 @@ body {
   font-weight: 600;
   color: rgba(41, 41, 45, 1);
 }
-.heart {
+.heart-block{
   position: absolute;
   top: 1.45vw;
-  right: 1.458vw;
-  width: 1.2vw;
+  right: 2.6vw;
+}
+.heart {
+  position: absolute;
+  width: 1.5vw;
   height: 1.3vw;
-  background-image: url(/image/HomePage/sales/heard-normal.png);
   background-size: cover;
   cursor: pointer;
 }
-.heart.active {
-  background-image: url(/image/HomePage/sales/heart-active.png);
-}
+
 
 /* about */
 .main-about {
@@ -931,6 +937,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: end;
+  height: 100%;
 }
 .projects-content_title {
   font-family: "Gilroy", sans-serif;
@@ -1163,7 +1170,9 @@ body {
   width: 2.5vmax;
   height: 2.5vmax;
 }
-
+.social-link{
+  text-decoration: none;
+}
 /* Button */
 .btn-blue {
   background: rgba(19, 75, 175, 1);
@@ -1222,9 +1231,8 @@ body {
   text-decoration: none;
 }
 .basket-button {
-  width: 1vmax;
-  height: 1vmax;
-  background-image: url("/image/HomePage/sales/basket-white.svg");
+  width: 1.2vmax;
+  height: 1.2vmax;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -1243,9 +1251,7 @@ body {
   background-color: white;
   border: 2px solid rgba(19, 75, 175, 1);
 }
-.btn-blue-basket.active .basket-button {
-  background-image: url("/image/HomePage/sales/basket-blue.svg");
-}
+
 .btn-blue:disabled {
   background: rgba(233, 233, 233, 1);
   cursor: not-allowed;

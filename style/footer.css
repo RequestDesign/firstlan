@@ -104,7 +104,9 @@
   width: 2.5vmax;
   height: 2.5vmax;
 }
-
+.social-link{
+  text-decoration: none;
+}
 /* Button */
 .btn-blue {
   background: rgba(19, 75, 175, 1);
@@ -124,6 +126,7 @@
   background: #0056b3;
 }
 .btn-arrow {
+  width: 1.2vw;
   font-size: 1.2vmax;
   color: white;
   transition: transform 0.3s;

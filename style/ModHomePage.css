@@ -745,6 +745,8 @@
     }
     .projects-content_box {
       margin-top: 14px;
+      width: 315px;
+      height: 176px;
     }
     .projects-content_number {
       width: 141px;

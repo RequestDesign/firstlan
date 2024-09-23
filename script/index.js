@@ -43,16 +43,76 @@ document.addEventListener("DOMContentLoaded", () => {
     event.stopPropagation();
   });
 });
-document.querySelectorAll(".heart").forEach(function (element) {
-  element.addEventListener("click", function () {
-    this.classList.toggle("active");
+const heartItem = document.querySelectorAll(".heart-block");
+heartItem.forEach((element) => {
+  element.addEventListener("click", () => {
+    const advantagesActive = document.querySelector(
+      ".heart-block.active"
+    );
+    const img = element.querySelector("img");
+    if (img) {
+      if (element.classList.contains("active")) {
+        img.src = img.dataset.defaultSrc;
+        element.classList.remove("active");
+      } else {
+        img.src = img.dataset.activeSrc;
+        element.classList.add("active");
+      }
+    }
   });
 });
-document.querySelectorAll(".btn-blue-basket").forEach(function (button) {
-  button.addEventListener("click", function () {
-    this.classList.toggle("active");
+
+const btnBasket = document.querySelectorAll(".btn-blue-basket");
+btnBasket.forEach((bottom) => {
+  bottom.addEventListener("click", () => {
+    const advantagesActive = document.querySelector(
+      ".btn-blue-basket.active"
+    );
+    const img = bottom.querySelector("img");
+    if (img) {
+      if (bottom.classList.contains("active")) {
+        img.src = img.dataset.defaultSrc;
+        bottom.classList.remove("active");
+      } else {
+        img.src = img.dataset.activeSrc;
+        bottom.classList.add("active");
+      }
+    }
   });
 });
+
+
+const advantagesItems = document.querySelectorAll(".main-advantages_item");
+advantagesItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    const advantagesActive = document.querySelector(
+      ".main-advantages_item.active"
+    );
+    const img = item.querySelector("img");
+    if (img) {
+      if (item.classList.contains("active")) {
+        // Если блок уже активен, можно сбросить изображение
+        img.src = img.dataset.defaultSrc;
+        item.classList.remove("active");
+      } else {
+        // Если блок неактивен, сбрасываем предыдущий активный блок
+        if (advantagesActive) {
+          const activeImg = advantagesActive.querySelector("img");
+          if (activeImg) {
+            activeImg.src = activeImg.dataset.defaultSrc;
+          }
+          advantagesActive.classList.remove("active");
+        }
+        // Устанавливаем новое изображение
+        img.src = img.dataset.activeSrc;
+        item.classList.add("active");
+      }
+    }
+  });
+});
+
+
+
 
 // слайдер
 document.addEventListener("DOMContentLoaded", () => {
@@ -237,34 +297,7 @@ clientItems.forEach((item) => {
   });
 });
 
-const advantagesItems = document.querySelectorAll(".main-advantages_item");
-advantagesItems.forEach((item) => {
-  item.addEventListener("click", () => {
-    const advantagesActive = document.querySelector(
-      ".main-advantages_item.active"
-    );
-    const img = item.querySelector("img");
-    if (img) {
-      if (item.classList.contains("active")) {
-        // Если блок уже активен, можно сбросить изображение
-        img.src = img.dataset.defaultSrc;
-        item.classList.remove("active");
-      } else {
-        // Если блок неактивен, сбрасываем предыдущий активный блок
-        if (advantagesActive) {
-          const activeImg = advantagesActive.querySelector("img");
-          if (activeImg) {
-            activeImg.src = activeImg.dataset.defaultSrc;
-          }
-          advantagesActive.classList.remove("active");
-        }
-        // Устанавливаем новое изображение
-        img.src = img.dataset.activeSrc;
-        item.classList.add("active");
-      }
-    }
-  });
-});
+
 
 document.addEventListener("DOMContentLoaded", function () {
   let currentSlide = 0;
