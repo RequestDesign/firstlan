@@ -551,7 +551,7 @@
     height: 50px;
   }
   .btn-gray-arrow {
-    width: 4vw;
+    width: 3vw;
     font-size: 6vw;
   }
 
@@ -735,11 +735,12 @@
       font-size: 22px;
       line-height: 30px;
       margin-bottom: 0;
-      height: 60px;
+      height: 9.317vh;
     }
     .projects-content_text {
       font-size: 16px;
-      width: 315px;
+     
+      width: 100%;
       height: 176px;
       line-height: 22px;
     }

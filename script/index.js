@@ -43,6 +43,25 @@ document.addEventListener("DOMContentLoaded", () => {
     event.stopPropagation();
   });
 });
+const btngray = document.querySelectorAll(".btn-gray");
+
+btngray.forEach((element) => {
+  element.addEventListener("mouseenter", () => {
+    const img = element.querySelector("img");
+    if (img && !element.classList.contains("active")) {
+      img.src = img.dataset.activeSrc; 
+      element.classList.add("active"); 
+    }
+  });
+
+  element.addEventListener("mouseleave", () => {
+    const img = element.querySelector("img");
+    if (img && element.classList.contains("active")) {
+      img.src = img.dataset.defaultSrc; 
+      element.classList.remove("active"); 
+    }
+  });
+});
 const heartItem = document.querySelectorAll(".heart-block");
 heartItem.forEach((element) => {
   element.addEventListener("click", () => {
