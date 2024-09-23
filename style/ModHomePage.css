@@ -166,12 +166,13 @@
     font-size: 6.4vw;
     text-align: left;
     text-decoration: none;
-    height: 30px;
+    height: 4.658vh;
     font-family: "Gilroy", sans-serif;
     font-weight: 600;
   }
   .menu-list_content {
     margin-top: 38px;
+    height: 66.77vh;
   }
   .link_image {
     width: 32px;
@@ -179,12 +180,14 @@
   }
   .menu-list_link {
     display: grid;
-    gap: 4.969vh;
-    margin-top: 6.211vh;
+    gap: 4vh;
+    margin-top: 6vh;
+    height: 52.795vh;
   }
   .menu-list_end {
+    height: 11.18vh;
     display: grid;
-    gap: 6.211vh;
+    gap: 3.211vh;
     align-content: end;
   }
   .list-box {
@@ -205,7 +208,7 @@
   }
   .end-tel {
     color: rgba(41, 41, 45, 1);
-    font-size: 24px;
+    font-size: 6.4vw;
     font-family: "Gilroy", sans-serif;
     font-weight: 600;
     text-decoration: none;
@@ -398,8 +401,8 @@
   }
   .heart {
     position: absolute;
-    width: 27px;
-    height: 24px;
+    width: 24px;
+    height: 22px;
     top: 14px;
     right: 14px;
   }

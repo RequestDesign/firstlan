@@ -435,8 +435,8 @@ body {
   position: absolute;
   top: 1.45vw;
   right: 1.458vw;
-  width: 1vw;
-  height: 1.2vw;
+  width: 1.2vw;
+  height: 1.3vw;
   background-image: url(/image/HomePage/sales/heard-normal.png);
   background-size: cover;
   cursor: pointer;
