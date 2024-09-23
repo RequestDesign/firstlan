@@ -163,7 +163,7 @@
     display: block;
     /* padding: 8px; */
     color: black;
-    font-size: 24px;
+    font-size: 6.4vw;
     text-align: left;
     text-decoration: none;
     height: 30px;
@@ -184,7 +184,7 @@
   }
   .menu-list_end {
     display: grid;
-    gap: 40px;
+    gap: 6.211vh;
     align-content: end;
   }
   .list-box {
