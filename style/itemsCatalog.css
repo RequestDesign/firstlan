@@ -257,7 +257,7 @@ input[type="range"]::-moz-range-thumb {
   left: 0;
   width: 0px;
   height: 0px;
-  font-size: 0.833vw;
+  font-size: 0.633vw;
   transition: 500ms;
   overflow: hidden;
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0,0,256,256' width='24px' height='24px' fill-rule='nonzero'%3e%3cg fill='%23134baf' fill-rule='nonzero' stroke='none' stroke-width='1' stroke-linecap='butt' stroke-linejoin='miter' stroke-miterlimit='10' stroke-dasharray='' stroke-dashoffset='0' font-family='none' font-weight='none' font-size='none' text-anchor='none' style='mix-blend-mode: normal'%3e%3cg transform='scale(10.66667,10.66667)'%3e%3cpath d='M20.29297,5.29297l-11.29297,11.29297l-4.29297,-4.29297l-1.41406,1.41406l5.70703,5.70703l12.70703,-12.70703z'%3e%3c/path%3e%3c/g%3e%3c/g%3e%3c/svg%3e");
@@ -702,6 +702,16 @@ input[type="range"]::-moz-range-thumb {
   height: 9.4vmax;
   background-color: rgba(255, 255, 255, 1);
 }
+.sorting-content_item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.radio_sorting[type="radio"] {
+  accent-color: rgba(19, 75, 175, 1);
+  width: 26px;
+  height: 26px;
+}
 @media (max-width: 420px) {
   .container-fluid {
     margin: 0;
@@ -857,14 +867,14 @@ input[type="range"]::-moz-range-thumb {
     letter-spacing: 2px;
     text-transform: uppercase;
   }
-  .btn-apply_box:hover{
+  .btn-apply_box:hover {
     .btn_apply {
       border-bottom: 2px solid rgba(19, 75, 175, 1);
       transition: border 0.5s ease-in-out;
       color: rgba(19, 75, 175, 1);
     }
   }
-  
+
   .main-categories_brands {
     margin-top: 32px;
   }
@@ -890,13 +900,13 @@ input[type="range"]::-moz-range-thumb {
   .field {
     height: 44px !important;
   }
-  .field input{
+  .field input {
     font-size: 14px;
   }
   .input-min {
     height: 100%;
   }
-  .price-input{
+  .price-input {
     align-items: center;
   }
   .separator {
@@ -1064,7 +1074,7 @@ input[type="range"]::-moz-range-thumb {
     margin-top: 32px;
     margin-bottom: 38px;
   }
-  
+
   .broducts-btn_clear {
     font-size: 14px;
   }
