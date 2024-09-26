@@ -49,6 +49,9 @@ body {
   gap: 1.25vw;
   margin-left: 3vmax;
 }
+.header-element{
+  cursor: pointer;
+}
 .element {
   width: 1.667vw;
 }
@@ -63,6 +66,9 @@ body {
   font-family: "Gilroy", sans-serif;
   font-weight: 500;
   font-size: 1.042vmax;
+}
+.header-link:hover{
+  color: rgba(255, 255, 255, 0.666);
 }
 .header-number {
   font-family: "Gilroy", sans-serif;
@@ -159,6 +165,7 @@ body {
   width: 3.5vmax;
   height: 3.5vmax;
   background: rgba(255, 255, 255, 1);
+  cursor: pointer;
 }
 .prevBtn {
   display: none;
@@ -221,6 +228,9 @@ body {
   color: rgba(255, 255, 255, 0.5);
   text-transform: uppercase;
   text-decoration: none;
+}
+.slide-social:hover{
+  color: rgba(255, 255, 255, 0.281);
 }
 .slide_title-small {
   position: absolute;
@@ -1225,7 +1235,7 @@ body {
   transform: translateX(5px);
 }
 .btn-gray-arrow {
-  width: 1.2vw;
+  width: 0.8vw;
   font-size: 1.5vmax;
   color: black;
   text-decoration: none;

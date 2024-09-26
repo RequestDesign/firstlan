@@ -448,11 +448,15 @@ input[type="range"]::-moz-range-thumb {
   width: 14.5vmax;
 }
 .dropdown-item {
+  --bs-dropdown-link-hover-bg:none;
   /* width: 10.4vw !important; */
   font-family: "Gilroy", sans-serif;
   font-weight: 400;
   font-size: 0.938vw;
   padding: 0 !important;
+}
+.dropdown-item:hover{
+  background-color: none;
 }
 .item-active {
   color: rgba(19, 75, 175, 1) !important;
@@ -477,6 +481,7 @@ input[type="range"]::-moz-range-thumb {
 .cross {
   width: 0.833vw;
   height: 1.6vh;
+  cursor: pointer;
 }
 .main-products_items {
   width: 100%;
@@ -628,10 +633,12 @@ input[type="range"]::-moz-range-thumb {
 .pagination-page_item {
   display: grid;
   justify-content: center;
-  align-content: center;
   width: 2.604vw;
   height: 2.604vw;
   background-color: white;
+}
+.pagination-page_item:hover{
+  background-color: rgba(215, 215, 215, 0.286);
 }
 .pagination-arr {
   width: 1.146vw;
@@ -810,6 +817,9 @@ input[type="range"]::-moz-range-thumb {
     font-weight: 500;
     font-family: "Gilroy", sans-serif;
     color: rgba(41, 41, 45, 1);
+  }
+  .main-categories_content{
+    padding: 0 16px 43px 16px;
   }
   .main-categories_content ul {
     list-style: none;

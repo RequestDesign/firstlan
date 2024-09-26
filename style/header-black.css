@@ -37,6 +37,9 @@
   gap: 1.25vw;
   margin-left: 3vmax;
 }
+.header-element{
+  cursor: pointer;
+}
 .element {
   width: 1.667vw;
 }
@@ -51,6 +54,9 @@
   font-family: "Gilroy", sans-serif;
   font-weight: 500;
   font-size: 1.042vmax;
+}
+.header-link:hover{
+  color: rgba(0, 0, 0, 0.732);
 }
 .header-number {
   font-family: "Gilroy", sans-serif;
