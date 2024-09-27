@@ -1,0 +1,23 @@
+.main-favourites{
+    margin-bottom: 18vh;
+}
+.content-products {
+  width: 100%;
+}
+.main-products_items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.083vw;
+}
+.main-products_item {
+  width: 15vw;
+}
+.sales-item_text {
+  width: 12.708vw;
+  height: 4vmax;
+}
+@media (max-width: 420px) {
+    .main-favourites{
+        margin-bottom: 80px;
+    }
+}

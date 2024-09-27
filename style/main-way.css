@@ -1,0 +1,32 @@
+.main-way {
+  margin-top: 2.5vmax;
+}
+.main-way_links {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 8px;
+}
+.main-way_square {
+  width: 5px;
+  height: 5px;
+  background-color: black;
+}
+.main-link {
+  text-decoration: none;
+  color: rgba(41, 41, 45, 1);
+  font-size: 14px;
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+}
+.link-active {
+  color: rgba(19, 75, 175, 1);
+}
+.main-catalog_title {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+  font-size: 3.125vw;
+  margin-bottom: 3vmax;
+  margin-top: 0.5vmax;
+  color: rgba(41, 41, 45, 1);
+}
