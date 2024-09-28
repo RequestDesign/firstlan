@@ -66,7 +66,9 @@
   margin-left: 6vmax;
   text-decoration: none;
 }
-
+.main-category_still{
+  text-decoration: none;
+}
 /* Скрываем окно поиска и результаты по умолчанию */
 .search-box,
 .search-results {

@@ -1,5 +1,5 @@
-.main-favourites{
-    margin-bottom: 18vh;
+.main-favourites {
+  margin-bottom: 18vh;
 }
 .content-products {
   width: 100%;
@@ -17,7 +17,7 @@
   height: 4vmax;
 }
 @media (max-width: 420px) {
-    .main-favourites{
-        margin-bottom: 80px;
-    }
+  .main-favourites {
+    margin-bottom: 80px;
+  }
 }

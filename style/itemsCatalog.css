@@ -342,6 +342,7 @@ input[type="range"]::-moz-range-thumb {
   font-weight: 400;
   font-size: 3.125vw;
   margin-bottom: 2vh;
+  line-height: 60px;
 }
 .definition_text {
   font-family: "Gilroy", sans-serif;
@@ -934,6 +935,7 @@ input[type="range"]::-moz-range-thumb {
   }
   .definition_title {
     font-size: 34px;
+    line-height: 34px;
   }
   .definition_text {
     font-size: 16px;

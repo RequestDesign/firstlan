@@ -1,0 +1,71 @@
+body {
+  background: rgba(230, 230, 230, 0.356) !important;
+}
+.main-brands_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+}
+.box-title {
+  font-family: "Gilroy", sans-serif;
+  font-size: 3.125vw;
+  font-weight: 400;
+}
+.main-brands_content {
+  margin-top: 6vh;
+  margin-bottom: 18vh;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.083vw;
+}
+.main-brands_item {
+  width: 19.271vw;
+  height: 20.5vh;
+  background-color: white;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+.definition_title{
+    margin-bottom: 3.5vh !important;
+}
+@media (max-width: 420px) {
+  .main-brands_box {
+    display: grid;
+    gap: 20px;
+  }
+  .box-title {
+    font-size: 34px;
+    color: rgba(41, 41, 45, 1);
+    line-height: 34px;
+  }
+  .main-brands_item {
+    width: 167px;
+    height: 100px;
+    justify-items: center
+  }
+  .main-category_still {
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+  .main-category_button {
+    gap: 16px;
+  }
+  .btn-blue {
+    width: 50px;
+    height: 50px;
+  }
+  .btn-arrow {
+    width: 5.2vw;
+    font-size: 7vw;
+  }
+  .image {
+    width: 40%;
+    height: 100px;
+  }
+  .image-item{
+    width: 40%;
+  }
+ 
+}
