@@ -1,0 +1,316 @@
+.fon-image {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.main-about {
+  height: 70vh;
+  display: grid;
+  align-items: end;
+  margin-top: 100px;
+}
+.main-about_content {
+  display: flex;
+  gap: 6.198vw;
+}
+.main-about_partner {
+  margin: 30vh 0 0 0;
+}
+.about-block_title {
+  width: 50.833vw;
+  font-family: "Gilroy", sans-serif;
+  font-size: 3.125vw;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  line-height: 60px;
+  margin-bottom: 1vh;
+}
+.about-block_min {
+  font-family: "Gilroy", sans-serif;
+  font-size: 0.833vw;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+  text-transform: uppercase;
+}
+.about-block_text {
+  width: 21.719vw;
+  font-family: "Gilroy", sans-serif;
+  font-size: 1.042vw;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+}
+.achievement-box_white {
+  width: 33.49vw;
+}
+.achievement-box_title {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+  font-size: 3.125vw;
+  line-height: 60px;
+}
+.achievement-box_information {
+  display: flex;
+  margin-top: 6vh;
+  gap: 4.167vw;
+  width: 25.313vw;
+}
+.information_numder {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+  color: rgba(19, 75, 175, 1);
+  font-size: 3.125vw;
+  text-align: center;
+}
+.information_text {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 500;
+  font-size: 1.042vw;
+}
+.about-partner_content {
+  display: flex;
+  justify-content: space-between;
+}
+.content-advantages_title {
+  display: grid;
+  gap: 2vh;
+}
+.partner-content_advantages {
+  display: grid;
+  gap: 6vh;
+}
+.content-advantages_text {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 500;
+  color: rgba(136, 140, 142, 1);
+  width: 26.979vw;
+  font-size: 1.042vw;
+}
+.title_still {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 600;
+  font-size: 1.667vw;
+}
+.main-about_box {
+  margin: 18vh 0;
+  width: 100%;
+  overflow: hidden;
+}
+.about-box_content {
+  width: 100%;
+  overflow: hidden;
+}
+.main-about_box .swiper-wrapper {
+  flex-wrap: wrap;
+}
+.main-category_button {
+  gap: 1.042vw;
+}
+.main-about_box .about-block_title {
+  color: rgba(41, 41, 45, 1);
+}
+.box-content {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 6vh;
+  gap: 2.083vw;
+}
+.box-item {
+  width: 19.271vw;
+  height: 198px;
+  display: grid;
+}
+.box-blue {
+  width: 100%;
+  height: 10px;
+  background: rgba(19, 75, 175, 1);
+}
+.box-white {
+  width: 100%;
+  height: 188px;
+  background: rgba(255, 255, 255, 1);
+  padding: 32px 32px 42px 32px;
+}
+.svg-image {
+  text-align: right;
+}
+.box-white_number {
+  display: flex;
+  gap: 2.6vh;
+  margin-top: 2vh;
+}
+.content-number,
+.content-title {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 600;
+  font-size: 1.667vw;
+}
+.main-brands_item {
+  width: 14.948vw !important;
+  height: 18.6vh !important;
+  display: grid !important;
+  justify-content: center !important;
+}
+.main-brands_content {
+  height: 18.6vh !important;
+  overflow: hidden;
+}
+
+.image {
+  width: 90%;
+  height: 100px;
+}
+.image-item {
+  width: 90%;
+}
+.box-image {
+  display: flex;
+  align-items: center;
+  gap: 4.5vh;
+}
+.image-content_title {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+  font-size: 3.125vw;
+}
+.image-content_text {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 500;
+  font-size: 1.042vw;
+  width: 32.292vw;
+}
+.image-about {
+  width: 40.625vw;
+}
+@media (max-width: 420px) {
+  .main-about_box {
+    margin: 80px 0;
+  }
+  .box-image {
+    display: grid;
+    gap: 32px;
+  }
+  .image-about {
+    order: 2;
+  }
+  .box-image_content {
+    order: 1;
+  }
+  .image-content_title {
+    font-size: 34px;
+  }
+  .image-content_text {
+    font-size: 16px;
+    width: 91vw;
+  }
+  .image-about {
+    width: 100%;
+    height: 200px;
+  }
+  .box-container {
+    margin: 32px 16px 0 16px;
+    width: 91vw;
+  }
+  .main-brands_item {
+    width: 167px !important;
+    height: 100px !important;
+  }
+  .box-container .swiper-wrapper {
+    gap: 12px;
+  }
+  .main-category_button {
+    width: 100% !important;
+  }
+  .about-block_title {
+    font-size: 34px;
+    line-height: 34px;
+    width: 91vw;
+  }
+  .main-about_box .swiper-wrapper {
+    flex-wrap: nowrap;
+  }
+  .box-item {
+    width: 91vw;
+    height: 150px;
+  }
+  .mr-top {
+    margin-top: 40px;
+  }
+  .box-white {
+    padding: 14px;
+  }
+  .content-title {
+    font-size: 24px;
+  }
+  .content-number {
+    font-size: 24px;
+  }
+  .about-partner_content {
+    display: grid;
+  }
+  .main-about_block {
+    display: grid;
+  }
+  .main-about_content{
+    display: grid;
+  }
+  .about-block_title {
+    display: grid;
+    order: 2;
+    width: 91vw;
+    font-size: 34px;
+  }
+  .about-block_min {
+    display: grid;
+    order: 1;
+    font-size: 13px;
+  }
+  .about-block_text{
+    width: 91vw;
+    font-size: 16px;
+  }
+  .main-about{
+    height: 72vh;
+  }
+  .main-about_partner{
+    margin: 80px 0 0 0;
+  }
+  .achievement-box_white{
+    width: 91vw;
+  }
+  .about-partner_content{
+    gap: 40px;
+  }
+  .achievement-box_information{
+    margin-top: 40px;
+    width: 253px;
+  }
+  .achievement-box_title{
+    font-size: 34px;
+    width: 91vw;
+    line-height: 34px;
+  }
+  .information{
+    width: 100%;
+  }
+ 
+  .information_numder{
+    text-align: left;
+    font-size: 34px;
+  }
+  .information_text{
+    font-size: 16px;
+    width: 100%;
+  }
+  .title_still{
+    font-size: 24px;
+    line-height: 26px;
+  }
+  .content-advantages_text{
+    font-size: 16px;
+    width: 91vw;
+  }
+}

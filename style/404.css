@@ -30,6 +30,7 @@ body {
   font-size: 10.417vw;
   font-weight: 400;
   height: 24vh;
+  margin-bottom: 3vh;
 }
 .content_box_current-text {
   font-family: "Gilroy", sans-serif;
@@ -56,11 +57,12 @@ body {
   }
   .main-favorites_content {
     width: 343px;
-    height: 300px;
+    height: 350px;
   }
   .content-box_title {
     font-size: 120px;
     height: 140px;
+    margin-bottom: 3vh;
   }
   .content_box_current-text {
     font-size: 19px;
@@ -69,6 +71,7 @@ body {
   .content_box_text {
     width: 217px;
     font-size: 14px;
+    margin-bottom: 2vh;
   }
   .main-category_still {
     font-size: 14px;

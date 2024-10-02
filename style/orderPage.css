@@ -1,0 +1,424 @@
+body {
+  background: rgba(230, 230, 230, 0.356) !important;
+}
+.main-order_personal {
+  margin-top: 18vh;
+  margin-bottom: 18vh;
+}
+.main-order_block {
+  display: flex;
+  gap: 2.083vw;
+  margin-bottom: 18vh;
+}
+.main-order_products {
+  width: 61.979vw;
+  display: grid;
+  gap: 4vh;
+}
+.main-order_product {
+  padding: 32px;
+  width: 100%;
+  height: 26.4vh;
+  background-color: white;
+  display: flex;
+  gap: 2.083vw;
+}
+.product-content {
+  height: 17.1vh;
+  display: grid;
+  justify-content: space-between;
+}
+.basket-foto {
+  width: 11.875vw;
+  height: 20vh;
+}
+.product-content_title {
+  display: flex;
+  gap: 5.104vw;
+}
+.sales-item_text {
+  font-family: "Gilroy", sans-serif;
+  font-size: 1.25vw;
+  font-weight: 600;
+  font-style: normal;
+  width: 22.552vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 3 !important;
+  -webkit-box-orient: vertical;
+  line-clamp: 3 !important;
+  box-orient: vertical !important;
+}
+.image-flex {
+  display: flex;
+  gap: 1.667vw;
+}
+.price {
+  font-family: "Gilroy", sans-serif;
+  font-size: 1.5vw;
+  font-weight: 600;
+  color: rgba(41, 41, 45, 1);
+}
+.trash {
+  width: 1.7vw;
+  height: 1.5vw;
+  background-size: cover;
+  cursor: pointer;
+}
+.heart {
+  margin-top: 3px;
+  width: 1.3vw;
+  height: 1.2vw;
+  background-size: cover;
+  cursor: pointer;
+}
+.product-content_quantity {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 9.844vw;
+  height: 7.1vh;
+  border: 2px solid rgba(28, 28, 31, 0.2);
+}
+.minus,
+.plus {
+  border: none;
+  width: 50%;
+  height: 100%;
+  background: none;
+  font-size: 24px;
+}
+.quantity {
+  font-family: "Gilroy", sans-serif;
+  font-size: 1.25vw;
+  font-weight: 600;
+}
+.main-order_price {
+  width: 19.271vw;
+  height: 100%;
+  background-color: white;
+  padding: 32px;
+}
+.order-price_poducts {
+  display: grid;
+  gap: 16px;
+}
+.price-products_title {
+  font-family: "Gilroy", sans-serif;
+  font-size: 0.938vw;
+  font-weight: 400;
+}
+.price-products_price {
+  font-family: "Gilroy", sans-serif;
+  font-size: 1.042vw;
+  font-weight: 500;
+}
+.personal_title {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 600;
+  font-size: 1.667vw;
+}
+.order-price_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.price_title {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 600;
+  font-size: 1.667vw;
+}
+.price_item {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+  font-size: 0.729vw;
+}
+.price-result_price {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 600;
+  font-size: 1.667vw;
+}
+.price-products {
+  display: flex;
+  justify-content: space-between;
+}
+.price_result {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.broder {
+  margin: 24px 0;
+  border: 2px solid rgba(28, 28, 31, 0.2);
+}
+.form {
+  margin-top: 4vh;
+  width: 61.927vw;
+  display: grid;
+  gap: 4vh;
+}
+.box_button {
+  justify-content: space-between;
+}
+.form-content_box {
+  display: flex;
+  gap: 2.083vw;
+  position: relative;
+}
+.form-content {
+  display: grid;
+  gap: 2.083vw;
+}
+
+/* input */
+.form-input {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 500;
+  color: rgba(136, 140, 142, 1);
+  border: 2px solid rgba(28, 28, 31, 0.2);
+  width: 100%;
+  height: 3.5vmax;
+  padding: 2.2vh 1.667vw 2.2vh 1.667vw;
+  transition: border-color 0.3s, color 0.3s;
+  box-sizing: border-box;
+  font-size: 1vw;
+  position: relative;
+  border-radius: 0;
+  background: none;
+}
+.form-input::placeholder {
+  color: rgba(136, 140, 142, 1);
+  font-weight: 500;
+  font-size: 1vw;
+  transition: transform 0.3s, font-size 0.3s;
+}
+/* input-placeholder */
+.form-input:focus::placeholder,
+.form-input:not(:placeholder-shown)::placeholder {
+  transform: translateY(-2.3vh);
+  font-size: 0.729vw;
+  color: rgba(28, 28, 31, 0.5) !important;
+}
+.form-input:focus {
+  border-color: rgba(28, 28, 31, 0.5);
+  color: black !important;
+  outline: none;
+}
+.form-control {
+  height: 3.5vmax !important;
+  border-radius: 0 !important;
+  border: 2px solid rgba(28, 28, 31, 0.2) !important;
+  padding: 2.099vh 0 2.099vh 2vw !important;
+  font-size: 1vw !important;
+  font-family: "Gilroy", sans-serif !important;
+  font-weight: 500 !important;
+  color: rgba(136, 140, 142, 1) !important;
+  background: none !important;
+}
+.form-control:focus {
+  border-color: rgba(28, 28, 31, 0.5) !important;
+  color: black !important;
+  outline: none;
+  box-shadow: none !important;
+  font-size: 0;
+}
+.form-control::placeholder {
+  color: rgba(136, 140, 142, 1) !important;
+  transition: transform 0.3s, font-size 0.3s;
+}
+.form-control:focus::placeholder,
+.form-control:not(:placeholder-shown)::placeholder {
+  font-size: 0;
+}
+
+@media (max-width: 420px) {
+  .form-content_box {
+    display: grid;
+    gap: 24px;
+  }
+  .main-order_block {
+    display: grid;
+  }
+  .main-catalog_title {
+    font-size: 34px !important;
+    margin-bottom: 40px !important;
+    margin-top: 0;
+  }
+  .personal_title {
+    font-size: 24px;
+  }
+  .form-content {
+    gap: 24px;
+  }
+  .form {
+    width: 99%;
+    gap: 24px;
+    margin-top: 32px;
+  }
+  .form-input {
+    width: 100% !important;
+    height: 50px !important;
+    font-size: 3vw !important;
+    padding: 2.099vh 0 2.099vh 4vw !important;
+    border-radius: 0 !important;
+  }
+  .form-input::placeholder {
+    font-size: 3vw !important;
+  }
+  .form-input:focus::placeholder,
+  .form-input:not(:placeholder-shown)::placeholder {
+    font-size: 0 !important;
+  }
+  .form-comment {
+    height: 124px !important;
+  }
+  .form-control {
+    height: 124px !important;
+  }
+  .form-control::placeholder {
+    font-size: 3vw; 
+  }
+  /* input-placeholder */
+  .form-control:focus::placeholder,
+  .form-control:not(:placeholder-shown)::placeholder {
+    font-size: 0;
+  }
+
+  .main-order_products {
+    width: 100%;
+  }
+  .main-order_product {
+    width: 100%;
+    height: 210px;
+    padding: 14px;
+    position: relative;
+  }
+  .product-content_title {
+    display: grid;
+    gap: 20px;
+  }
+  .sales-item_text {
+    width: 215px;
+    font-size: 16px;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical;
+  }
+  .basket-foto {
+    width: 94px;
+    height: 60px;
+    object-fit: cover;
+  }
+  .product-image {
+    width: 94px;
+    height: 60px;
+  }
+  .heart-block {
+    position: absolute;
+    bottom: 14px;
+    left: 14px;
+  }
+  .heart {
+    width: 22px;
+    height: 20px;
+  }
+  .trash-image {
+    position: absolute;
+    bottom: 14px;
+    right: 14px;
+  }
+  .trash {
+    width: 25px;
+    height: 24px;
+  }
+  .product-content_quantity {
+    width: 160px;
+    height: 50px;
+    gap: 46px;
+    margin-top: 0;
+  }
+  .minus,
+  .plus {
+    font-size: 19px;
+    font-weight: 700;
+  }
+  .quantity {
+    font-size: 19px;
+  }
+  .price {
+    position: absolute;
+    left: 14px;
+    bottom: 85px;
+    font-size: 19px;
+    font-weight: 700;
+  }
+  .product-content {
+    justify-items: end;
+  }
+  .main-order_content {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-order_price {
+    width: 100%;
+    height: 305px;
+    padding: 14px;
+    order: 3;
+  }
+  .main-order_personal {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    order: 2;
+  }
+  .main-order_products {
+    order: 1;
+  }
+  .price_title {
+    font-size: 19px;
+  }
+  .price_item {
+    font-size: 14px;
+  }
+  .price-products_title {
+    font-size: 14px;
+  }
+  .price-products_price {
+    font-size: 16px;
+  }
+  .price-result_price {
+    font-size: 19px;
+  }
+  .box_button {
+    justify-content: left;
+  }
+  .main-category_still {
+    font-size: 14px;
+  }
+  .box-white_button {
+    width: 50vw;
+    gap: 4.267vw;
+  }
+  .btn-blue {
+    width: 50px;
+    height: 50px;
+  }
+  .btn-arrow {
+    width: 5.2vw;
+    font-size: 7vw;
+  }
+  .price_result {
+    margin-bottom: 32px;
+  }
+  .main-category_button {
+    gap: 4.267vw;
+    height: 50px;
+    text-decoration: none;
+  }
+  .broder {
+    margin: 24px 0;
+    border: 1px solid rgba(28, 28, 31, 0.2);
+  }
+}

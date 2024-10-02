@@ -26,9 +26,10 @@ body {
   display: grid;
   align-items: center;
   justify-content: center;
+  justify-items: center;
 }
 .definition_title{
-    margin-bottom: 3.5vh !important;
+  margin-bottom: 3.5vh !important;
 }
 @media (max-width: 420px) {
   .main-brands_box {
