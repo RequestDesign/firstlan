@@ -280,7 +280,7 @@ body {
 
 /* Main */
 .main {
-  overflow: hidden;
+  overflow: hidden !important;
 }
 /* category */
 .main-category {

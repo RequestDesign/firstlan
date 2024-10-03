@@ -1,7 +1,7 @@
 .fon-image {
   position: absolute;
   top: 0;
-  width: 100vw;
+  width: 100%;
   height: 100%;
   z-index: -1;
   object-fit: cover;
@@ -103,8 +103,13 @@
   width: 100%;
   overflow: hidden;
 }
-.main-about_box .swiper-wrapper {
+
+.mr-top .swiper-wrapper {
   flex-wrap: wrap;
+  overflow: hidden;
+}
+.swiper-wrapper{
+  overflow: hidden;
 }
 .main-category_button {
   gap: 1.042vw;
@@ -158,7 +163,9 @@
   height: 18.6vh !important;
   overflow: hidden;
 }
-
+.box-container{
+  width: 100%;
+}
 .image {
   width: 90%;
   height: 100px;
@@ -185,6 +192,7 @@
 .image-about {
   width: 40.625vw;
 }
+
 @media (max-width: 420px) {
   .main-about_box {
     margin: 80px 0;
