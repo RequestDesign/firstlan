@@ -1,0 +1,163 @@
+body {
+  background: rgba(230, 230, 230, 0.356) !important;
+}
+.main-product {
+  margin-top: 6vh;
+}
+.main-product_description {
+  margin-top: 18vh;
+}
+.product-content_title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6vh;
+}
+.product-content_image {
+  width: 40.625vw;
+  height: 520px;
+}
+.block-new {
+  position: relative;
+}
+.main-product_content {
+  height: 520px;
+  display: flex;
+  gap: 2.083vw;
+}
+.product-content_info {
+  width: 100%;
+}
+.content_title {
+  font-size: 32px;
+  font-family: "Gilroy", sans-serif;
+  font-weight: 600;
+}
+.content_article {
+  font-size: 18px;
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+  color: rgba(136, 140, 142, 1);
+  margin-top: 10px;
+}
+.text-box {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  height: 17px;
+  margin-top: 24px;
+}
+.content-specifications_block {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.block-gray {
+  height: 49px;
+  width: 100%;
+  background: rgba(233, 233, 233, 1);
+  padding: 12px 24px;
+}
+.product-content_specifications {
+  display: grid;
+  gap: 24px;
+}
+.box-new {
+  border: 2px solid rgba(19, 175, 72, 1);
+  width: 87px;
+  height: 33px;
+  padding: 0 16px;
+  color: rgba(19, 175, 72, 1);
+  font-size: 14px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  position: absolute;
+  top: 32px;
+  left: 32px;
+}
+.btn-gray {
+  background: rgba(233, 233, 233, 1);
+  width: 3.5vmax;
+  height: 3.5vmax;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.btn-gray:hover {
+  background: rgb(245, 245, 245);
+  .btn-gray-arrow {
+    color: white;
+  }
+}
+.heart {
+  margin-top: 3px;
+  width: 1.3vw;
+  height: 1.2vw;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.points_item {
+  color: rgba(136, 140, 142, 1);
+  font-size: 14px;
+  font-family: "Gilroy", sans-serif;
+  font-weight: 600;
+}
+.blue-block {
+  width: 8px;
+  height: 8px;
+  background-color: rgba(136, 140, 142, 1);
+  margin-top: 3px;
+}
+.content-block_text {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+}
+.content-block_title {
+  font-size: 20px;
+  font-family: "Gilroy", sans-serif;
+  font-weight: 600;
+  width: 5.208vw;
+}
+.product-price {
+  margin-top: 4vh;
+}
+.none{
+    display: none;
+}
+.product-price_title {
+  font-size: 32px;
+  font-family: "Gilroy", sans-serif;
+  font-weight: 600;
+  margin-bottom: 2vh;
+}
+.product-price_block {
+  display: flex;
+  gap: 60px;
+}
+.product-content_quantity {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 9.844vw;
+  height: 7.1vh;
+  border: 2px solid rgba(28, 28, 31, 0.2);
+}
+.minus,
+.plus {
+  border: none;
+  width: 50%;
+  height: 100%;
+  background: none;
+  font-size: 24px;
+}
+.quantity {
+  font-family: "Gilroy", sans-serif;
+  font-size: 1.25vw;
+  font-weight: 600;
+}
