@@ -96,6 +96,7 @@ body {
   font-size: 1.25vw;
   font-weight: 600;
 }
+
 .main-order_price {
   width: 19.271vw;
   height: 100%;
@@ -173,7 +174,15 @@ body {
   display: grid;
   gap: 2.083vw;
 }
-
+.grid-vit {
+  display: none;
+}
+.product-price_title {
+  font-size: 1.667vw;
+  font-family: "Gilroy", sans-serif;
+  font-weight: 600;
+ 
+}
 /* input */
 .form-input {
   font-family: "Gilroy", sans-serif;
@@ -303,6 +312,7 @@ body {
   }
   .sales-item_text {
     width: 215px;
+    height: 52px;
     font-size: 16px;
     -webkit-line-clamp: 2 !important;
     -webkit-box-orient: vertical;
@@ -316,6 +326,18 @@ body {
     width: 94px;
     height: 60px;
   }
+  .scroll-price {
+    z-index: 2;
+    padding: 28px 16px;
+    width: 100vw;
+    height: 86px;
+    background: white;
+    bottom: 0;
+    position: fixed;
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+  }  
   .heart-block {
     position: absolute;
     bottom: 14px;
@@ -416,9 +438,20 @@ body {
     gap: 4.267vw;
     height: 50px;
     text-decoration: none;
+    border: none;
+    background: none;
+    padding: 0;
   }
   .broder {
     margin: 24px 0;
     border: 1px solid rgba(28, 28, 31, 0.2);
+  }
+  .product-price_title {
+    width: 99px;
+    height: 30px;
+    font-size: 24px;
+  }
+  .grid-vit {
+    display: grid;
   }
 }
