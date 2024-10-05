@@ -14,6 +14,8 @@ heartItem.forEach((element) => {
   });
 });
 
+
+
 const btnBasket = document.querySelectorAll(".btn-blue-basket");
 btnBasket.forEach((bottom) => {
   bottom.addEventListener("click", () => {

@@ -30,3 +30,8 @@
   margin-top: 0.5vmax;
   color: rgba(41, 41, 45, 1);
 }
+@media (max-width:420px) {
+  .main-link{
+    font-size: 3.6vw;
+  }
+}

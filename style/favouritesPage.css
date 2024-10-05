@@ -16,6 +16,10 @@
   width: 12.708vw;
   height: 4vmax;
 }
+.main-catalog_title {
+  margin-top: 0 !important;
+  margin-bottom: 2vmax !important;
+}
 @media (max-width: 420px) {
   .main-favourites {
     margin-bottom: 80px;

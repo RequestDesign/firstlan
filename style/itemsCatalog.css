@@ -980,10 +980,6 @@ input[type="range"]::-moz-range-thumb {
     width: 74px;
     height: 25px;
   }
-  .sales-price {
-    width: 74px;
-    height: 40px;
-  }
   .main-catalog_content {
     display: grid;
     width: 91.467vw;
