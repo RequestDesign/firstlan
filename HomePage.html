@@ -33,14 +33,7 @@
             <div class="menu-list">
               <div class="menu-list_box">
                 <div class="list-box">
-                  <svg
-                    class="logo_white"
-                    width="183"
-                    height="68"
-                    viewBox="0 0 183 68"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
+                  <svg  class="logo_white" width="183" height="68"  viewBox="0 0 183 68" fill="none"  xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M42.6078 17.5166H49.8814C50.0105 17.5166 50.1396 17.6027 50.1396 17.7318V43.1676C50.1396 43.2967 50.2257 43.3828 50.3548 43.3828H69.2918C69.5069 43.4258 69.593 43.5119 69.593 43.641V49.6234C69.593 49.7525 69.4639 49.8816 69.2918 49.8816H46.3952C44.1572 49.8816 42.3496 48.3753 42.3496 46.5246V17.7748C42.3496 17.6027 42.4357 17.5166 42.6078 17.5166Z"
                       fill="#29292D"
@@ -165,9 +158,7 @@
             <a href="#" class="header-link">Бренды</a>
             <a href="#" class="header-link">Контакты</a>
           </div>
-          <a href="tel:+74956496962" class="header-number footer_model"
-            >+7(495) 649-69-62</a
-          >
+          <a class="header-number footer_model" href="tel:+74956496962" >+7(495) 649-69-62</a>
           <div class="header-elements footer_model">
             <a class="header-element">
               <img
@@ -1058,7 +1049,7 @@
                       placeholder="Имя"
                       required
                     />
-
+                    <span class="error-message" id="name-error"></span>
                     <input
                       id="phone"
                       class="form-input"
@@ -1067,6 +1058,7 @@
                       placeholder="Телефон"
                       required
                     />
+                    <span class="error-message" id="phone-error"></span>
                   </div>
                   <div class="form-input_comment footer_model-open">
                     <textarea
@@ -1076,6 +1068,7 @@
                     ></textarea>
                   </div>
                   <div class="form-content_box footer_model">
+                    
                     <input
                       id="email"
                       class="form-input"
@@ -1083,14 +1076,18 @@
                       placeholder="Электронная почта"
                       required
                     />
-
+                    <span class="error-message" id="email-error"></span>
                     <input
                       id="inn"
                       class="form-input"
-                      type="text"
+                      type="number"
+                      pattern="\d*"
+                      minLength="12"
+                      maxLength="12"
                       placeholder="ИНН"
                       required
                     />
+                    <span class="error-message" id="inn-error"></span>
                   </div>
                 </div>
                 <div class="form-agreement_button">
@@ -1838,5 +1835,6 @@
     ></script>
     <script src="script/index.js"></script>
     <script src="script/headerMobWhite.js"></script>
+    <script src="script/from-error.js"></script>
   </body>
 </html>
