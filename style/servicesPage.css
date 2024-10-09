@@ -90,7 +90,7 @@ body {
   margin-bottom: 4vh;
   display: grid;
   justify-self: center;
-  width: 225px;
+  width: 320px;
 }
 .broducts-btn_clear {
   font-family: "Gilroy", sans-serif;
@@ -98,6 +98,7 @@ body {
   font-size: 0.833vw;
   text-transform: uppercase;
   height: 20px;
+  width: 100%;
   color: rgba(41, 41, 45, 1);
   letter-spacing: 1.5px;
   border: none;

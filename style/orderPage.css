@@ -159,9 +159,12 @@ body {
 .form {
   margin-top: 4vh;
   width: 61.927vw;
-  display: grid;
-  gap: 4vh;
 }
+.order-personal_content{
+  display: grid;
+  width: 61.927vw;
+  gap: 4vh;
+ }
 .box_button {
   justify-content: space-between;
 }
@@ -264,10 +267,15 @@ body {
     gap: 24px;
   }
   .form {
-    width: 99%;
+    width: 91vw;
     gap: 24px;
     margin-top: 32px;
   }
+  .order-personal_content{
+    display: grid;
+    width: 91vw;
+    gap: 32px;
+   }
   .form-input {
     width: 100% !important;
     height: 50px !important;

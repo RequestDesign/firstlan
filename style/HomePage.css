@@ -864,13 +864,9 @@ body {
 .form-input.error {
   border-color: rgba(41, 41, 45, 1);
 }
-
-/* .error-message {
-  color: red;
-  font-size: 0.8em;
-  margin-top: 0.2em;
-  display: none;
-} */
+.error-input{
+  position: relative;
+}
 .error-message {
  position: absolute;
   bottom: 0;
@@ -879,8 +875,8 @@ body {
   color: rgba(233, 29, 29, 1);
   font-family: "Gilroy", sans-serif;
   font-weight: 400;
-  font-size: 0.8125rem; 
-  margin-left: 32px;
+  font-size: 0.6vw;
+  margin-left: 1.667vw;
   margin-top: 0px;
   display: none;
 }

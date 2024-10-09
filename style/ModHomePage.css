@@ -74,7 +74,7 @@
     width: 150px;
     text-decoration: none;
   }
-  
+
   .swiper-pagination-progressbar {
     display: flex;
     width: 91.467vw;
@@ -94,7 +94,7 @@
     margin-bottom: 40px;
     height: 34px;
   }
-  
+
   /* header */
   .header-scrolled {
     background-color: #ffffff;
@@ -269,7 +269,13 @@
     max-height: 50px;
   }
 
-  
+  .error-message {
+    font-size: 0.5rem;
+    margin-left: 4.5vw;
+    margin-top: 0px;
+    display: none;
+  }
+
   /* slide */
   .slide-image {
     width: 100vw;
@@ -361,7 +367,7 @@
     margin-top: 0;
     gap: 0;
     transition-duration: 300ms;
-    transition-delay:300ms;
+    transition-delay: 300ms;
   }
   .sales_item {
     position: relative;
@@ -738,7 +744,7 @@
     }
     .projects-content_text {
       font-size: 16px;
-     
+
       width: 100%;
       height: 176px;
       line-height: 22px;
@@ -916,7 +922,7 @@
     height: 7.796vh;
     padding: 14px 20px;
     border: 2px solid rgba(255, 255, 255, 1);
-    background-color: transparent ;
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -927,10 +933,10 @@
     color: rgba(255, 255, 255, 1);
   }
   .search-box input {
-    background-color: transparent ;
+    background-color: transparent;
   }
   /* Стили для поля ввода */
-  #searchInput{
+  #searchInput {
     width: 90.501vw;
     height: 100%;
     border: none;
@@ -943,8 +949,8 @@
     text-align: left;
     padding-left: 10px;
   }
- 
-  #searchInputm{
+
+  #searchInputm {
     width: 90.501vw;
     height: 100%;
     border: none;
@@ -1016,14 +1022,13 @@
   #resInpS {
     display: none;
     border: none;
-    background:none;
+    background: none;
     position: relative;
-    top:-6px;
+    top: -6px;
   }
-  #resInpS::after{
+  #resInpS::after {
     content: url(../image/header/cross.svg);
     height: 11px;
     width: 11px;
   }
-  
 }

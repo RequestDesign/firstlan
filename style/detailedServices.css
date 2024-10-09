@@ -248,25 +248,7 @@ body {
 }
 
 /* input-error */
-.form-input.error {
-  border-color: rgba(41, 41, 45, 1);
-}
-.error-message {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  transform: translateY(-50%);
-  color: rgba(233, 29, 29, 1);
-  font-family: "Gilroy", sans-serif;
-  font-weight: 400;
-  font-size: 0.8125rem;
-  margin-left: 32px;
-  margin-top: 0px;
-  display: none;
-}
-.form-input.error + .error-message {
-  display: block;
-}
+
 .points_title {
   font-family: "Gilroy", sans-serif;
   font-weight: 600;
@@ -644,6 +626,10 @@ body {
   text-align: center;
   line-height: 3.8vh;
   margin-top: 3.2vh;
+  text-decoration: none;
+}
+.map{
+  width: 100%;
 }
 @media (max-width: 420px) {
   .cotacts-block{

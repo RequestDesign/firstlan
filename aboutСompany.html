@@ -886,22 +886,14 @@
                   <form action="" class="form">
                     <div class="form-content">
                       <div class="form-content_box">
-                        <input
-                          id="name"
-                          class="form-input"
-                          type="text"
-                          placeholder="Имя"
-                          required
-                        />
-    
-                        <input
-                          id="phone"
-                          class="form-input"
-                          type="text" pattern="\d*"
-                          maxLength="12" minLength="11"
-                          placeholder="Телефон"
-                          required
-                        />
+                        <div class="error-input">
+                          <input  id="name" class="form-input" type="name" placeholder="Имя"  required/>
+                          <span class="error-message" id="name-error"></span>
+                        </div>
+                        <div class="error-input">
+                          <input id="phone" name="phone" class="form-input" type="tel" pattern="\d*" maxlength="12" minlength="11" placeholder="Телефон" required/>
+                          <span class="error-message" id="phone-error"></span>
+                        </div>
                       </div>
                       <div class="form-input_comment footer_model-open">
                         <textarea
@@ -911,21 +903,15 @@
                         ></textarea>
                       </div>
                       <div class="form-content_box footer_model">
-                        <input
-                          id="email"
-                          class="form-input"
-                          type="text"
-                          placeholder="Электронная почта"
-                          required
-                        />
-    
-                        <input
-                          id="inn"
-                          class="form-input"
-                          type="text"
-                          placeholder="ИНН"
-                          required
-                        />
+                        <div class="error-input">
+                          <input id="email" class="form-input" type="email" placeholder="Электронная почта" required/>
+                        <span class="error-message" id="email-error"></span>
+                        </div>
+                        <div class="error-input">
+                          <input id="inn" class="form-input" type="tel" pattern="\d*" maxlength="12" minlength="12" placeholder="ИНН" required />
+                        <span class="error-message" id="inn-error"></span>
+                        </div>
+                        
                       </div>
                     </div>
                     <div class="form-agreement_button">
@@ -1247,5 +1233,6 @@
     ></script>
     <script src="script/headerMobWhite.js"></script>
     <script src="script/index.js"></script>
+    <script src="script/from-error.js"></script>
 </body>
 </html>
