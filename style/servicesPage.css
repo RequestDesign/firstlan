@@ -17,7 +17,7 @@ body {
   display: flex;
 }
 .services-content_title {
-  width: 507px;
+  width: 26.406vw;
   height: 250px;
 }
 .services-content_items {
@@ -89,18 +89,20 @@ body {
   margin-top: 3.2vh;
   margin-bottom: 4vh;
   display: grid;
-  justify-self: center;
-  width: 320px;
+  justify-content: left;
+  width: 14.167vw;
 }
 .broducts-btn_clear {
   font-family: "Gilroy", sans-serif;
+  display: grid;
+  justify-content: left;
   font-weight: 700;
   font-size: 0.833vw;
   text-transform: uppercase;
-  height: 20px;
-  width: 100%;
+  /* height: 2vh;
+  width: 100%; */
   color: rgba(41, 41, 45, 1);
-  letter-spacing: 1.5px;
+  letter-spacing: 0.2vh;
   border: none;
   background: none;
   padding: 0 0;
@@ -338,7 +340,6 @@ body {
   display: flex;
 }
 @media (max-width: 420px) {
- 
   .main-services {
     display: grid;
     margin-top: 24px;
@@ -385,7 +386,6 @@ body {
     margin-left: 0;
     line-height: 5.7vw;
     height: 100%;
-   
   }
   .services-content_item {
     width: 91.467vw;
@@ -429,7 +429,7 @@ body {
     width: 91.467vw;
     line-height: 6vw;
   }
-  .services-content_title{
+  .services-content_title {
     padding: 0;
     gap: 0;
   }
