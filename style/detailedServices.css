@@ -206,11 +206,11 @@ body {
 .checkbox-input::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 10%;
+  left: 10%;
   width: 0px;
   height: 0px;
-  font-size: 16px;
+  font-size: 14px;
   transition: 500ms;
   overflow: hidden;
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0,0,256,256' width='24px' height='24px' fill-rule='nonzero'%3e%3cg fill='%23134baf' fill-rule='nonzero' stroke='none' stroke-width='1' stroke-linecap='butt' stroke-linejoin='miter' stroke-miterlimit='10' stroke-dasharray='' stroke-dashoffset='0' font-family='none' font-weight='none' font-size='none' text-anchor='none' style='mix-blend-mode: normal'%3e%3cg transform='scale(10.66667,10.66667)'%3e%3cpath d='M20.29297,5.29297l-11.29297,11.29297l-4.29297,-4.29297l-1.41406,1.41406l5.70703,5.70703l12.70703,-12.70703z'%3e%3c/path%3e%3c/g%3e%3c/g%3e%3c/svg%3e");
@@ -504,19 +504,19 @@ body {
   gap: 2.083vw;
 }
 .content-block {
-  margin-top: 40px;
+  margin-top: 4vh;
 }
 .border {
   height: 2px;
   background-color: rgba(144, 202, 255, 0.14);
-  margin: 60px 0;
+  margin: 4vh 0;
 }
 .delivery-content_block {
   width: 47.76vw;
 }
 .content-block_points {
   display: grid;
-  gap: 32px;
+  gap: 2vmax;
 }
 .content-box_title {
   font-family: "Gilroy", sans-serif;
@@ -525,27 +525,27 @@ body {
 }
 .point {
   display: flex;
-  gap: 30px;
+  gap: 1.563vw;
 }
 .point_title {
-  width: 245px;
+  width: 12.76vw;
   font-family: "Gilroy", sans-serif;
   font-weight: 600;
   font-size: 1.042vw;
 }
 .point_text {
-  width: 591px;
+  width: 30.781vw;
   font-family: "Gilroy", sans-serif;
   font-weight: 500;
   font-size: 1.042vw;
 }
 .points_texts {
   display: grid;
-  gap: 2vh;
+  gap: 0.7vmax;
 }
 .content-image {
-  width: 643px;
-  height: 860px;
+  width: 33.49vw;
+  object-fit: cover;
 }
 @media (max-width: 420px) {
   .main-delivery_content {
@@ -576,7 +576,7 @@ body {
     width: 91.467vw;
   }
   .border{
-    margin: 40px 0;
+    margin: 3vh 0;
   }
   .main-delivery{
     margin-bottom: 80px;

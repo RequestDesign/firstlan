@@ -52,7 +52,7 @@
 .header-elements {
   display: flex;
   gap: 1.25vw;
-  margin-left: 3vmax;
+  margin-left: 2vmax;
 }
 .header-element {
   cursor: pointer;
@@ -63,14 +63,14 @@
 .header-links {
   display: flex;
   gap: 1.823vw;
-  margin-left: 5vmax;
+  margin-left: 2vmax;
 }
 .header-link {
   color: black;
   text-decoration: none;
   font-family: "Gilroy", sans-serif;
   font-weight: 500;
-  font-size: 1.042vmax;
+  font-size: 0.95vmax;
 }
 .header-link:hover {
   color: rgba(0, 0, 0, 0.732);
@@ -80,7 +80,7 @@
   font-weight: 700;
   font-size: 1.042vmax;
   color: black;
-  margin-left: 6vmax;
+  margin-left: 2vmax;
   text-decoration: none;
 }
 .main-category_still {
