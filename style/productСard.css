@@ -14,26 +14,26 @@ body {
 }
 .product-content_image {
   width: 40.625vw;
-  height: 520px;
+  height: 100%;
 }
 .block-new {
   position: relative;
 }
 .main-product_content {
-  height: 520px;
+  height: 100%;
   display: flex;
   gap: 2.083vw;
 }
 .product-content_info {
-  width: 100%;
+  width: 40.625vw;
 }
 .content_title {
-  font-size: 32px;
+  font-size: 1.667vw;
   font-family: "Gilroy", sans-serif;
   font-weight: 600;
 }
 .content_article {
-  font-size: 18px;
+  font-size: 0.938vw;
   font-family: "Gilroy", sans-serif;
   font-weight: 400;
   color: rgba(136, 140, 142, 1);
@@ -52,10 +52,10 @@ body {
   gap: 18px;
 }
 .block-gray {
-  height: 49px;
+  /* height: 49px; */
   width: 100%;
   background: rgba(233, 233, 233, 1);
-  padding: 12px 24px;
+  padding: 1vh 1.25vw;
 }
 .product-content_specifications {
   display: grid;
@@ -63,17 +63,17 @@ body {
 }
 .box-new {
   border: 2px solid rgba(19, 175, 72, 1);
-  width: 87px;
-  height: 33px;
-  padding: 2.8px 16px;
+  width: 4.531vw;
+  height: 1.719vw;
+  padding: 2.8px 0.833vw;
   color: rgba(19, 175, 72, 1);
   font-weight: 600;
-  font-size: 14px;
+  font-size: 0.729vw;
   display: flex;
   justify-content: center;
   position: absolute;
-  top: 32px;
-  left: 32px;
+  top: 1.667vw;
+  left: 1.667vw;
 }
 .btn-gray {
   background: rgba(233, 233, 233, 1);
@@ -143,17 +143,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 9.844vw;
-  height: 7.1vh;
+  /* width: 9.844vw;
+  height: 7.1vh; */
   border: 2px solid rgba(28, 28, 31, 0.2);
 }
 .minus,
 .plus {
   border: none;
-  width: 50%;
+  width: 4vw;
   height: 100%;
   background: none;
-  font-size: 24px;
+  font-size: 1.25vw;
 }
 .quantity {
   font-family: "Gilroy", sans-serif;
@@ -375,7 +375,7 @@ body {
   grid-template-columns: auto auto;
   grid-template-rows: auto auto auto auto auto;
   grid-auto-flow: column;
-  gap: 16px;
+  gap: 0.833vw;
   margin-top: 32px;
 }
 .content-certificate {
@@ -950,8 +950,13 @@ body {
     display: grid;
   }
   .box-new {
+    width: 80px;
+    height: 31px;
+    display: grid;
+    align-items: center;
     top: 14px;
     left: 14px;
+    font-size: 12px;
   }
   .product-content_title {
     margin-bottom: 4vh;
