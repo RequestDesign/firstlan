@@ -49,25 +49,23 @@ btngray.forEach((element) => {
   element.addEventListener("mouseenter", () => {
     const img = element.querySelector("img");
     if (img && !element.classList.contains("active")) {
-      img.src = img.dataset.activeSrc; 
-      element.classList.add("active"); 
+      img.src = img.dataset.activeSrc;
+      element.classList.add("active");
     }
   });
 
   element.addEventListener("mouseleave", () => {
     const img = element.querySelector("img");
     if (img && element.classList.contains("active")) {
-      img.src = img.dataset.defaultSrc; 
-      element.classList.remove("active"); 
+      img.src = img.dataset.defaultSrc;
+      element.classList.remove("active");
     }
   });
 });
 const heartItem = document.querySelectorAll(".heart-block");
 heartItem.forEach((element) => {
   element.addEventListener("click", () => {
-    const advantagesActive = document.querySelector(
-      ".heart-block.active"
-    );
+    const advantagesActive = document.querySelector(".heart-block.active");
     const img = element.querySelector("img");
     if (img) {
       if (element.classList.contains("active")) {
@@ -84,9 +82,7 @@ heartItem.forEach((element) => {
 const btnBasket = document.querySelectorAll(".btn-blue-basket");
 btnBasket.forEach((bottom) => {
   bottom.addEventListener("click", () => {
-    const advantagesActive = document.querySelector(
-      ".btn-blue-basket.active"
-    );
+    const advantagesActive = document.querySelector(".btn-blue-basket.active");
     const img = bottom.querySelector("img");
     if (img) {
       if (bottom.classList.contains("active")) {
@@ -99,7 +95,6 @@ btnBasket.forEach((bottom) => {
     }
   });
 });
-
 
 const advantagesItems = document.querySelectorAll(".main-advantages_item");
 advantagesItems.forEach((item) => {
@@ -130,35 +125,27 @@ advantagesItems.forEach((item) => {
   });
 });
 
-
-
-
 // слайдер
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.querySelector(".main-sales_items");
   const prevButton = document.querySelector(".prev");
   const nextButton = document.querySelector(".next");
   const items = Array.from(container.querySelectorAll(".sales_item"));
-
   let scrollAmount = getItemWidth();
   let isDragging = false;
   let startX;
   let scrollLeft;
   let deltaX = 0;
-
   function getItemWidth() {
     return items[0].offsetWidth + parseInt(getComputedStyle(container).gap);
   }
-
   function updateButtonState() {
     const scrollLeft = container.scrollLeft;
     const scrollWidth = container.scrollWidth;
     const clientWidth = container.clientWidth;
-
     prevButton.disabled = scrollLeft <= 0;
     nextButton.disabled = scrollLeft + clientWidth >= scrollWidth - 8;
   }
-
   function showItemsInView() {
     const containerRect = container.getBoundingClientRect();
     items.forEach((item) => {
@@ -173,14 +160,18 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-
   function scrollToSlide(index) {
-    const scrollPosition = Math.max(0, Math.min(index * scrollAmount, container.scrollWidth - container.clientWidth));
+    const scrollPosition = Math.max(
+      0,
+      Math.min(
+        index * scrollAmount,
+        container.scrollWidth - container.clientWidth
+      )
+    );
     container.scrollTo({ left: scrollPosition, behavior: "smooth" });
     setTimeout(updateButtonState, 300);
   }
-
-  // Режим кнопок для прокрутки (экран больше 420px)
+  // Режим кнопок для прокрутки (экран больше 440px)
   function enableButtonMode() {
     prevButton.style.display = "block";
     nextButton.style.display = "block";
@@ -193,8 +184,7 @@ document.addEventListener("DOMContentLoaded", () => {
     container.removeEventListener("touchmove", handleTouchMove);
     container.removeEventListener("touchend", handleTouchEnd);
   }
-
-  // Режим прокрутки пальцем/мышью (экран меньше или равен 420px)
+  // Режим прокрутки пальцем/мышью (экран меньше или равен 440px)
   function enableScrollMode() {
     prevButton.style.display = "none";
     nextButton.style.display = "none";
@@ -205,24 +195,20 @@ document.addEventListener("DOMContentLoaded", () => {
     container.addEventListener("touchmove", handleTouchMove);
     container.addEventListener("touchend", handleTouchEnd);
   }
-
   function handlePrevClick() {
     container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
     setTimeout(updateButtonState, 300);
   }
-
   function handleNextClick() {
     container.scrollBy({ left: scrollAmount, behavior: "smooth" });
     setTimeout(updateButtonState, 300);
   }
-
   function handleMouseDown(e) {
     isDragging = true;
     startX = e.pageX - container.offsetLeft;
     scrollLeft = container.scrollLeft;
     container.classList.add("active");
   }
-
   function handleMouseMove(e) {
     if (!isDragging) return;
     e.preventDefault();
@@ -230,12 +216,10 @@ document.addEventListener("DOMContentLoaded", () => {
     deltaX = x - startX;
     container.scrollLeft = scrollLeft - deltaX;
   }
-
   function handleMouseUp() {
     isDragging = false;
     container.classList.remove("active");
     const movedBy = Math.abs(deltaX);
-
     if (movedBy > scrollAmount / 4) {
       if (deltaX < 0) {
         scrollToSlide(currentIndex + 1);
@@ -246,21 +230,18 @@ document.addEventListener("DOMContentLoaded", () => {
       scrollToSlide(currentIndex);
     }
   }
-
   function handleTouchStart(e) {
     startX = e.touches[0].clientX;
     scrollLeft = container.scrollLeft;
   }
-
   function handleTouchMove(e) {
     const x = e.touches[0].clientX;
     deltaX = x - startX;
     container.scrollLeft = scrollLeft - deltaX;
   }
-
   function handleTouchEnd() {
     const movedBy = Math.abs(deltaX);
-    if (movedBy > scrollAmount / 4 && innerWidth <= 420) {
+    if (movedBy > scrollAmount / 4 && innerWidth <= 48 * 16) {
       if (deltaX < 0) {
         container.scrollBy({ left: scrollAmount, behavior: "smooth" });
       } else {
@@ -268,11 +249,9 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   }
-
   function isMobile() {
-    return window.innerWidth <= 420;
+    return window.innerWidth <= 48 * 16;
   }
-
   function updateMode() {
     if (isMobile()) {
       enableScrollMode();
@@ -282,23 +261,19 @@ document.addEventListener("DOMContentLoaded", () => {
       container.style.cursor = "default";
     }
   }
-
   window.addEventListener("resize", () => {
     scrollAmount = getItemWidth();
     updateMode();
     updateButtonState();
   });
-
   // Инициализация при загрузке страницы
   scrollAmount = getItemWidth();
-
   requestAnimationFrame(() => {
     updateMode();
     updateButtonState();
     showItemsInView();
   });
 });
-
 
 const clientItems = document.querySelectorAll(".main-client_item");
 clientItems.forEach((item) => {
@@ -315,8 +290,6 @@ clientItems.forEach((item) => {
     }
   });
 });
-
-
 
 document.addEventListener("DOMContentLoaded", function () {
   let currentSlide = 0;
@@ -461,7 +434,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Включение скроллинга только на мобильных устройствах
   function toggleSwipeBehavior() {
-    if (window.innerWidth <= 420) {
+    if (window.innerWidth <= 48 * 16) {
       PrevBtn.style.display = "none";
       enableSwipe();
     } else {
@@ -526,16 +499,13 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
-
-
 document.addEventListener("DOMContentLoaded", function () {
   const swiperContainer = document.querySelector(".swiper-container");
   const progressBar = document.querySelector(".progress-indicators");
   let swiper;
 
   function initializeSwiper() {
-    if (window.innerWidth <= 420) {
+    if (window.innerWidth <= 48 * 16) {
       if (!swiper) {
         swiper = new Swiper(".swiper-container", {
           slidesPerView: 1,
@@ -601,32 +571,57 @@ let searchInps = document.getElementById("searchInputs");
 const burgerChk = document.getElementById("burger-checkbox");
 const menu = document.querySelector(".menu-search");
 let resB = document.getElementById("resInpS");
+const menuSearchText = document.getElementById("menuSearchText");
+let noResultsMessage = document.getElementById("noResultsMessage");
 
-searchInp.addEventListener("click", function(){
-if (burgerChk.checked != true){
-  burgerChk.checked = true;
-  searchInps.focus();
-}});
-searchInps.addEventListener("input",function(){ 
-  menu.style.display = "flex";
-  menu.style.position = "absolute";
-  menu.style.zindex = "100";
-  menu.style.top = "180px";
-  menu.style.left = "0px";
-  if (searchInps.value == ""){
-    menu.style.display = "none"
-    resB.style.display = "none"
-  } else {
-    resB.style.display = "flex"
-    resB.addEventListener("click", function(){
-      searchInps.value = "";
-      menu.style.display = "none"
-      resB.style.display = "none"
-    })
+searchInp.addEventListener("click", function () {
+  if (burgerChk.checked != true) {
+    burgerChk.checked = true;
+    searchInps.focus();
   }
 });
-burgerChk.addEventListener("change",function(){
+searchInps.addEventListener("input", function () {
+  menu.style.display = "flex";
+  menu.style.position = "absolute";
+  menu.style.zindex = "0"; 
+  menu.style.top = "25vh";
+  menu.style.left = "0px";
+  menuSearchText.innerHTML = "";
+  noResultsMessage.style.display = "none"; 
+
+  if (searchInps.value == "") {
+    menu.style.display = "none";
+    resB.style.display = "none";
+    noResultsMessage.style.display = "none"; // Скрыть сообщение
+  } else {
+    // Здесь должна быть логика проверки результатов поиска
+    // Пример: если введенное значение не соответствует никаким результатам
+    const searchTerm = searchInps.value.toLowerCase();
+    const availableResults = ["пример", "поиск", "результат"]; // Пример доступных результатов
+    const filteredResults = availableResults.filter(result => result.includes(searchTerm));
+
+    if (filteredResults.length > 0) {
+      filteredResults.forEach(result => {
+          const resultItem = document.createElement("div");
+          resultItem.textContent = result;
+          menuSearchText.appendChild(resultItem);
+      });
+  } else {
+      noResultsMessage.style.display = "block"; // Показываем сообщение, если результатов нет
+  }
+
+    resB.style.display = "flex";
+    resB.addEventListener("click", function () {
+      searchInps.value = "";
+      menu.style.display = "none";
+      resB.style.display = "none";
+      noResultsMessage.style.display = "none"; // Скрыть сообщение
+    });
+  }
+});
+burgerChk.addEventListener("change", function () {
   menu.style.display = "none";
   searchInps.value = "";
   resB.style.display = "none";
-})
+  noResultsMessage.style.display = "none"; 
+});

@@ -47,7 +47,7 @@ body {
 .header-elements {
   display: flex;
   gap: 1.25vw;
-  margin-left: 3vmax;
+  margin-left: 3vw;
 }
 .header-element{
   cursor: pointer;
@@ -65,7 +65,7 @@ body {
   text-decoration: none;
   font-family: "Gilroy", sans-serif;
   font-weight: 500;
-  font-size: 1.042vmax;
+  font-size: 1.042vw;
 }
 .header-link:hover{
   color: rgba(255, 255, 255, 0.666);
@@ -73,9 +73,9 @@ body {
 .header-number {
   font-family: "Gilroy", sans-serif;
   font-weight: 700;
-  font-size: 1.042vmax;
+  font-size: 1.042vw;
   color: rgba(255, 255, 255, 1);
-  margin-left: 6vmax;
+  margin-left: 6vw;
   text-decoration: none;
 }
 
@@ -1271,8 +1271,6 @@ body {
 .btn-blue:disabled:hover {
   background: rgba(233, 233, 233, 1);
 }
-
-
 
 /* Скрываем окно поиска и результаты по умолчанию */
 .search-box,

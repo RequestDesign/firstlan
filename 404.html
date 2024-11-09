@@ -108,7 +108,12 @@
                   </div>
                 </div>
                 <!-- Заглушка для поиска в мобилке -->
-                <div class="menu-search"></div>
+                <div class="menu-search">
+                  <div class="menu-search_text" id="menuSearchText">
+    
+                  </div>
+                </div>
+                <div class="no-results" id="noResultsMessage">К сожалению, по вашему запросу ничего не нашлось</div>
               </div>
   
               <div class="header-links footer_model">
@@ -177,7 +182,8 @@
         </div>
       </header>
       <main>
-        <div class="search-box footer_model-open">
+        <div class="container-fluid">
+          <div class="search-box footer_model-open">
             <svg
               class="search-icon"
               id="sr3"
@@ -205,7 +211,8 @@
     
             <input type="text" id="searchInputm" placeholder="Поиск" />
             <div id="sr3" class="search-results"></div>
-        </div>
+          </div>
+        </div>  
         <div class="main-favorites">
             <div class="container-fluid">
                 <div class="main-favorites_content">

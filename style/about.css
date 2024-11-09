@@ -112,6 +112,8 @@
   overflow: hidden;
 }
 .main-category_button {
+  display: flex;
+  align-items: center;
   gap: 1.042vw;
 }
 .main-about_box .about-block_title {

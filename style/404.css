@@ -11,6 +11,12 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
+.main-category_button{
+  display: flex;
+  align-items: center;
+  gap: 2.083vw;
+}
+
 .header-box {
   height: 80px;
   position: absolute;
@@ -46,14 +52,13 @@ body {
   margin-bottom: 3vh;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 48em) {
   .search-box {
     position: absolute;
-    top: 82px;
-    right: 16px;
   }
-  .main-favorites{
-    height: 700px;
+  .main-favorites {
+    height: 900px;
+    object-fit: contain;
   }
   .main-favorites_content {
     width: 343px;

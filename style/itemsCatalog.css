@@ -564,6 +564,7 @@ input[type="range"]::-moz-range-thumb {
 } */
 .sales {
   width: 100%;
+  object-fit: contain;
 }
 .sales-price {
   width: 105px;
@@ -701,7 +702,7 @@ input[type="range"]::-moz-range-thumb {
   right: 0;
   width: 20vw;
   height: 15vh;
-  object-fit: all;
+  object-fit: contain;
   padding: 0;
 }
 .main-banner_white {
@@ -723,7 +724,12 @@ input[type="range"]::-moz-range-thumb {
   width: 26px;
   height: 26px;
 }
-@media (max-width: 420px) {
+.main-category_button{
+  display: flex;
+  align-items: center;
+  gap: 2.083vw;
+}
+@media (max-width: 48em) {
   .container-fluid {
     margin: 0;
     margin-left: 4.267vw !important;
@@ -742,6 +748,9 @@ input[type="range"]::-moz-range-thumb {
   .main-catalog_title {
     font-size: 34px;
     margin-bottom: 40px;
+  }
+  .broducts-more{
+    width: 91vw;
   }
   /* catalog */
   .categories_title {
@@ -1103,7 +1112,7 @@ input[type="range"]::-moz-range-thumb {
   }
   .page-item {
     width: 10px;
-    font-size: 14px;
+    font-size: 13px;
   }
   .pagination-arr {
     width: 24px;

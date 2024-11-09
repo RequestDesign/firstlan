@@ -27,7 +27,7 @@
   display: none;
 }
 .header-box {
-  height: 80px;
+  height: 12.414vh;
 }
 .header {
   position: fixed;
@@ -52,7 +52,7 @@
 .header-elements {
   display: flex;
   gap: 1.25vw;
-  margin-left: 2vmax;
+  margin-left: 3vw;
 }
 .header-element {
   cursor: pointer;
@@ -70,7 +70,7 @@
   text-decoration: none;
   font-family: "Gilroy", sans-serif;
   font-weight: 500;
-  font-size: 0.95vmax;
+  font-size: 1.042vw;
 }
 .header-link:hover {
   color: rgba(0, 0, 0, 0.732);
@@ -78,7 +78,7 @@
 .header-number {
   font-family: "Gilroy", sans-serif;
   font-weight: 700;
-  font-size: 1.042vmax;
+   font-size: 1.042vw;
   color: black;
   margin-left: 2vmax;
   text-decoration: none;
@@ -92,8 +92,8 @@
   display: none;
   position: absolute;
   top: 2vh;
-  right: 13.542vw; /* Смещаем блок поиска на 18px правее от иконки */
-  width: 36.458vw; /* Ширина поиска */
+  right: 13.542vw; 
+  /* width: 36.458vw;  */
   background-color: rgba(255, 255, 255, 1);
   padding: 0.833vw;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -173,7 +173,7 @@
   display: none;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 48em) {
   .container-fluid {
     margin: 0;
     margin-left: 4.267vw !important;
@@ -206,20 +206,20 @@
   }
   .burger {
     content: url(../image/HomePage/burger_ico/Vector1.svg);
-    background-color: black;
+    background-color: rgba(41, 41, 45, 1);
   }
   .burger-box {
     width: 50px;
     height: 50px;
-    background: black;
+    background: rgba(41, 41, 45, 1);
   }
   .burger-checkbox:checked + .burger {
-    background-color: #000;
+    background-color: rgba(41, 41, 45, 1);
     position: absolute;
-    top: 2px;
     height: 50px;
     width: 50px;
     padding: 10px;
+    margin: 0;
     content: url(../image/HomePage/burger_ico/Vector2.svg);
   }
   .menu-list {
@@ -228,7 +228,9 @@
     position: absolute;
     display: grid;
     /* gap: 12px; */
-    padding: 2.2vh 16px 32px 16px;
+    padding: 2.2vh 0 32px 0;
+    padding-left: 4.267vw !important;
+    padding-right: 4.267vw !important;
     margin: 0;
     background: white;
     list-style-type: none;
@@ -252,16 +254,16 @@
     font-weight: 600;
   }
   .menu-list_content {
-    margin-top: 38px;
+    margin-top: 3vh;
     height: 66.77vh;
   }
   .link_image {
-    width: 32px;
-    height: 32px;
+    width: 6.167vw;
+    height: 6.766vw;
   }
   .menu-list_link {
     display: grid;
-    gap: 4vh;
+    gap: 3vh;
     margin-top: 6vh;
   }
   .menu-list_end {
@@ -271,7 +273,6 @@
     align-content: end;
   }
   .list-box {
-    height: 50px;
   }
   .menu-list_box {
     display: grid;
@@ -284,7 +285,7 @@
   .end-link {
     display: flex;
     justify-content: space-between;
-    height: 32px;
+    height: 6vh;
   }
   .end-tel {
     color: rgba(41, 41, 45, 1);
@@ -301,10 +302,46 @@
   }
   .menu-search {
     background-color: white;
-    width: 425px;
+    width: 100%;
     height: 1240px;
     display: none;
     z-index: 0;
+    padding-left: 4.267vw !important;
+    padding-right: 4.267vw !important;
+    font-family: "Gilroy";
+    font-size: 2.833vw;
+    font-weight: 500;
+    line-height:2.436vh;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .menu-search_text{
+    font-family: "Gilroy";
+    font-size: 2.833vw;
+    font-weight: 500;
+    line-height:2.436vh;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    width: 73.75vw;
+  }
+  .no-results {
+    position: absolute;
+    top: 25.251vh;
+    z-index: 1;
+    left: 0;
+    padding-left: 4.267vw !important;
+    padding-right: 4.267vw !important;
+    font-family: "Gilroy";
+    font-size: 2.833vw;
+    font-weight: 500;
+    line-height:2.436vh;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    width: 73.75vw;
+    display: none;
   }
   .br {
     border-top: 2px solid rgba(28, 28, 31, 0.2);
@@ -314,7 +351,7 @@
     height: 56px;
     position: absolute;
     bottom: 40px;
-    right: 16px;
+    right: 4.283vw;
     padding: 16px 12px;
     background-color: rgba(255, 255, 255, 1);
     cursor: pointer;
@@ -333,7 +370,7 @@
     height: 116px;
     position: absolute;
     bottom: 100px;
-    right: 16px;
+    right: 4.283vw;
     padding: 16px 12px;
     background-color: rgba(255, 255, 255, 1);
     gap: 20px;
@@ -372,7 +409,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    top: 0px;
+    top: -2vmax;
     right: -4.5vw;
     z-index: 1;
     color: rgba(28, 28, 31, 0.2);

@@ -115,7 +115,12 @@
                 </div>
               </div>
               <!-- Заглушка для поиска в мобилке -->
-              <div class="menu-search"></div>
+              <div class="menu-search">
+                <div class="menu-search_text" id="menuSearchText">
+  
+                </div>
+              </div>
+              <div class="no-results" id="noResultsMessage">К сожалению, по вашему запросу ничего не нашлось</div>
             </div>
 
             <div class="header-links footer_model">
@@ -193,33 +198,33 @@
     </header>
     <main class="main">
       <div class="search-box footer_model-open">
-        <svg
-          class="search-icon"
-          id="sr3"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M10.5 19C15.1944 19 19 15.1944 19 10.5C19 5.80558 15.1944 2 10.5 2C5.80558 2 2 5.80558 2 10.5C2 15.1944 5.80558 19 10.5 19Z"
-            stroke="#888C8E"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M22 22L19 19"
-            stroke="#888C8E"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-
-        <input type="text" id="searchInputm" placeholder="Поиск" />
-        <div id="sr3" class="search-results"></div>
+          <svg
+            class="search-icon"
+            id="sr3"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5 19C15.1944 19 19 15.1944 19 10.5C19 5.80558 15.1944 2 10.5 2C5.80558 2 2 5.80558 2 10.5C2 15.1944 5.80558 19 10.5 19Z"
+              stroke="#888C8E"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M22 22L19 19"
+              stroke="#888C8E"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+  
+          <input type="text" id="searchInputm" placeholder="Поиск" />
+          <div id="sr3" class="search-results"></div>
       </div>
       <div class="main-way">
         <div class="container-fluid">
