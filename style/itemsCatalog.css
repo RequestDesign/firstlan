@@ -728,6 +728,7 @@ input[type="range"]::-moz-range-thumb {
   display: flex;
   align-items: center;
   gap: 2.083vw;
+  text-decoration: none;
 }
 @media (max-width: 48em) {
   .container-fluid {
@@ -772,6 +773,10 @@ input[type="range"]::-moz-range-thumb {
   }
   .main-categories.active {
     transform: translateX(0); /*  Перемещаем  меню  в  начало  */
+  }
+  .main-brands_content{
+    display: flex;
+    justify-content: space-between;
   }
   .box-white {
     display: none;
@@ -943,11 +948,13 @@ input[type="range"]::-moz-range-thumb {
     margin-bottom: 32px;
   }
   .definition_title {
-    font-size: 34px;
-    line-height: 34px;
+    font-size: 6.427vw;
+    line-height: normal;
+    width: 91vw;
   }
   .definition_text {
     font-size: 16px;
+    width: 91vw;
   }
   .main-content_achievement {
     width: 100%;
@@ -961,7 +968,7 @@ input[type="range"]::-moz-range-thumb {
   }
   .achievement-box_text {
     font-size: 14px;
-    width: 315px;
+    width: 82.016vw;
     margin-top: 20px;
   }
   .achievement-box_information {
@@ -969,7 +976,7 @@ input[type="range"]::-moz-range-thumb {
     margin-top: 40px;
   }
   .information_numder {
-    font-size: 34px;
+    font-size: 6.427vw;
   }
   .information_text {
     font-size: 16px;
@@ -1046,12 +1053,15 @@ input[type="range"]::-moz-range-thumb {
   .sales-item_text {
     order: 2;
     font-size: 13px;
-    width: 143px !important;
+    width: 35.62vw !important;
     height: 55px !important;
   }
   .sales {
     order: 1;
-    width: 143px;
+    width: 35vw;
+    /* width: 143px; */
+    height: 7vh;
+    object-fit: contain;
   }
   .sales-price {
     order: 3;

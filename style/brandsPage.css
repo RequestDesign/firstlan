@@ -31,7 +31,13 @@ body {
 .definition_title{
   margin-bottom: 3.5vh !important;
 }
-@media (max-width: 420px) {
+.image{
+  width: 80%;
+}
+.image-item{
+  width: 80%;
+}
+@media (max-width: 48em) {
   .main-brands_box {
     display: grid;
     gap: 20px;
@@ -42,8 +48,8 @@ body {
     line-height: 34px;
   }
   .main-brands_item {
-    width: 167px;
-    height: 100px;
+    width: 20vmin;
+    height: 8vmax;
     justify-items: center
   }
   .main-category_still {
@@ -62,11 +68,13 @@ body {
     font-size: 7vw;
   }
   .image {
-    width: 40%;
+    width: 60%;
     height: 100px;
   }
   .image-item{
-    width: 40%;
+    width: 60%;
   }
- 
+ .main-brands_content{
+  margin-bottom: 80px;
+ }
 }

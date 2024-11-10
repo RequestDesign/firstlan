@@ -34,7 +34,13 @@ body {
   width: 24.583vw;
   margin-bottom: 4vh;
 }
-@media (max-width: 420px) {
+.main-category_button{
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 4vw;
+}
+@media (max-width: 48em) {
   .main-favorites {
     margin-bottom: 80px;
     margin-top: 24px;

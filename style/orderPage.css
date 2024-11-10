@@ -30,7 +30,8 @@ body {
 }
 .basket-foto {
   width: 11.875vw;
-  height: 20vh;
+  height: 100%;
+  object-fit: contain;
 }
 .product-content_title {
   display: flex;
@@ -58,7 +59,7 @@ body {
 }
 .price {
   font-family: "Gilroy", sans-serif;
-  font-size: 1.5vw;
+  font-size: 1vw;
   font-weight: 600;
   color: rgba(41, 41, 45, 1);
 }
@@ -80,7 +81,7 @@ body {
   align-items: center;
   justify-content: space-around;
   width: 9.844vw;
-  height: 7.1vh;
+  height: 3vmax;
   border: 2px solid rgba(28, 28, 31, 0.2);
 }
 .minus,
@@ -90,6 +91,7 @@ body {
   height: 100%;
   background: none;
   font-size: 24px;
+  display: contents;
 }
 .quantity {
   font-family: "Gilroy", sans-serif;
@@ -186,6 +188,12 @@ body {
   font-weight: 600;
  
 }
+.main-category_button{
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+  text-decoration: none;
+}
 /* input */
 .form-input {
   font-family: "Gilroy", sans-serif;
@@ -247,7 +255,7 @@ body {
   font-size: 0;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 48em) {
   .form-content_box {
     display: grid;
     gap: 24px;
@@ -319,19 +327,19 @@ body {
     gap: 20px;
   }
   .sales-item_text {
-    width: 215px;
+    width: 33vw;
     height: 52px;
-    font-size: 16px;
+    font-size: 2.283vw;
     -webkit-line-clamp: 2 !important;
     -webkit-box-orient: vertical;
   }
   .basket-foto {
-    width: 94px;
+    width: 9vmax;
     height: 60px;
     object-fit: cover;
   }
   .product-image {
-    width: 94px;
+    width: 9vmax;
     height: 60px;
   }
   .scroll-price {
@@ -365,18 +373,19 @@ body {
     height: 24px;
   }
   .product-content_quantity {
-    width: 160px;
-    height: 50px;
+    width: 10.833vmax;
+    height: 3.4vh;
     gap: 46px;
-    margin-top: 0;
+    margin-top: -25px;
   }
   .minus,
   .plus {
-    font-size: 19px;
+    font-size: 3.7vw;
     font-weight: 700;
+    width: 100%;
   }
   .quantity {
-    font-size: 19px;
+    font-size: 3.7vw;
   }
   .price {
     position: absolute;
@@ -386,7 +395,7 @@ body {
     font-weight: 700;
   }
   .product-content {
-    justify-items: end;
+    justify-items: center;
   }
   .main-order_content {
     display: flex;
