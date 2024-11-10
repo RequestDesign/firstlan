@@ -84,13 +84,12 @@ body {
   text-decoration: none;
 }
 .broducts-btn_border {
-  height: 26px;
+  height: 0;
   border-bottom: 2px solid rgba(41, 41, 45, 1);
-  margin-top: 3.2vh;
-  margin-bottom: 4vh;
   display: grid;
   justify-content: left;
-  width: 14.167vw;
+  width: 100%;
+  white-space: nowrap
 }
 .broducts-btn_clear {
   font-family: "Gilroy", sans-serif;
@@ -107,6 +106,7 @@ body {
   background: none;
   padding: 0 0;
   text-decoration: none;
+  margin-top: 2vh;
 }
 .broducts-btn_border:hover {
   border-color: rgba(19, 75, 175, 1);
@@ -339,7 +339,7 @@ body {
 .footer_model {
   display: flex;
 }
-@media (max-width: 420px) {
+@media (max-width: 48em) {
   .main-services {
     display: grid;
     margin-top: 24px;
@@ -357,8 +357,8 @@ body {
     gap: 2.999vh;
     padding: 0 4.267vw;
     margin-bottom: 0;
-    width: 343px;
-    height: 180px;
+    width: 91vw;
+    height: 100%;
   }
   .services_title {
     font-size: 9.067vw;
@@ -389,12 +389,12 @@ body {
   }
   .services-content_item {
     width: 91.467vw;
-    height: 101px;
+    height: 100%;
     align-items: end;
   }
   .services-content_items {
-    height: 617px;
-    gap: 0;
+    height: 100%;
+    gap: 2vh;
   }
   .services_numder {
     margin-bottom: -25px;
@@ -412,17 +412,20 @@ body {
   }
   .broducts-btn_clear {
     font-size: 14px;
+    width: 300px;
+    margin-top: 3vh;
   }
   .broducts-btn_border {
-    margin-top: 20px;
+    margin-top: 0;
     margin-bottom: 0;
     justify-self: left;
-    width: 241px;
+    height: 0;
+    width: 100%;
   }
   .box-white_title {
     font-size: 9.067vw;
     margin-bottom: 2.999vh;
-    line-height: 34px;
+    line-height: normal;
   }
   .box-white_text {
     font-size: 4.267vw;
@@ -470,12 +473,9 @@ body {
     font-size: 0;
   }
   .project-box_content {
-    margin: 2.399vh;
-  }
-  .box-white_title {
-    font-size: 9.067vw;
-    margin-bottom: 2.999vh;
-    line-height: 34px;
+    margin: 2.399vh 0;
+    margin-left: 4.267vw !important;
+    margin-right: 4.267vw !important;
   }
   .box-white_text {
     font-size: 4.267vw;
@@ -519,7 +519,7 @@ body {
   .box-agreement_text {
     font-size: 3.467vw;
     width: 64.533vw;
-    line-height: 18.2px;
+    line-height: normal;
   }
   .box-agreement {
     gap: 4.267vw;
@@ -536,7 +536,7 @@ body {
   }
   .equipment {
     margin-left: 0;
-    margin-top: -140px;
+    margin-top: -20.1vmax;
     width: 200px;
     display: grid;
     justify-self: center;
@@ -579,7 +579,6 @@ body {
   .main-category_button {
     gap: 4.267vw;
     height: 50px;
-    width: 150px;
     text-decoration: none;
   }
   .footer_model {

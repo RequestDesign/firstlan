@@ -1,3 +1,9 @@
+.main-category_button {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 2vmax;
+}
 .footer {
   margin-bottom: 3.7vh;
 }
@@ -141,8 +147,14 @@
   text-transform: uppercase;
   transition: color 0.3s;
   letter-spacing: 0.104vw;
+  white-space: nowrap;
 }
 @media (max-width: 48em) {
+  .main-category_button {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
   /* footer */
   .footer {
     margin-bottom: 6vh;
@@ -238,7 +250,8 @@
     font-size: 7vw;
   }
   .main-category_still {
-    font-size: 0.8vw;
+    font-size: 2.7vw;
+    white-space: nowrap;
   }
   .btn-arrow {
     width: 5.2vw;

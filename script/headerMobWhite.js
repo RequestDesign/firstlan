@@ -33,8 +33,8 @@ document.addEventListener("scroll", function () {
   const menu = document.querySelector(".menu-search");
 
   if (scrollPosition > 10) {
-    burgerBox.style.background = "black";
-    burger.style.background = "black";
+    burgerBox.style.background = "rgba(41, 41, 45, 1)";
+    burger.style.background = "rgba(41, 41, 45, 1)";
     burger.style.content = "url(image/HomePage/burger_ico/Vector1.svg)";
   } else {
     burgerBox.style.background = "white";
@@ -43,12 +43,12 @@ document.addEventListener("scroll", function () {
   }
   burgerChk.addEventListener("change", function () {
     if (burgerChk.checked == true) {
-      burgerBox.style.background = "black";
-      burger.style.background = "black";
+      burgerBox.style.background = "rgba(41, 41, 45, 1)";
+      burger.style.background = "rgba(41, 41, 45, 1)";
       burger.style.content = "url(image/HomePage/burger_ico/Vector2.svg)";
     } else if (burgerChk.checked == false && scrollPosition > 10) {
-      burgerBox.style.background = "black";
-      burger.style.background = "black";
+      burgerBox.style.background = "rgba(41, 41, 45, 1)";
+      burger.style.background = "rgba(41, 41, 45, 1)";
       burger.style.content = "url(image/HomePage/burger_ico/Vector1.svg)";
     } else if (burgerChk.checked == false && scrollPosition < 10) {
       burgerBox.style.background = "white";
@@ -56,4 +56,13 @@ document.addEventListener("scroll", function () {
       burger.style.content = "url(image/HomePage/burger_ico/Vector.svg)";
     }
   });
+});
+document.addEventListener("scroll", function () {
+  const header = document.querySelector("header");
+  const scrollPosition = window.scrollY;
+  if (scrollPosition > 10) {
+    header.classList.add("header-scrolled");
+  } else {
+    header.classList.remove("header-scrolled");
+  }
 });

@@ -343,7 +343,7 @@ body {
     height: 60px;
   }
   .scroll-price {
-    z-index: 2;
+    z-index: 1;
     padding: 28px 16px;
     width: 100vw;
     height: 86px;
@@ -373,7 +373,7 @@ body {
     height: 24px;
   }
   .product-content_quantity {
-    width: 10.833vmax;
+    width: 12.833vmax;
     height: 3.4vh;
     gap: 46px;
     margin-top: -25px;
@@ -385,7 +385,7 @@ body {
     width: 100%;
   }
   .quantity {
-    font-size: 3.7vw;
+    font-size: 3vw;
   }
   .price {
     position: absolute;
@@ -434,7 +434,7 @@ body {
     justify-content: left;
   }
   .main-category_still {
-    font-size: 14px;
+    font-size: 2.7vw;
   }
   .box-white_button {
     width: 50vw;

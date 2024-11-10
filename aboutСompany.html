@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>О компании</title>
+
     <link rel="stylesheet" href="style/HomePage.css" />
     <link rel="stylesheet" href="style/ModHomePage.css" />
     <link rel="stylesheet" href="font/stylesheet.css" />
@@ -237,31 +238,11 @@
       </header>
     <main>
         <div class="search-box footer_model-open">
-            <svg
-              class="search-icon"
-              id="sr3"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M10.5 19C15.1944 19 19 15.1944 19 10.5C19 5.80558 15.1944 2 10.5 2C5.80558 2 2 5.80558 2 10.5C2 15.1944 5.80558 19 10.5 19Z"
-                stroke="#888C8E"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M22 22L19 19"
-                stroke="#888C8E"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
+            
+            <svg class="search-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.5 19C15.1944 19 19 15.1944 19 10.5C19 5.80558 15.1944 2 10.5 2C5.80558 2 2 5.80558 2 10.5C2 15.1944 5.80558 19 10.5 19Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M22 22L19 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-    
             <input type="text" id="searchInputm" placeholder="Поиск" />
             <div id="sr3" class="search-results"></div>
         </div>
@@ -328,11 +309,11 @@
         <div class="main-about_box">
             <div class="container-fluid">
                 <div class="about-block_title">Решения для любого бизнеса</div>
-                <div class="mr-top">
-                    <div class="swipeer-container">
+                
+                    <div class="swiper-container mr-top">
                         <div class="swiper-wrapper">
                     <!-- <div class="box-content"> -->
-                        <div class="swiper-slide">
+                                <div class="swiper-slide">
                                 <div class="box-item">
                                     <div class="box-blue"></div>
                                     <div class="box-white">
@@ -352,7 +333,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                                </div>
                                 <div class="swiper-slide">
                                     <div class="box-item">
                                         <div class="box-blue"></div>
@@ -497,8 +478,9 @@
                                 </div>
                             <!-- </div> -->
                         </div>
+                        <div class="swiper-pagination footer_model-open"></div>
                     </div>
-                </div>
+                
             </div>
         </div>
         <div class="main-about_box">    
@@ -933,24 +915,14 @@
                           конфиденциальности</label
                         >
                       </div>
-                      <a href="#" class="box_button main-category_button">
+                      <button type="submit" class="box_button main-category_button">
                         <div class="main-category_still">отправить</div>
-                        <button type="submit" class="btn-blue">
-                          <svg
-                            class="btn-arrow"
-                            width="23"
-                            height="15"
-                            viewBox="0 0 23 15"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M22.7071 8.14851C23.0976 7.75799 23.0976 7.12482 22.7071 6.7343L16.3431 0.370338C15.9526 -0.0201859 15.3195 -0.0201859 14.9289 0.370338C14.5384 0.760863 14.5384 1.39403 14.9289 1.78455L20.5858 7.44141L14.9289 13.0983C14.5384 13.4888 14.5384 14.1219 14.9289 14.5125C15.3195 14.903 15.9526 14.903 16.3431 14.5125L22.7071 8.14851ZM0 8.44141L22 8.44141V6.44141L0 6.44141L0 8.44141Z"
-                              fill="white"
-                            />
+                        <div  class="btn-blue">
+                          <svg class="btn-arrow" width="23" height="15"  viewBox="0 0 23 15"  fill="none"   xmlns="http://www.w3.org/2000/svg" >
+                            <path  d="M22.7071 8.14851C23.0976 7.75799 23.0976 7.12482 22.7071 6.7343L16.3431 0.370338C15.9526 -0.0201859 15.3195 -0.0201859 14.9289 0.370338C14.5384 0.760863 14.5384 1.39403 14.9289 1.78455L20.5858 7.44141L14.9289 13.0983C14.5384 13.4888 14.5384 14.1219 14.9289 14.5125C15.3195 14.903 15.9526 14.903 16.3431 14.5125L22.7071 8.14851ZM0 8.44141L22 8.44141V6.44141L0 6.44141L0 8.44141Z" fill="white" />
                           </svg>
-                        </button>
-                      </a>
+                        </div>
+                      </button>
                     </div>
                   </form>
                 </div>
@@ -1237,7 +1209,8 @@
       crossorigin="anonymous"
     ></script>
     <script src="script/headerMobWhite.js"></script>
-    <script src="script/index.js"></script>
+    <script src="script/company.js"></script>
     <script src="script/from-error.js"></script>
+    <script src="script/search.js"></script>
 </body>
 </html>

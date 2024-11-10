@@ -1,20 +1,23 @@
-const buttons = document.querySelectorAll(".description-button button");
-const contentBoxes = document.querySelectorAll(
-  ".description-block_content .content-box"
-);
+document.addEventListener("DOMContentLoaded", function () {
+  const buttons = document.querySelectorAll(".swiper-slide");
+  const contentBoxes = document.querySelectorAll(
+    ".description-block_content .content-box"
+  );
 
-buttons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const targetId = button.getAttribute("data-target");
-    const targetContent = document.getElementById(targetId);
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const targetId = button.getAttribute("data-target");
+      const targetContent = document.getElementById(targetId);
 
-    buttons.forEach((btn) => btn.classList.remove("active-btn"));
-    button.classList.add("active-btn");
+      buttons.forEach((btn) => btn.classList.remove("active-btn"));
+      button.classList.add("active-btn");
 
-    contentBoxes.forEach((box) => box.classList.remove("active-block"));
-    targetContent.classList.add("active-block");
+      contentBoxes.forEach((box) => box.classList.remove("active-block"));
+      targetContent.classList.add("active-block");
+    });
   });
 });
+
 
 const butModal = document.querySelectorAll(".modal-vis");
 const modal = document.getElementById("modal-window");
@@ -72,13 +75,13 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
   `;
 
-  form.addEventListener("submit", function(event) {
+  form.addEventListener("submit", function (event) {
     event.preventDefault();
     modalBlock.parentNode.replaceChild(thankYouBlock, modalBlock);
   });
 
   const closeButton = thankYouBlock.querySelector("#close-modal");
-  closeButton.addEventListener("click", function() {
+  closeButton.addEventListener("click", function () {
     modal.style.display = "none";
   });
 });

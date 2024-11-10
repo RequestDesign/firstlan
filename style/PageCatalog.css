@@ -484,9 +484,8 @@ body {
   }
  
   .main-category_button {
-    gap: 4.267vw !important;
+    gap: 16px;
     height: 50px;
-    width: 150px;
     text-decoration: none;
   }
   .btn-blue {

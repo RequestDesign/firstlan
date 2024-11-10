@@ -70,9 +70,8 @@
     font-size: 7vw;
   }
   .main-category_button {
-    gap: 4.267vw;
+    gap: 16px;
     height: 50px;
-    width: 150px;
     text-decoration: none;
   }
 
@@ -169,6 +168,7 @@
     font-size: 6.4vw;
     text-align: left;
     text-decoration: none;
+    height: 4.658vh;
     font-family: "Gilroy", sans-serif;
     font-weight: 600;
   }
@@ -562,7 +562,6 @@
     margin-top: 4.798vh;
     margin-left: 4.267vw !important;
     margin-right: 4.267vw !important;
-    margin-right: 0;
     width: 91.467vw;
   }
   .item-box {
@@ -977,7 +976,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    top: 11.67vmax;
+    top: 11vmax;
     right: 95.5vw;
     z-index: 1;
     color: rgba(255, 255, 255, 1);
@@ -1080,5 +1079,9 @@
     content: url(../image/header/cross.svg);
     height: 11px;
     width: 11px;
+  }
+  .box_button{
+    border: none;
+    background: none;
   }
 }

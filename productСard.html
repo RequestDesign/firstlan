@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Товар</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
     <link rel="stylesheet" href="style/footer.css" />
     <link rel="stylesheet" href="style/header-black.css" />
     <link rel="stylesheet" href="font/stylesheet.css" />
@@ -376,11 +378,14 @@
                     </div>
                 </div>
                 <div class="main-product_description">
-                  <div class="description-button">
-                    <button class="btn-white active-btn" data-target="characteristics">Характеристики</button>
-                    <button class="btn-white" data-target="recommended">Рекомендуемая комплектация</button>
-                    <button class="btn-white" data-target="comparison">Сравнение с аналогами</button>
-                    <button class="btn-white" data-target="specification">Спецификация</button>
+                  <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <button class="swiper-slide btn-white active-btn" data-target="characteristics">Характеристики</button>
+                      <button class="swiper-slide btn-white" data-target="recommended">Рекомендуемая комплектация</button>
+                      <button class="swiper-slide btn-white" data-target="comparison">Сравнение с аналогами</button>
+                      <button class="swiper-slide btn-white" data-target="specification">Спецификация</button>
+                      
+                    </div>
                   </div>
                   <div class="product-description_block">
                     <div class="description-block_content">
@@ -1491,7 +1496,7 @@
           </div>
         </div>
     </footer>
-      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
       <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -1500,5 +1505,7 @@
     <script src="script/itemsCatalog.js"></script>
     <script src="script/productCard.js"></script>
     <script src="script/from-error.js"></script>
+    <script src="script/button.js"></script>
+    <script src="script/search.js"></script>
 </body>
 </html>

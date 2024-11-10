@@ -103,13 +103,8 @@
   width: 100%;
   overflow: hidden;
 }
-
 .mr-top .swiper-wrapper {
   flex-wrap: wrap;
-  overflow: hidden;
-}
-.swiper-wrapper{
-  overflow: hidden;
 }
 .main-category_button {
   display: flex;
@@ -165,7 +160,7 @@
   height: 18.6vh !important;
   overflow: hidden;
 }
-.box-container{
+.box-container {
   width: 100%;
 }
 .image {
@@ -195,7 +190,23 @@
   width: 40.625vw;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 48em) {
+  .search-box {
+    width: 91.467vw;
+    height: 7.796vh;
+    padding: 14px 20px;
+    border: 2px solid white;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 10.4vmax;
+    right: -4.4vw;
+    z-index: 1;
+    color: white;
+    box-shadow: none;
+  }
   .main-about_box {
     margin: 80px 0;
   }
@@ -221,16 +232,17 @@
     height: 200px;
   }
   .box-container {
-    margin: 32px 16px 0 16px;
+    margin: 32px 0 0 0;
+    margin: 2.399vh 0;
+    margin-left: 4.267vw !important;
+    margin-right: 4.267vw !important;
     width: 91vw;
   }
   .main-brands_item {
-    width: 167px !important;
-    height: 100px !important;
+    width: 45vw !important;
+    height: 13vmax !important;
   }
-  .box-container .swiper-wrapper {
-    gap: 12px;
-  }
+  
   .main-category_button {
     width: 100% !important;
   }
@@ -244,7 +256,7 @@
   }
   .box-item {
     width: 91vw;
-    height: 150px;
+    height: 100%;
   }
   .mr-top {
     margin-top: 40px;
@@ -264,7 +276,7 @@
   .main-about_block {
     display: grid;
   }
-  .main-about_content{
+  .main-about_content {
     display: grid;
   }
   .about-block_title {
@@ -278,48 +290,48 @@
     order: 1;
     font-size: 13px;
   }
-  .about-block_text{
+  .about-block_text {
     width: 91vw;
     font-size: 16px;
   }
-  .main-about{
-    height: 72vh;
+  .main-about {
+    height: 76vh;
   }
-  .main-about_partner{
-    margin: 80px 0 0 0;
+  .main-about_partner {
+    margin: 120px 0 0 0;
   }
-  .achievement-box_white{
+  .achievement-box_white {
     width: 91vw;
   }
-  .about-partner_content{
+  .about-partner_content {
     gap: 40px;
   }
-  .achievement-box_information{
+  .achievement-box_information {
     margin-top: 40px;
     width: 253px;
   }
-  .achievement-box_title{
+  .achievement-box_title {
     font-size: 34px;
     width: 91vw;
     line-height: 34px;
   }
-  .information{
+  .information {
     width: 100%;
   }
- 
-  .information_numder{
+
+  .information_numder {
     text-align: left;
     font-size: 34px;
   }
-  .information_text{
+  .information_text {
     font-size: 16px;
     width: 100%;
   }
-  .title_still{
+  .title_still {
     font-size: 24px;
     line-height: 26px;
   }
-  .content-advantages_text{
+  .content-advantages_text {
     font-size: 16px;
     width: 91vw;
   }

@@ -2,7 +2,7 @@ body {
   background: rgba(230, 230, 230, 0.356) !important;
 }
 .main-product {
-  margin-top: 6vh;
+  margin-top: 4vmax;
 }
 .main-product_description {
   margin-top: 18vh;
@@ -56,6 +56,8 @@ body {
   width: 100%;
   background: rgba(233, 233, 233, 1);
   padding: 1vh 1.25vw;
+  display: flex;
+  justify-content: center;
 }
 .product-content_specifications {
   display: grid;
@@ -171,16 +173,22 @@ body {
 .content-box.active-block {
   display: block;
 }
-.btn-white {
-  width: 100%;
+.swiper-slide {
+ width: 100%;
   height: 73px;
   border: 2px solid rgba(19, 75, 175, 1);
   font-family: "Gilroy", sans-serif;
   font-size: 1.25vw;
   font-weight: 600;
   color: rgba(41, 41, 45, 1);
+  flex-shrink: 1;
 }
-.active-btn {
+
+.main-product_description .swiper-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.swiper-slide.active-btn {
   background: rgba(19, 75, 175, 1);
   color: white !important;
 }
@@ -237,17 +245,18 @@ body {
 }
 .block-banner_white {
   display: flex;
-  gap: 25px;
+  gap: 1.302vw;
 }
 .banner-image {
   width: 12.448vw;
   margin-top: -80px;
+  object-fit: contain;
 }
 .white-contetn_text {
   font-size: 0.938vw;
   font-family: "Gilroy", sans-serif;
   font-weight: 400;
-  line-height: 2.5vh;
+  line-height: normal;
   width: 14.688vw;
   margin-bottom: 4vh;
 }
@@ -743,11 +752,39 @@ body {
   font-size: 0.729vw;
   color: rgba(28, 28, 31, 0.5);
 }
-
 .flex-vit {
   display: none;
 }
-@media (max-width: 420px) {
+
+@media (max-width: 48em) {
+  .main-product_description{
+    margin: 80px 0;
+  }
+ 
+  .main-product_description .swiper-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .swiper-slide {
+    width: auto;
+    height: 55px;
+    font-size: 19px;
+    padding: 0 20px;
+    white-space: nowrap;
+    flex: 0 0 auto;
+  }
+  .swiper-slide:nth-child(1n) {
+    width: auto;
+  }
+  .swiper-slide:nth-child(2n) {
+    width: auto;
+  }
+  .swiper-slide:nth-child(3n) {
+    width: auto;
+  }
+  .swiper-slide:nth-child(4n) {
+    width: auto;
+  }
   .description-block_content {
     width: 91.467vw;
   }
@@ -756,6 +793,15 @@ body {
   }
   .content-box {
     width: 91.467vw;
+  }
+  .content-box.active-block {
+    overflow-x: auto;
+    width: 100% !important;
+    flex-wrap: nowrap;
+  }
+  .table {
+    width: 100%;
+    flex-wrap: nowrap;
   }
   .product-description_block {
     display: grid;
@@ -807,7 +853,7 @@ body {
   }
   .main-category_still {
     font-family: "Gilroy", sans-serif;
-    font-size: 14px;
+    font-size: 2.7vw;
   }
   .main-category_button {
     gap: 16px;
@@ -819,12 +865,7 @@ body {
   .content-certificate_title {
     font-size: 24px;
   }
-  .btn-white {
-    width: 100%;
-    height: 55px;
-    font-size: 19px;
-    padding: 0 20px;
-  }
+ 
   .product-content_specifications {
     margin-top: 1vh;
   }
@@ -859,10 +900,7 @@ body {
   .table-block_general {
     font-size: 19px;
   }
-  .table {
-    width: 100%;
-    flex-wrap: nowrap;
-  }
+
   .table-text {
     font-size: 14px;
   }
@@ -874,9 +912,6 @@ body {
     width: 44.35vw !important;
     height: 228px !important;
     padding: 12px !important;
-  }
-  .main-category_still {
-    font-size: 14px;
   }
 
   .sales-item_text {
@@ -979,7 +1014,7 @@ body {
     width: 91vw;
   }
   .scroll-price {
-    z-index: 2;
+    z-index: 1;
     padding: 28px 16px;
     width: 100vw;
     height: 86px;
