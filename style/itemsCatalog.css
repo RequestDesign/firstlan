@@ -68,6 +68,7 @@ body {
 }
 .brands-content_box {
   display: none;
+  margin-top: 15px;
 }
 
 .categories_title {
