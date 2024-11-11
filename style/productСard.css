@@ -737,7 +737,7 @@ body {
 /* input-placeholder */
 .form-input:focus::placeholder,
 .form-input:not(:placeholder-shown)::placeholder {
-  transform: translateY(-2.3vh);
+  transform: translateY(-1.8vh);
   font-size: 0.729vw;
   color: rgba(28, 28, 31, 0.5);
 }
@@ -760,7 +760,10 @@ body {
   .main-product_description{
     margin: 80px 0;
   }
- 
+  .swiper{
+    z-index: 0;
+  }
+  
   .main-product_description .swiper-wrapper {
     display: flex;
     justify-content: space-between;
@@ -1129,14 +1132,15 @@ body {
     width: 91vw;
     height: 50px;
     padding: 16px 20px;
-    font-size: 16px;
+    font-size: 1.8vw;
   }
   .form-input::placeholder {
-    font-size: 16px;
+    font-size: 1.8vw;
   }
   .form-input:focus::placeholder,
   .form-input:not(:placeholder-shown)::placeholder {
-    font-size: 2.4vw;
+    font-size: 1.4vw;
+    transform: translateY(-1.3vh);
   }
   .form-agreement_button {
     display: grid;

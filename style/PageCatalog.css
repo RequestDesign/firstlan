@@ -509,27 +509,27 @@ body {
 
   /* каталог */
   .main-catalog_content{
-    gap: 1.172vw;
+    gap: 3vw;
     justify-content: space-between;
   }
   .main-catalog-white_box{
-    width: 11.745vmax;
+    width: 12.745vmax;
     height: 11.409vh;
   }
   .catalog-link_block{
-    width: 11.745vmax;
+    width: 12.745vmax;
     height: 11.409vh;
     display: grid;
     justify-content: center;
   }
   .catalog-title{
-    width: 11.745vmax;
+    width: 100%;
     text-align: center;
     font-size: 1.523vw;
     font-weight: 400;
   }
   .catalog-image{
-    width: 12.745vmax;
+    width: 100%;
     height: 8.443vh;
     display: grid;
     justify-content: center;
