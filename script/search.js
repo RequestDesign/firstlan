@@ -27,8 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
   closeSearch.addEventListener("click", (event) => {
     searchInput.value = "";
     searchResults.classList.remove("active");
-    menuSearch.innerHTML = ""; // Убираем предыдущие результаты
-    noResultsMessag.style.display = "none"; // Скрываем сообщение о отсутствии результатов
+    menuSearch.innerHTML = ""; 
+    noResultsMessag.style.display = "none"; 
     event.stopPropagation();
   });
 
@@ -46,8 +46,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const query = e.target.value.trim();
 
     // Очистка предыдущих результатов и сообщения
-    menuSearch.innerHTML = ""; // Очищаем предыдущие результаты
-    noResultsMessag.style.display = "none"; // Скрываем сообщение о отсутствии результатов
+    menuSearch.innerHTML = ""; 
+    noResultsMessag.style.display = "none"; 
 
     if (query.length > 0) {
       const filteredResults = availableResults.filter((result) =>
@@ -58,23 +58,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
       
       if (filteredResults.length > 0) {
-        // Создаем элементы для каждого найденного результата
         filteredResults.forEach((result) => {
           const resultItem = document.createElement("div");
-          resultItem.classList.add("menu-search_item"); // Изменяем класс на menu-search_item
+          resultItem.classList.add("menu-search_item");
           resultItem.textContent = result;
           menuSearch.appendChild(resultItem);
           console.log("блоков есть");
         });
       } else {
-        // Если нет результатов, отображаем сообщение
-        noResultsMessag.style.display = "grid"; // Показываем сообщение о отсутствии результатов
+        noResultsMessag.style.display = "grid"; 
         console.log("блок показывается");
       }
     } 
     else {
-      searchResults.classList.remove("active"); // Убираем результаты, если пустой ввод
-      noResultsMessag.style.display = "none"; // Скрываем сообщение
+      searchResults.classList.remove("active"); 
+      noResultsMessag.style.display = "none"; 
     }
   });
 
