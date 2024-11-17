@@ -137,6 +137,8 @@ body {
   -webkit-box-orient: vertical;
   line-clamp: 3 !important;
   box-orient: vertical !important;
+  text-decoration: none;
+  color: rgba(41, 41, 45, 1);
 }
 .sales-price {
   margin-top: 2vmax;

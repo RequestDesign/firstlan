@@ -527,6 +527,8 @@ input[type="range"]::-moz-range-thumb {
   -webkit-box-orient: vertical;
   line-clamp: 3 !important;
   box-orient: vertical !important;
+  text-decoration: none;
+  color: rgba(28, 28, 31, 1);
 }
 .position {
   position: absolute;
@@ -650,6 +652,7 @@ input[type="range"]::-moz-range-thumb {
   width: 2.604vw;
   height: 2.604vw;
   background-color: white;
+  cursor: pointer;
 }
 .pagination-page_item:hover{
   background-color: rgba(215, 215, 215, 0.286);

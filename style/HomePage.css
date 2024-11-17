@@ -296,6 +296,8 @@ body {
   align-items: center;
   gap: 1.458vw;
   text-decoration: none;
+  border: none;
+  background: none;
 }
 .main-category_title {
   font-size: 3.125vw;
@@ -416,6 +418,8 @@ body {
   -webkit-box-orient: vertical;
   line-clamp: 3 !important;
   box-orient: vertical !important;
+  text-decoration: none;
+  color: rgba(28, 28, 31, 1);
 }
 .sales-price {
   margin-top: 2vmax;

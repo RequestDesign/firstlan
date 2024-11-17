@@ -161,6 +161,8 @@ body {
   font-family: "Gilroy", sans-serif;
   font-size: 1.25vw;
   font-weight: 600;
+  width: 20px;
+  text-align: center;
 }
 .description-button {
   display: flex;
@@ -434,6 +436,8 @@ body {
   -webkit-box-orient: vertical;
   line-clamp: 3 !important;
   box-orient: vertical !important;
+  text-decoration: none;
+  color: rgba(41, 41, 45, 1);
 }
 .position {
   position: absolute;

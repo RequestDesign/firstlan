@@ -97,6 +97,8 @@ body {
   font-family: "Gilroy", sans-serif;
   font-size: 1.25vw;
   font-weight: 600;
+  width: 20px;
+  text-align: center;
 }
 
 .main-order_price {
@@ -159,7 +161,8 @@ body {
   border: 2px solid rgba(28, 28, 31, 0.2);
 }
 .form {
-  margin-top: 4vh;
+  display: grid;
+  gap: 4vh;
   width: 61.927vw;
 }
 .order-personal_content{

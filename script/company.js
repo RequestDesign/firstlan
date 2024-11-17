@@ -50,10 +50,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Инициализация слайдеров
   initializeSwipers();
 
-  // Обработка события изменения размера окна
   window.addEventListener("resize", function () {
     initializeSwipers();
   });
@@ -63,9 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const smallButton = document.getElementById("smallButton");
   const photoContainer = document.getElementById("photoContainer");
 
-  // Обработчик клика по маленькой кнопке (изображению)
   smallButton.addEventListener("click", () => {
-    // Показать или скрыть контейнер с фотографиями
     photoContainer.style.display =
       photoContainer.style.display === "grid" ? "none" : "grid";
   });
@@ -95,11 +91,9 @@ advantagesItems.forEach((item) => {
     const img = item.querySelector("img");
     if (img) {
       if (item.classList.contains("active")) {
-        // Если блок уже активен, можно сбросить изображение
         img.src = img.dataset.defaultSrc;
         item.classList.remove("active");
       } else {
-        // Если блок неактивен, сбрасываем предыдущий активный блок
         if (advantagesActive) {
           const activeImg = advantagesActive.querySelector("img");
           if (activeImg) {
@@ -107,7 +101,6 @@ advantagesItems.forEach((item) => {
           }
           advantagesActive.classList.remove("active");
         }
-        // Устанавливаем новое изображение
         img.src = img.dataset.activeSrc;
         item.classList.add("active");
       }
@@ -143,12 +136,12 @@ searchInps.addEventListener("input", function () {
   if (searchInps.value == "") {
     menu.style.display = "none";
     resB.style.display = "none";
-    noResultsMessage.style.display = "none"; // Скрыть сообщение
+    noResultsMessage.style.display = "none"; 
   } else {
     // Здесь должна быть логика проверки результатов поиска
     // Пример: если введенное значение не соответствует никаким результатам
     const searchTerm = searchInps.value.toLowerCase();
-    const availableResults = ["пример", "поиск", "результат"]; // Пример доступных результатов
+    const availableResults = ["пример", "поиск", "результат"]; 
     const filteredResults = availableResults.filter((result) =>
       result.includes(searchTerm)
     );
@@ -160,7 +153,7 @@ searchInps.addEventListener("input", function () {
         menuSearchText.appendChild(resultItem);
       });
     } else {
-      noResultsMessage.style.display = "block"; // Показываем сообщение, если результатов нет
+      noResultsMessage.style.display = "block"; 
     }
 
     resB.style.display = "flex";
@@ -168,7 +161,7 @@ searchInps.addEventListener("input", function () {
       searchInps.value = "";
       menu.style.display = "none";
       resB.style.display = "none";
-      noResultsMessage.style.display = "none"; // Скрыть сообщение
+      noResultsMessage.style.display = "none"; 
     });
   }
 });
