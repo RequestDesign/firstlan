@@ -13,6 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 nextEl: null,
                 prevEl: null,
             },
+            allowTouchMove: true,
+            grabCursor: true,
             on: {
                 slideChange: function () {
                     

@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
       container.scrollTo({ left: scrollPosition, behavior: "smooth" });
       setTimeout(updateButtonState, 300);
     }
-    // Режим кнопок для прокрутки (экран больше 440px)
+    // Режим кнопок для прокрутки (экран больше 48em)
     function enableButtonMode() {
       prevButton.style.display = "block";
       nextButton.style.display = "block";
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
       container.removeEventListener("touchmove", handleTouchMove);
       container.removeEventListener("touchend", handleTouchEnd);
     }
-    // Режим прокрутки пальцем/мышью (экран меньше или равен 440px)
+    // Режим прокрутки пальцем/мышью (экран меньше или равен 48me)
     function enableScrollMode() {
       prevButton.style.display = "none";
       nextButton.style.display = "none";
