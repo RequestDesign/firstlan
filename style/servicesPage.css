@@ -3,11 +3,13 @@ body {
 }
 .main-services {
   margin: 4vh 0 21vh 0;
-  display: flex;
-  gap: 2.083vw;
 }
 .main-services_content {
-  width: 54.844vw;
+  display: flex;
+  justify-content: space-between;
+}
+.main-services_content {
+  /* width: 54.844vw; */
 }
 .services {
   width: 34.74vw;
@@ -28,6 +30,7 @@ body {
   display: flex;
   justify-content: space-between;
   height: 3vmax;
+  gap: 0.938vw;
 }
 .services_title {
   font-family: "Gilroy", sans-serif;
@@ -89,7 +92,7 @@ body {
   display: grid;
   justify-content: left;
   width: 100%;
-  white-space: nowrap
+  white-space: nowrap;
 }
 .broducts-btn_clear {
   font-family: "Gilroy", sans-serif;
@@ -340,6 +343,7 @@ body {
   display: flex;
 }
 @media (max-width: 48em) {
+ 
   .main-services {
     display: grid;
     margin-top: 24px;
@@ -351,7 +355,9 @@ body {
     object-fit: cover;
     overflow: hidden;
   }
-
+  .main-services_content {
+    display: grid;
+  }
   .services-content_title {
     display: grid;
     gap: 2.999vh;
@@ -361,11 +367,11 @@ body {
     height: 100%;
   }
   .services_title {
-    font-size: 9.067vw;
+    font-size: 34px;
     margin-bottom: 20px;
   }
   .services_text {
-    font-size: 3.733vw;
+    font-size: 14px;
     width: 91.467vw;
     text-align: left;
     color: rgba(41, 41, 45, 1);
@@ -373,9 +379,9 @@ body {
   }
   .main-services_content {
     margin: 0;
-    margin-top: 4.798vh;
-    margin-right: 0;
     width: 91.467vw;
+    margin-top: 4vh;
+    margin-bottom: 5vh;
   }
   .item-box {
     display: grid;
@@ -388,13 +394,14 @@ body {
     height: 100%;
   }
   .services-content_item {
-    width: 91.467vw;
+    width: 91vw;
     height: 100%;
     align-items: end;
   }
   .services-content_items {
     height: 100%;
     gap: 2vh;
+    width: 91vw;
   }
   .services_numder {
     margin-bottom: -25px;
@@ -403,8 +410,8 @@ body {
     height: 76px;
   }
   .btn-gray {
-    width: 50px;
-    height: 50px;
+    width: 12.51vw;
+    height: 12.51vw;
   }
   .btn-gray-arrow {
     width: 3vw;
@@ -439,10 +446,11 @@ body {
   /* project */
   .main-project {
     margin-top: 80px;
-    margin-bottom: 80px;
+    margin-bottom: 80px; 
   }
   .main-about_box {
     display: grid;
+    overflow: hidden;
   }
   .form-content_box {
     display: grid;
@@ -453,10 +461,10 @@ body {
   .main-about_box-blue {
     justify-items: center;
     width: 100%;
-    height: 260px;
+    height: 34.758vmax;
   }
   .about_box-blue {
-    height: 325px !important;
+    height: 345px !important;
   }
   .form-input {
     width: 100%;
@@ -476,6 +484,11 @@ body {
     margin: 2.399vh 0;
     margin-left: 4.267vw !important;
     margin-right: 4.267vw !important;
+  }
+  .box-white_title {
+    font-size: 9.067vw;
+    margin-bottom: 2.999vh;
+    line-height: normal;
   }
   .box-white_text {
     font-size: 4.267vw;
@@ -562,7 +575,7 @@ body {
     height: 26px;
   }
   .main-category_still {
-    font-size: 2.7vw;
+    font-size: 2.7vw !important;
   }
   .box-white_button {
     width: 50vw;

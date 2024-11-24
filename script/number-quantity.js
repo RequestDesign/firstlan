@@ -4,9 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const quantityDisplays = document.querySelectorAll('.quantity');
 
     minusButtons.forEach((minusButton, index) => {
-        let quantity = parseInt(quantityDisplays[index].textContent);
-
         minusButton.addEventListener('click', function() {
+            let quantity = parseInt(quantityDisplays[index].textContent);
             if (quantity > 1) { 
                 quantity--; 
                 quantityDisplays[index].textContent = quantity; 
@@ -15,9 +14,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     plusButtons.forEach((plusButton, index) => {
-        let quantity = parseInt(quantityDisplays[index].textContent);
-
         plusButton.addEventListener('click', function() {
+            let quantity = parseInt(quantityDisplays[index].textContent);
             quantity++; 
             quantityDisplays[index].textContent = quantity; 
         });

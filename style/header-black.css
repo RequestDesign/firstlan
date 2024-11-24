@@ -9,7 +9,7 @@
   background-color: #ffffff;
   z-index: 5;
 }
-.error-input{
+.error-input {
   position: relative;
   width: 100%;
 }
@@ -78,7 +78,7 @@
 .header-number {
   font-family: "Gilroy", sans-serif;
   font-weight: 700;
-   font-size: 1.042vw;
+  font-size: 1.042vw;
   color: black;
   margin-left: 2vmax;
   text-decoration: none;
@@ -103,13 +103,19 @@
   font-family: "Gilroy", sans-serif;
   font-weight: 400;
   color: rgba(41, 41, 45, 1);
+  text-decoration: none;
+  cursor: auto;
 }
 .no-results {
   display: none;
+  position: absolute;
+  /* top: 50%; */
+  /* left: 25vw; */
+  width: 353px;
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-left: -240px;
+  /* margin-left: -180px; */
   z-index: 1;
   color: #414141;
 }
@@ -123,7 +129,7 @@
 }
 /* Поле ввода в поиске */
 .search-box input {
-  width: 36.458vw;
+  width: 57vw;
   font-size: 16px;
   border: none;
   outline: none;
@@ -133,7 +139,7 @@
 }
 /* Кнопка закрытия поиска */
 .close-btn {
-  width: 5vw;
+  width: 2vw;
   height: 5vh;
   display: grid;
   align-items: center;
@@ -149,7 +155,7 @@
   width: 65.833vw;
   height: 35vh;
   background-color: rgba(255, 255, 255, 1);
-  padding: 0.833vw;
+  padding: 0;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   display: none;
 }
@@ -157,12 +163,26 @@
   height: 100%;
   overflow-y: auto;
   padding: 16px 56px;
-  width: 30.885vw;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.menu-search::-webkit-scrollbar {
+  width: 3px;
+}
+.menu-search::-webkit-scrollbar-track {
+  background: rgba(136, 140, 142, 1);
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.menu-search::-webkit-scrollbar-thumb {
+  background-color: rgba(41, 41, 45, 1);
+  border: 1px solid rgba(136, 140, 142, 1);
 }
 .menu-search_item {
   color: #414141;
   margin-bottom: 1.729vmin;
-  height: 2.161vh;
+  /* height: 2.161vh; */
   font-family: "Gilroy";
   font-size: 0.938vw;
   font-weight: 400;
@@ -170,6 +190,10 @@
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: normal;
+  overflow-wrap: break-word;
 }
 .menu-search_item:hover {
   color: rgba(19, 75, 175, 1);
@@ -177,9 +201,12 @@
 /* Когда есть результаты */
 .search-results.active {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 6.116vh;
   font-family: "Gilroy", sans-serif;
   font-weight: 400;
+  padding-right: 16px;
 }
 .icon-box {
   width: 35px;
@@ -198,7 +225,7 @@
 .footer_model-open {
   display: none;
 }
-.box_button{
+.box_button {
   border: none;
   background: none;
   padding: 0;
@@ -259,8 +286,8 @@
     display: grid;
     /* gap: 12px; */
     padding: 2.2vh 0 32px 0;
-    padding-left: 4.267vw !important;
-    padding-right: 4.267vw !important;
+    padding-left: 4vw !important;
+    padding-right: 2vw !important;
     margin: 0;
     background: white;
     list-style-type: none;
@@ -268,6 +295,8 @@
     transition: 0.3s;
     width: 100vw;
     height: 100vh;
+    overflow-x: scroll;
+    overflow-y: none;
   }
   .menu-list ul {
     padding-left: 16px;
@@ -279,13 +308,13 @@
     font-size: 6.4vw;
     text-align: left;
     text-decoration: none;
-    height: 4.658vh;
+    height: 100%;
     font-family: "Gilroy", sans-serif;
     font-weight: 600;
   }
   .menu-list_content {
-    margin-top: 3vh;
-    height: 66.77vh;
+    /* margin-top: 3vh;
+    height: 66.77vh; */
   }
   .link_image {
     width: 6.167vw;
@@ -308,6 +337,7 @@
   .menu-list_box {
     display: grid;
     justify-content: space-between;
+    gap: 2.312vh;
   }
   .end-link_image {
     display: flex;
@@ -334,40 +364,54 @@
   .menu-search {
     background-color: white;
     width: 100%;
-    height: 1240px;
+    height: 1840px;
     display: none;
     z-index: 0;
-    padding-left: 4.267vw !important;
-    padding-right: 4.267vw !important;
+    padding-left: 4vw !important;
+    padding-right: 4vw !important;
     font-family: "Gilroy";
     font-size: 2.833vw;
     font-weight: 500;
-    line-height:2.436vh;
+    line-height: 2.436vh;
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
+    padding-top: 0;
+    overflow-y: auto;
   }
-  .menu-search_text{
+  .menu-search_text {
     font-family: "Gilroy";
-    font-size: 2.833vw;
+    font-size: 16px;
     font-weight: 500;
-    line-height:2.436vh;
+    line-height: 2.436vh;
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
-    width: 73.75vw;
+    width: 91vw;
+    display: grid;
+    gap: 20px;
+    overflow-y: auto;
+    height: 72.335vh;
+  }
+  .menu-search_mobal {
+    height: 100%;
+    width: 84vw !important;
+    text-decoration: none;
+    color: rgba(41, 41, 45, 1);
+    white-space: normal;
+    overflow-wrap: break-word;
   }
   .no-results {
     position: absolute;
-    top: 25.251vh;
+    /* top: 25.251vh; */
     z-index: 1;
-    left: 0;
-    padding-left: 4.267vw !important;
+    /* left: 0; */
+    /* padding-left: 4.267vw !important; */
     padding-right: 4.267vw !important;
     font-family: "Gilroy";
     font-size: 2.833vw;
     font-weight: 500;
-    line-height:2.436vh;
+    line-height: 2.436vh;
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
@@ -432,7 +476,7 @@
   }
   .search-box {
     width: 91.467vw;
-    height: 7.796vh;
+    height: 50px;
     padding: 14px 20px;
     border: 2px solid rgba(28, 28, 31, 0.2);
     background-color: transparent;
@@ -440,7 +484,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    top: -2vmax;
+    top: 0;
     right: -4.4vw;
     z-index: 1;
     color: rgba(28, 28, 31, 0.2);
@@ -504,9 +548,21 @@
     padding: 5px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   }
+  .menu-search_text::-webkit-scrollbar {
+    width: 3px;
+  }
+  .menu-search_text::-webkit-scrollbar-track {
+    background: rgba(136, 140, 142, 1);
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .menu-search_text::-webkit-scrollbar-thumb {
+    background-color: rgba(41, 41, 45, 1);
+    border: 1px solid rgba(136, 140, 142, 1);
+  }
   .search-boxs {
     width: 91.467vw;
-    height: 7.796vh;
+    height: 50px;
     padding: 14px 20px;
     border: 2px solid rgba(28, 28, 31, 0.2);
     background-color: transparent;
@@ -529,6 +585,9 @@
     text-align: left;
     padding-left: 10px;
   }
+  .list-box {
+    height: 13vmin;
+  }
   #resInpS {
     display: none;
     border: none;
@@ -537,7 +596,7 @@
     top: -6px;
   }
   #resInpS::after {
-    content: url(../image/HomePage/header/cross.svg);
+    content: url(../image/header/cross.svg);
     height: 11px;
     width: 11px;
   }
@@ -547,4 +606,9 @@
     margin-top: 0px;
     display: none;
   }
+}
+@media (max-width: 320px){
+  .list-box {
+    height: 16vmin;
+}
 }

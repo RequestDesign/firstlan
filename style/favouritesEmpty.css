@@ -43,7 +43,7 @@ body {
 @media (max-width: 48em) {
   .main-favorites {
     margin-bottom: 80px;
-    margin-top: 24px;
+    margin-top: 0;
   }
   .main-favorites_content {
     display: grid;

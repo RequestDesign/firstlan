@@ -1,5 +1,6 @@
 .main-way {
-  margin-top: 2.5vmax;
+  margin-top: 34px;
+  margin-bottom: 18px;
 }
 .main-way_links {
   display: flex;

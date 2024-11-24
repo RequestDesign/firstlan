@@ -55,7 +55,7 @@ body {
 @media (max-width: 48em) {
   .search-box {
     width: 91.467vw;
-    height: 7.796vh;
+    height: 50px;
     padding: 14px 20px;
     border: 2px solid rgba(28, 28, 31, 0.2);
     background-color: transparent;
@@ -63,7 +63,7 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
-    top: 10.4vmax;
+    top: 12.5vmax;
     right: 4.2vw;
     z-index: 1;
     color: rgba(28, 28, 31, 0.2);

@@ -353,29 +353,27 @@ body {
   .main-project {
     margin-top: 80px;
     margin-bottom: 80px;
-    width: 91vw;
   }
   .main-about_box {
     display: grid;
+    overflow: hidden;
   }
   .form-content_box {
     display: grid;
-    width: 91vw;
   }
   .main-about_box-white {
-    width: 100vw;
+    width: 100%;
   }
   .main-about_box-blue {
     justify-items: center;
-    width: 100vw;
-    height: 260px;
-    overflow: hidden;
+    width: 100%;
+    height: 34.758vmax;
   }
   .about_box-blue {
-    height: 325px !important;
+    height: 345px !important;
   }
   .form-input {
-    width: 91.467vw;
+    width: 100%;
     height: 50px;
     font-size: 3vw;
     padding: 2.099vh 0 2.099vh 4vw;

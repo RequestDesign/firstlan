@@ -176,7 +176,7 @@ body {
   display: block;
 }
 .swiper-slide {
- width: 100%;
+  width: 100%;
   height: 73px;
   border: 2px solid rgba(19, 75, 175, 1);
   font-family: "Gilroy", sans-serif;
@@ -517,7 +517,7 @@ body {
 .modal-block {
   z-index: 3;
   width: 53.125vw;
-  height: 68vh;
+  /* height: 68vh; */
   background-color: #fff;
   padding: 20px;
   /* display: none; */
@@ -525,9 +525,18 @@ body {
   backdrop-filter: blur(20px);
   position: relative;
   margin: 10vh auto;
-  padding: 4.25vw 5.208vw 6.25vw 6.25vw;
+  padding: 4.25vmax 5.208vw 4.25vmax 6.25vw;
   display: grid;
   gap: 7vh;
+}
+.modal-block .close-btn {
+  position: absolute;
+  border: none;
+  background: none;
+  top: 14px;
+  right: 14px;
+  width: 25px;
+  height: 25px;
 }
 .thank-you-block {
   z-index: 3;
@@ -535,27 +544,31 @@ body {
   height: 68vh;
   background-color: #fff;
   padding: 20px;
-  /* display: none; */
+  display: none;
   background: white;
   backdrop-filter: blur(20px);
   position: relative;
   margin: 10vh auto;
   padding: 6.25vw 2vw 6.25vw 20vw;
-  display: grid;
   gap: 7vh;
+}
+.modal-block_content{
+  margin-bottom: 2vmax;
 }
 .blue-element {
   position: absolute;
+  top: 0;
   left: 0;
   width: 1.2vw;
-  height: 68vh;
+  height: 100%;
   background-color: rgba(19, 75, 175, 1);
 }
 .thank-blue_element {
   position: absolute;
+  top: 0;
   left: 0;
   width: 16.146vw;
-  height: 68vh;
+  height: 100%;
   background-color: rgba(19, 75, 175, 1);
 }
 .blue-text_second {
@@ -570,30 +583,40 @@ body {
   display: flex;
   flex-direction: column;
   font-family: "Gilroy", sans-serif;
-  font-size: 9.375vw;
+  font-size: 8.375vw;
   font-weight: 900;
   color: rgba(144, 202, 255, 0.14);
-  line-height: 10vw;
+  line-height: 8vw;
   text-transform: uppercase;
-  width: 54vw;
-  height: 20vmax;
+  width: 46vw;
+  height: 12vmax;
   text-align: right;
-  margin-left: -23vw;
+  margin-left: -2vw;
   /* margin-top: 5vh; */
+}
+.thank-block_content {
+  display: grid;
+  justify-content: right;
+  width: 45.125vw;
+}
+.thank-box_text {
+  display: grid;
+  justify-content: right;
+  width: 42vw;
 }
 .thank-block_title {
   font-size: 3.125vw;
   font-family: "Gilroy", sans-serif;
   font-weight: 400;
-  margin-bottom: 3.2vh;
+  margin-bottom: 2vmax;
 }
 .thank-block_text {
   width: 17.813vw;
-  line-height: 2.4vh;
+  line-height: normal;
   font-size: 1.042vw;
   font-family: "Gilroy", sans-serif;
   font-weight: 500;
-  margin-bottom: 3.2vh;
+  margin-bottom: 2vmax;
 }
 .modal.active-mod {
   display: block;
@@ -761,13 +784,13 @@ body {
 }
 
 @media (max-width: 48em) {
-  .main-product_description{
+  .main-product_description {
     margin: 80px 0;
   }
-  .swiper{
+  .swiper {
     z-index: 0;
   }
-  
+
   .main-product_description .swiper-wrapper {
     display: flex;
     justify-content: space-between;
@@ -844,12 +867,12 @@ body {
   .banner_text {
     font-family: "Gilroy", sans-serif;
     font-size: 14px;
-    width: 297px;
+    width: 100%;
     color: white;
   }
   .banner_iamge {
-    width: 280px;
-    height: 111px;
+    width: 81%;
+    height: 100%;
   }
   .main-banner_white {
     height: 90px;
@@ -860,7 +883,7 @@ body {
   }
   .main-category_still {
     font-family: "Gilroy", sans-serif;
-    font-size: 2.7vw;
+    font-size: 3.5vw;
   }
   .main-category_button {
     gap: 16px;
@@ -872,7 +895,7 @@ body {
   .content-certificate_title {
     font-size: 24px;
   }
- 
+
   .product-content_specifications {
     margin-top: 1vh;
   }
@@ -917,19 +940,22 @@ body {
   }
   .main-products_item {
     width: 44.35vw !important;
-    height: 228px !important;
+    height: 100% !important;
     padding: 12px !important;
+    gap: 1vh;
   }
 
   .sales-item_text {
     order: 2;
-    font-size: 13px;
-    width: 143px !important;
+    font-size: 12px;
+    width: 100% !important;
     height: 55px !important;
   }
   .sales {
     order: 1;
-    width: 143px;
+    width: 100%;
+    height: 50%;
+    object-fit: contain;
   }
   .sales-price {
     order: 3;
@@ -970,8 +996,8 @@ body {
     height: 40px;
   }
   .price {
-    font-size: 18px;
-    width: 74px;
+    font-size: 12px;
+    /* width: 74px; */
     height: 25px;
   }
   .table-title_weight {
@@ -1036,7 +1062,7 @@ body {
     width: 91vw;
   }
   .product-price_title {
-    width: 99px;
+    /* width: 99px; */
     height: 30px;
     font-size: 24px;
   }
@@ -1069,17 +1095,21 @@ body {
   }
   .thank-block_content {
     display: grid;
+    justify-content: center;
+    width: 100%;
   }
   .thank-blue_element {
     position: absolute;
-    bottom: 0;
+    top: 60%;
     right: 0;
     width: 100%;
-    height: 267px;
+    height: 39.867vh;
   }
   .thank-box_text {
     display: grid;
     align-self: end;
+    justify-content: center;
+    width: 100%;
   }
   .thank-box {
     display: grid;
@@ -1087,11 +1117,12 @@ body {
     height: 100%;
   }
   .thank-block_title {
-    font-size: 34px;
+    font-size: 7.427vw;
+    line-height: normal;
   }
   .thank-block_text {
-    font-size: 16px;
-    width: 273px;
+    font-size: 3.083vw;
+    width: 61vw;
   }
   .blue-text_second {
     height: 100%;
@@ -1104,12 +1135,13 @@ body {
     text-align: right;
   }
   .box-blue_content {
-    font-size: 63px;
+    font-size: 15.813vw;
     width: 100%;
-    height: 112px;
+    height: 134px;
     text-align: right;
     margin-left: -0vw;
     margin-top: 50px;
+    line-height: 10vh;
   }
   .modal-block_content {
     display: grid;
@@ -1129,17 +1161,17 @@ body {
     display: grid;
   }
   .form {
-    width: 91vw;
+    width: 100%;
     margin-top: 40px;
   }
   .form-input {
-    width: 91vw;
+    width: 100%;
     height: 50px;
     padding: 16px 20px;
-    font-size: 1.8vw;
+    font-size: 14px;
   }
   .form-input::placeholder {
-    font-size: 1.8vw;
+    font-size: 14px;
   }
   .form-input:focus::placeholder,
   .form-input:not(:placeholder-shown)::placeholder {

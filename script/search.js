@@ -10,7 +10,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Пример доступных результатов
   const availableResults = [
-    "пример",
+    "примеррррррррррррррррррррррррррррррррррррррррррррррррррррррррррррррррррррррррррррррррррррррррррззззззззззззззззззззз",
+    "поисrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrккккккккккккккккккккккrrrrrк",
+    "поисrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrккккккккккккккккккккккrrrrrк",
+    "поисrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrккккккккккккккккккккккrrrrrк",
+    "поисrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrккккккккккккккккккккккrrrrrк",
+    "поисrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrккккккккккккккккккккккrrrrrк",
+    "поисrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrккккккккккккккккккккккrrrrrк",
+    "поисrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrккккккккккккккккккккккrrrrrк",
+    "поисrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrккккккккккккккккккккккrrrrrк",
+    "поисrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrккккккккккккккккккккккrrrrrк",
+    "поисrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrккккккккккккккккккккккrrrrrк",
+    "поисrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrккккккккккккккккккккккrrrrrк",
+    "поисrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrккккккккккккккккккккккrrrrrк",
     "поиск",
     "результат",
     "категория",
@@ -59,9 +71,10 @@ document.addEventListener("DOMContentLoaded", () => {
       
       if (filteredResults.length > 0) {
         filteredResults.forEach((result) => {
-          const resultItem = document.createElement("div");
+          const resultItem = document.createElement("a");
           resultItem.classList.add("menu-search_item");
           resultItem.textContent = result;
+          resultItem.href = "#";
           menuSearch.appendChild(resultItem);
           console.log("блоков есть");
         });
@@ -114,14 +127,34 @@ searchInps.addEventListener("input", function () {
     noResultsMessage.style.display = "none";
   } else {
     const searchTerm = searchInps.value.toLowerCase();
-    const availableResults = ["пример", "поиск", "результат"]; // Пример доступных результатов
+    const availableResults = [
+      "примерррррррррррррррррррррррррррррррррррррррррррррррррррррррррррррррррррррррррррррррррррррррррр",
+      "поисrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrккккккккккккккккккккккrrrrrк",
+      "поисrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrккккккккккккккккккккккrrrrrк",
+      "поисrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrккккккккккккккккккккккrrrrrк",
+      "поисrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrккккккккккккккккккккккrrrrrк",
+      "поисrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrккккккккккккккккккккккrrrrrк",
+      "поисrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrккккккккккккккккккккккrrrrrк",
+      "поисrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrккккккккккккккккккккккrrrrrк",
+      "поисrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrккккккккккккккккккккккrrrrrк",
+      "поисrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrккккккккккккккккккккккrrrrrк",
+      "поисrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrккккккккккккккккккккккrrrrrк",
+      "поисrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrккккккккккккккккккккккrrrrrк",
+      "поисrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrккккккккккккккккккккккrrrrrк",
+      "результат",
+      "категория",
+      "функция",
+      "данные",
+    ];
     const filteredResults = availableResults.filter((result) =>
       result.includes(searchTerm)
     );
 
     if (filteredResults.length > 0) {
       filteredResults.forEach((result) => {
-        const resultItem = document.createElement("div");
+        const resultItem = document.createElement("a");
+        resultItem.classList.add("menu-search_mobal");
+        resultItem.href = "#";
         resultItem.textContent = result;
         menuSearchText.appendChild(resultItem);
       });

@@ -93,12 +93,30 @@
               </div>
               <div class="menu-list_content">
                 <div class="search-boxs">
-                  <img
-                    class="search-icon"
-                    src="image/header/Icons.png"
-                    alt=""
-                    id="sr1"
-                  />
+                  <svg
+                        class="search-icon"
+                        id="sr1"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.5 19C15.1944 19 19 15.1944 19 10.5C19 5.80558 15.1944 2 10.5 2C5.80558 2 2 5.80558 2 10.5C2 15.1944 5.80558 19 10.5 19Z"
+                          stroke="#888C8E"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M22 22L19 19"
+                          stroke="#888C8E"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                    </svg>
                   <input type="text" id="searchInputs" placeholder="Поиск" />
                   <label for="searchInputs" id="resInpS" class="textRes"></label>
                   <div id="sr1" class="search-results"></div>
@@ -162,8 +180,9 @@
             <div class="menu-search_text" id="menuSearchText">
 
             </div>
+            <div class="no-results" id="noResultsMessage">К сожалению, по вашему запросу ничего не нашлось</div>
           </div>
-          <div class="no-results" id="noResultsMessage">К сожалению, по вашему запросу ничего не нашлось</div>
+          
         </div>
 
         <div class="header-links footer_model">
@@ -186,34 +205,23 @@
               id="searchIcon"
             />
             <div class="search-box" id="searchBox">
-              <div class="search-image">
-                <div class="icon-box">
-                  <img
-                    class="search-icon"
-                    src="image/header/search_black.png"
-                    alt="Иконка"
-                    id="searchIcon"
-                  />
+              <div class="input-top">
+                <div class="search-image">
+                  <div class="icon-box">
+                    <img
+                      class="search-icon"
+                      src="image/header/search_black.png"
+                      alt="Иконка"
+                      id="searchIcon"/>
+                  </div>
+                  <input type="text" id="searchInput" placeholder="Поиск" />
                 </div>
-                <input type="text" id="searchInput" placeholder="Поиск" />
+                <span class="close-btn" id="closeSearch">
+                  <svg width="10" height="10" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1.5L6.625 7.125M6.625 7.125L12.25 1.5M6.625 7.125L1 12.75M6.625 7.125L12.25 12.75" stroke="#888C8E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
               </div>
-              <span class="close-btn" id="closeSearch">
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 14 14"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M1 1.5L6.625 7.125M6.625 7.125L12.25 1.5M6.625 7.125L1 12.75M6.625 7.125L12.25 12.75"
-                    stroke="#888C8E"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </span>
 
               <div class="search-results" id="searchResults">
                 <div class="menu-search" id="menuSearch">
@@ -1213,8 +1221,9 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="script/index.js"></script>
     <script src="script/headerMobWhite.js"></script>
-    <script src="script/company.js"></script>
+    <!-- <script src="script/company.js"></script> -->
     <script src="script/from-error.js"></script>
     <script src="script/search.js"></script>
 </body>

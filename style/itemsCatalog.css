@@ -75,6 +75,7 @@ body {
   font-size: 1.667vw;
   font-family: "Gilroy", sans-serif;
   font-weight: 600;
+  color: rgba(41, 41, 45, 1);
 }
 .main-categories_content {
   display: grid;
@@ -741,6 +742,8 @@ input[type="range"]::-moz-range-thumb {
   align-items: center;
   gap: 2.083vw;
   text-decoration: none;
+  border: none;
+  background: none;
 }
 @media (max-width: 48em) {
   .container-fluid {
