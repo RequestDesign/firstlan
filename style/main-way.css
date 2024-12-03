@@ -4,6 +4,7 @@
 }
 .main-way_links {
   display: flex;
+  flex-flow: wrap;
   align-items: center;
   justify-content: left;
   gap: 8px;
@@ -31,7 +32,7 @@
   margin-top: 0.5vmax;
   color: rgba(41, 41, 45, 1);
 }
-@media (max-width:420px) {
+@media (max-width:48em) {
   .main-link{
     font-size: 3.6vw;
   }

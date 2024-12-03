@@ -59,7 +59,7 @@ body {
     justify-items: center
   }
   .main-category_still {
-    font-size: 2.7vw;
+    font-size: 2.7vw !important;
     letter-spacing: 2px;
   }
   .main-category_button {

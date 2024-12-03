@@ -99,7 +99,7 @@
   display: none;
 }
 .footer_model {
-  display: flex;
+  display: flex !important;
   align-items: center;
   gap: 2.083vw;
 }
@@ -262,7 +262,7 @@
     display: none;
   }
   .footer_model {
-    display: none;
+    display: none !important;
   }
   .footer_model-open {
     display: grid;

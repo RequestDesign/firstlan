@@ -476,6 +476,13 @@ body {
 .sales {
   width: 100%;
 }
+.products-item_bottom{
+  display: flex; 
+  align-items: center;
+  gap: 0.833vw; 
+  height: 100%;
+  justify-content: space-between;
+}
 .sales-price {
   width: 105px;
   height: 100%;
@@ -494,7 +501,6 @@ body {
 }
 
 .heart-block {
-  position: absolute;
   bottom: 1.3vw;
   right: 4.85vw;
 }
@@ -979,6 +985,9 @@ body {
     width: 5.2vw;
     font-size: 18px;
   }
+  .products-item_bottom{
+    order: 3;
+  }
   .price {
     width: 100%;
   }
@@ -987,13 +996,14 @@ body {
     height: 18px;
   }
   .heart-block {
+    position: absolute;
     top: 10px;
     right: 16px;
   }
 
   .sales-price {
-    width: 74px;
-    height: 40px;
+    width: 50%;
+    height: 80%;
   }
   .price {
     font-size: 12px;

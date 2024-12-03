@@ -83,7 +83,7 @@ body {
   margin-top: 3.2vh;
   padding: 0;
 }
-.categories_content-active{
+.categories_content-active {
   display: grid !important;
   gap: 1.6vh;
 }
@@ -313,7 +313,7 @@ input[type="range"]::-moz-range-thumb {
   padding: 0 0;
 }
 .broducts-btn_border {
-  height: 26px;
+  height: 36px;
   border-bottom: 2px solid rgba(41, 41, 45, 1);
   margin-top: 3.2vh;
   margin-bottom: 4vh;
@@ -461,14 +461,14 @@ input[type="range"]::-moz-range-thumb {
   width: 14.5vmax;
 }
 .dropdown-item {
-  --bs-dropdown-link-hover-bg:none;
+  --bs-dropdown-link-hover-bg: none;
   /* width: 10.4vw !important; */
   font-family: "Gilroy", sans-serif;
   font-weight: 400;
   font-size: 0.938vw;
   padding: 0 !important;
 }
-.dropdown-item:hover{
+.dropdown-item:hover {
   background-color: none;
 }
 .item-active {
@@ -506,11 +506,11 @@ input[type="range"]::-moz-range-thumb {
   width: 14.219vw;
   height: 20.2vmax;
   background-color: white;
-  padding: 1.146vw;
+  padding: 1.146vw 0 0 1.146vw;
   position: relative;
   display: grid;
   justify-content: space-between;
-  align-items: start;
+  align-content: space-between;
 }
 .sales-item_text {
   font-family: "Gilroy", sans-serif;
@@ -542,10 +542,11 @@ input[type="range"]::-moz-range-thumb {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 .btn-blue-basket {
   background: rgba(19, 75, 175, 1);
   border: 2px solid rgba(19, 75, 175, 1);
-  width: 3.5vmax;
+  width: 6.5vmax;
   height: 3.5vmax;
   border: none;
   display: flex;
@@ -576,26 +577,26 @@ input[type="range"]::-moz-range-thumb {
 } */
 .sales {
   width: 100%;
+  height: 9vw;
   object-fit: contain;
 }
 .sales-price {
-  width: 105px;
+  width: 100%;
   height: 100%;
   display: grid;
-  align-items: end;
+  align-items: center;
 }
 .price {
   width: 100%;
   height: 34px;
   font-family: "Gilroy", sans-serif;
-  font-size: 1.25vw;
+  font-size: 1.1vw;
   font-weight: 600;
   color: rgba(41, 41, 45, 1);
   display: grid;
-  align-items: end;
+  align-items: center;
 }
 .heart-block {
-  position: absolute;
   bottom: 1.3vw;
   right: 4.85vw;
 }
@@ -655,7 +656,7 @@ input[type="range"]::-moz-range-thumb {
   background-color: white;
   cursor: pointer;
 }
-.pagination-page_item:hover{
+.pagination-page_item:hover {
   background-color: rgba(215, 215, 215, 0.286);
 }
 .pagination-arr {
@@ -737,7 +738,7 @@ input[type="range"]::-moz-range-thumb {
   width: 26px;
   height: 26px;
 }
-.main-category_button{
+.main-category_button {
   display: flex;
   align-items: center;
   gap: 2.083vw;
@@ -765,10 +766,10 @@ input[type="range"]::-moz-range-thumb {
     font-size: 34px;
     margin-bottom: 40px;
   }
-  .main-categories_content{
+  .main-categories_content {
     margin-top: 0;
   }
-  .broducts-more{
+  .broducts-more {
     width: 91vw;
   }
   /* catalog */
@@ -792,7 +793,7 @@ input[type="range"]::-moz-range-thumb {
   .main-categories.active {
     transform: translateX(0); /*  Перемещаем  меню  в  начало  */
   }
-  .main-brands_content{
+  .main-brands_content {
     display: flex;
     justify-content: space-between;
   }
@@ -854,7 +855,7 @@ input[type="range"]::-moz-range-thumb {
     font-family: "Gilroy", sans-serif;
     color: rgba(41, 41, 45, 1);
   }
-  .main-categories_content{
+  .main-categories_content {
     padding: 0 16px 43px 16px;
   }
   .main-categories_content ul {
@@ -1006,8 +1007,8 @@ input[type="range"]::-moz-range-thumb {
   }
 
   .sales-price {
-    width: 74px;
-    height: 40px;
+    width: 50%;
+    height: 80%;
   }
   .price {
     font-size: 18px;
@@ -1033,11 +1034,11 @@ input[type="range"]::-moz-range-thumb {
   .main-products_item {
     width: 44.35vw !important;
     height: 228px !important;
-    padding: 12px !important;
+    padding: 12px!important;
   }
   .main-banner_blue {
     display: grid;
-    width: 91.467vw ;
+    width: 91.467vw;
     height: 100%;
     padding: 20px 17px;
     justify-items: center;
@@ -1063,7 +1064,7 @@ input[type="range"]::-moz-range-thumb {
     padding: 20px 16px;
   }
   .main-category_still {
-    font-size: 2.7vw;
+    font-size: 2.7vw !important;
   }
   .main-category_button {
     gap: 16px;
@@ -1078,18 +1079,22 @@ input[type="range"]::-moz-range-thumb {
     order: 1;
     width: 35vw;
     /* width: 143px; */
-    height: 7vh;
-    object-fit: contain;
+    height: 10vh;
+    object-fit: cover;
   }
   .sales-price {
-    order: 3;
-    width: 82px;
+    order: 1;
+    width: 100%;
     height: 100%;
-    font-size: 16px;
+    font-size: 2.083vw;
   }
   .btn-blue-basket {
+    order: 2;
     width: 50px;
     height: 50px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
   }
   .basket-button {
     width: 18px;
@@ -1111,8 +1116,9 @@ input[type="range"]::-moz-range-thumb {
     height: 18px;
   }
   .heart-block {
+    position: absolute;
     top: 10px;
-    right: 16px;
+    right: 18px;
   }
   .main-banner {
     display: grid;

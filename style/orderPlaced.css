@@ -206,7 +206,7 @@ body {
 
 @media (max-width: 48em) {
   .main-category_still {
-    font-size: 2.7vw;
+    font-size: 2.7vw !important;
     width: 100px;
   }
   .block_button{

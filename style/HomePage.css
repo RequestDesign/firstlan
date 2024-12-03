@@ -309,7 +309,7 @@ body {
   margin-top: 0;
 }
 .main-category_still {
-  font-size: 0.833vw;
+  font-size: 0.833vw !important;
   font-family: "Gilroy", sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -394,7 +394,7 @@ body {
   width: 19.271vw;
   /* height: 50.8vh; */
   background: white;
-  padding: 2.2vh 1.458vw;
+  padding: 1.458vw;
   position: relative;
   transition: opacity 0.3s ease;
   display: grid;
@@ -423,7 +423,7 @@ body {
 }
 .sales-price {
   margin-top: 2vmax;
-  width: 5.156vmax;
+  width: 9.156vmax;
   height: 4vmax;
   display: grid;
   align-items: end;
@@ -1177,7 +1177,7 @@ body {
   display: none;
 }
 .footer_model {
-  display: flex;
+  display: flex !important;
 }
 .social {
   width: 2.5vmax;

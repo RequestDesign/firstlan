@@ -54,7 +54,7 @@
     box-sizing: border-box;
   }
   .main-category_still {
-    font-size: 2.7vw;
+    font-size: 2.7vw !important;
     white-space: nowrap;
   }
   .box-white_button {
@@ -450,12 +450,12 @@
   }
   .price {
     font-size: 18px;
-    width: 74px;
+    width: 100%;
     height: 25px;
   }
   .sales-price {
-    width: 74px;
-    height: 40px;
+    width: 50%;
+    height: 80%;
   }
   .sales-item_description {
     margin-left: 0;
@@ -984,7 +984,7 @@
     }
   }
   .footer_model {
-    display: none;
+    display: none !important;
   }
   .footer_model-open {
     display: grid;

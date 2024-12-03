@@ -95,7 +95,7 @@ body {
     margin-bottom: 2vh;
   }
   .main-category_still {
-    font-size: 2.7vw;
+    font-size: 2.7vw !important;
   }
   .main-category_button {
     gap: 16px;
