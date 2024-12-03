@@ -408,7 +408,7 @@ body {
   font-weight: 600;
   font-style: normal;
   width: 12vw;
-  height: 5vmax;
+  height: 4vmax;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -moz-box;
@@ -705,7 +705,7 @@ body {
 .blue-text_first {
   text-align: right;
 }
-.box-blue_content {
+.main-project .box-blue_content {
   display: flex;
   flex-direction: column;
   font-family: "Gilroy", sans-serif;

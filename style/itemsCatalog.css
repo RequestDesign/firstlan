@@ -518,7 +518,7 @@ input[type="range"]::-moz-range-thumb {
   font-weight: 400;
   font-style: normal;
   width: 11vw;
-  height: 5vmax;
+  height: 4vmax;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -moz-box;

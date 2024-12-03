@@ -122,6 +122,7 @@ body {
 /* project */
 .main-project {
   margin: 18vh 0;
+  overflow: hidden;
 }
 .blue-text_second {
   text-align: right;
@@ -159,7 +160,7 @@ body {
   line-height: 1.8vw;
   margin-bottom: 2vmax;
 }
-.box-blue_content {
+.main-project .box-blue_content {
   display: flex;
   flex-direction: column;
   font-family: "Gilroy", sans-serif;
@@ -555,7 +556,7 @@ body {
     justify-self: center;
     margin-bottom: 10px;
   }
-  .box-blue_content {
+  .main-project .box-blue_content {
     font-size: 20.571vw;
     width: 100vw;
     height: 100%;
