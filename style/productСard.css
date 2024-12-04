@@ -15,6 +15,7 @@ body {
 .product-content_image {
   width: 40.625vw;
   height: 100%;
+  object-fit: cover;
 }
 .block-new {
   position: relative;
@@ -48,16 +49,18 @@ body {
 }
 .content-specifications_block {
   display: flex;
-  align-items: center;
+  align-items: start;
   gap: 18px;
 }
 .block-gray {
   /* height: 49px; */
-  width: 100%;
+  width: auto;
   background: rgba(233, 233, 233, 1);
   padding: 1vh 1.25vw;
   display: flex;
   justify-content: center;
+  text-decoration: none;
+  color: rgba(41, 41, 45, 1);
 }
 .product-content_specifications {
   display: grid;
@@ -73,6 +76,7 @@ body {
   font-size: 0.729vw;
   display: flex;
   justify-content: center;
+  align-items: center;
   position: absolute;
   top: 1.667vw;
   left: 1.667vw;
@@ -113,11 +117,15 @@ body {
 }
 .content-block_text {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   font-size: 0.938vw;
   font-family: "Gilroy", sans-serif;
   font-weight: 400;
   gap: 16px;
+  max-height: 300px;
+  overflow: hidden;
+  /* width: 31.25vw; */
 }
 .content-block_title {
   font-size: 1.042vw;
@@ -211,7 +219,7 @@ body {
 }
 .description-block_banner {
   width: 33.49vw;
-  height: 267px;
+  height: 23.906vw;
 }
 .block-banner_blue {
   width: 33.49vw;
@@ -240,7 +248,7 @@ body {
 .main-catalog_title {
   font-family: "Gilroy", sans-serif;
   font-weight: 400;
-  font-size: 3.125vw;
+  font-size: 34px;
   margin-bottom: 3vmax;
   margin-top: 0.5vmax;
   color: rgba(41, 41, 45, 1);
@@ -414,7 +422,7 @@ body {
   width: 14.219vw;
   height: 20.2vmax;
   background-color: white;
-  padding: 1.146vw;
+  padding: 1.146vw 0 0 1.146vw;
   position: relative;
   display: grid;
   justify-content: space-between;
@@ -426,7 +434,7 @@ body {
   font-weight: 400;
   font-style: normal;
   width: 11vw;
-  height: 4vmax;
+  height: 5vmax;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -moz-box;
@@ -453,7 +461,7 @@ body {
 .btn-blue-basket {
   background: rgba(19, 75, 175, 1);
   border: 2px solid rgba(19, 75, 175, 1);
-  width: 3.5vmax;
+  width: 6.5vmax;
   height: 3.5vmax;
   border: none;
   display: flex;
@@ -475,34 +483,36 @@ body {
 }
 .sales {
   width: 100%;
+  height: 9vw;
+  object-fit: contain;
+  padding-right: 1.146vw;
 }
-.products-item_bottom{
-  display: flex; 
+.products-item_bottom {
+  display: flex;
   align-items: center;
-  gap: 0.833vw; 
-  height: 100%;
+  /* gap: 0.833vw;  */
+  height: 3.385vw;
   justify-content: space-between;
 }
 .sales-price {
-  width: 105px;
+  width: 100%;
   height: 100%;
   display: grid;
-  align-items: end;
+  align-items: center;
 }
 .price {
   width: 100%;
-  height: 34px;
+  height: 100%;
   font-family: "Gilroy", sans-serif;
-  font-size: 1.25vw;
+  font-size: 1.1vw;
   font-weight: 600;
   color: rgba(41, 41, 45, 1);
   display: grid;
-  align-items: end;
+  align-items: center;
 }
-
 .heart-block {
-  bottom: 1.3vw;
-  right: 4.85vw;
+  display: flex;
+  margin-right: 0.8vw;
 }
 .heart {
   width: 1.42vw;
@@ -558,7 +568,7 @@ body {
   padding: 6.25vw 2vw 6.25vw 20vw;
   gap: 7vh;
 }
-.modal-block_content{
+.modal-block_content {
   margin-bottom: 2vmax;
 }
 .blue-element {
@@ -876,6 +886,10 @@ body {
     width: 100%;
     color: white;
   }
+  .banner_text {
+    font-size: 14px;
+    width: 297px;
+  }
   .banner_iamge {
     width: 81%;
     height: 100%;
@@ -959,19 +973,24 @@ body {
   }
   .sales {
     order: 1;
-    width: 100%;
-    height: 50%;
-    object-fit: contain;
+    width: 35vw;
+    /* width: 143px; */
+    height: 10vh;
+    object-fit: cover;
+    padding: 0;
   }
   .sales-price {
-    order: 3;
-    width: 82px;
+    order: 1;
+    width: 100%;
     height: 100%;
-    font-size: 16px;
   }
   .btn-blue-basket {
+    order: 2;
     width: 50px;
     height: 50px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
   }
   .basket-button {
     width: 18px;
@@ -985,11 +1004,14 @@ body {
     width: 5.2vw;
     font-size: 18px;
   }
-  .products-item_bottom{
+  .products-item_bottom {
     order: 3;
+    height: auto;
   }
   .price {
     width: 100%;
+    height: 35px;
+    font-size: 16px;
   }
   .heart {
     width: 20px;
@@ -1001,15 +1023,6 @@ body {
     right: 16px;
   }
 
-  .sales-price {
-    width: 50%;
-    height: 80%;
-  }
-  .price {
-    font-size: 12px;
-    /* width: 74px; */
-    height: 25px;
-  }
   .table-title_weight {
     font-size: 20px;
   }
@@ -1050,7 +1063,7 @@ body {
   }
   .product-content_image {
     width: 91vw;
-    height: 228px;
+    height: 90%;
     object-fit: cover;
   }
   .product-content_info {

@@ -292,11 +292,11 @@ body {
   }
   .price {
     font-size: 18px;
-    width: 74px;
+    width: 100%;
     height: 25px;
   }
   .sales-price {
-    width: 74px;
+    width: 70%;
     height: 40px;
   }
   .sales-item_description {
