@@ -888,7 +888,7 @@ body {
   }
   .banner_text {
     font-size: 14px;
-    width: 297px;
+    width: 100%;
   }
   .banner_iamge {
     width: 81%;
