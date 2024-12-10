@@ -592,7 +592,7 @@ body {
   text-align: right;
 }
 .blue-text_first {
-  z-index: 3;
+  z-index: 0;
   text-align: right;
 }
 .thank-box .box-blue_content {
@@ -888,7 +888,7 @@ body {
   }
   .banner_text {
     font-size: 14px;
-    width: 100%;
+    width: 99%;
   }
   .banner_iamge {
     width: 81%;
@@ -1154,7 +1154,7 @@ body {
   }
   .blue-text_first {
     height: 100%;
-    z-index: 3;
+    z-index: 0;
     text-align: right;
   }
   .thank-box .box-blue_content {
