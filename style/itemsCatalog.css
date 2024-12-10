@@ -1148,8 +1148,8 @@ input[type="range"]::-moz-range-thumb {
     height: 40px;
   }
   .page-items {
-    width: 215px;
-    height: 17px;
+    width: 57.333vw;
+    height: 4.533vw;
   }
   .page-item {
     width: 10px;
