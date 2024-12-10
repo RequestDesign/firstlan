@@ -714,9 +714,9 @@
     gap: 2.999vh;
   }
   .box-agreement_text {
-    font-size: 3.467vw;
-    width: 64.533vw;
-    line-height: normal;
+    font-size: 3.467vw !important;
+    width: 64.533vw !important;
+    line-height: normal !important;
   }
   .box-agreement {
     gap: 4.267vw;

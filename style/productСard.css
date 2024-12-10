@@ -54,7 +54,7 @@ body {
 }
 .block-gray {
   /* height: 49px; */
-  width: auto;
+  width: auto !important;
   background: rgba(233, 233, 233, 1);
   padding: 1vh 1.25vw;
   display: flex;
@@ -131,7 +131,6 @@ body {
   font-size: 1.042vw;
   font-family: "Gilroy", sans-serif;
   font-weight: 600;
-  width: 5vw;
 }
 .product-price {
   margin-top: 4vh;

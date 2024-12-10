@@ -146,11 +146,11 @@ body {
   gap: 2.083vw;
 }
 .box-agreement_text {
-  width: 13.385vw;
-  font-size: 0.729vw;
+  width: 13.385vw !important;
+  font-size: 0.729vw !important;
   font-family: "Gilroy", sans-serif;
   font-weight: 400;
-  line-height: 1.2vmax;
+  line-height: 1.2vmax !important;
   color: rgba(41, 41, 45, 1);
 }
 .box_button {
@@ -370,9 +370,9 @@ body {
     gap: 2.999vh;
   }
   .box-agreement_text {
-    font-size: 3.467vw;
-    width: 64.533vw;
-    line-height: normal;
+    font-size: 3.733vw !important;
+    line-height: normal !important;
+    width: 64.533vw !important;
   }
   .box-agreement {
     gap: 4.267vw;

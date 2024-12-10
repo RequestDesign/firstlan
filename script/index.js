@@ -464,7 +464,9 @@ document.addEventListener("DOMContentLoaded", function () {
     if (window.innerWidth <= 48 * 16) {
       if (!swiper) {
         swiper = new Swiper(".swiper-container", {
-          slidesPerView: "auto",
+          //
+          slidesPerView: 'auto',
+          //
           spaceBetween: 16,
           slidesPerGroup: 1,
           loop: false,

@@ -226,10 +226,10 @@ input[type="range"]::-moz-range-thumb {
   gap: 1.6vh;
 }
 .box-agreement_text {
-  font-size: 1.042vw;
+  font-size: 1.042vw !important;
   font-family: "Gilroy", sans-serif;
   font-weight: 500;
-  line-height: 1.2vmax;
+  line-height: 1.2vmax !important;
   color: rgba(41, 41, 45, 1);
 }
 .brands-content {
@@ -939,7 +939,9 @@ input[type="range"]::-moz-range-thumb {
     gap: 16px;
   }
   .box-agreement_text {
-    font-size: 14px;
+    font-size: 3.733vw !important;
+    line-height: normal !important;
+    width: 64.533vw !important;
   }
   .radio-sorting_text {
     color: rgba(41, 41, 45, 1);

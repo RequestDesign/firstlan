@@ -759,11 +759,11 @@ body {
 }
 
 .box-agreement_text {
-  width: 13.385vw;
-  font-size: 0.729vw;
+  width: 13.385vw !important;
+  font-size: 0.729vw !important;
   font-family: "Gilroy", sans-serif;
   font-weight: 400;
-  line-height: 1.2vmax;
+  line-height: 1.2vmax !important;
   color: rgba(41, 41, 45, 1);
 }
 .box_button {
