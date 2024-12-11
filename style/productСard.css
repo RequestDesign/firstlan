@@ -875,6 +875,7 @@ body {
     font-family: "Gilroy", sans-serif;
     font-size: 19px;
     width: 100%;
+    font-weight: 600;
     line-height: 22.8px;
     margin-bottom: 24px;
     color: white;
@@ -886,7 +887,7 @@ body {
     color: white;
   }
   .banner_text {
-    font-size: 14px;
+    font-size: 3.733vw;
     width: 99%;
   }
   .banner_iamge {

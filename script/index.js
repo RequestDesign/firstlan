@@ -55,31 +55,28 @@ btnBasket.forEach((bottom) => {
 const advantagesItems = document.querySelectorAll(".main-advantages_item");
 advantagesItems.forEach((item) => {
   item.addEventListener("click", () => {
-    const advantagesActive = document.querySelector(
-      ".main-advantages_item.active"
-    );
+    const advantagesActive = document.querySelector(".main-advantages_item.active");
     const img = item.querySelector("img");
+
     if (img) {
       if (item.classList.contains("active")) {
-        // Если блок уже активен, можно сбросить изображение
-        img.src = img.dataset.defaultSrc;
-        item.classList.remove("active");
+        img.src = img.dataset.activeSrc; 
       } else {
-        // Если блок неактивен, сбрасываем предыдущий активный блок
         if (advantagesActive) {
           const activeImg = advantagesActive.querySelector("img");
           if (activeImg) {
-            activeImg.src = activeImg.dataset.defaultSrc;
+            activeImg.src = activeImg.dataset.defaultSrc; 
           }
           advantagesActive.classList.remove("active");
         }
-        // Устанавливаем новое изображение
-        img.src = img.dataset.activeSrc;
-        item.classList.add("active");
+        img.src = img.dataset.activeSrc; 
+        item.classList.add("active"); 
       }
     }
   });
 });
+
+
 
 // слайдер
 document.addEventListener("DOMContentLoaded", () => {

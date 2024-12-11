@@ -194,7 +194,7 @@
   .search-box {
     width: 91.467vw;
     height: 50px;
-    padding: 14px 20px;
+    padding: 3.733vw 5.333vw;
     border: 2px solid white;
     background-color: transparent;
     display: flex;
@@ -214,7 +214,7 @@
     outline: none;
     background-color: transparent;
     color: white;
-    font-size: 16px;
+    font-size: 4.267vw;
     font-family: "Gilroy", sans-serif;
     font-weight: 400;
     text-align: left;
@@ -237,10 +237,10 @@
     order: 1;
   }
   .image-content_title {
-    font-size: 34px;
+    font-size: 9.067vw;
   }
   .image-content_text {
-    font-size: 16px;
+    font-size: 4.267vw;
     width: 91vw;
   }
   .image-about {
@@ -262,11 +262,7 @@
   .main-category_button {
     width: 100% !important;
   }
-  .about-block_title {
-    font-size: 34px;
-    line-height: 34px;
-    width: 91vw;
-  }
+
   .main-about_box .swiper-wrapper {
     flex-wrap: nowrap;
   }
@@ -278,13 +274,13 @@
     margin-top: 40px;
   }
   .box-white {
-    padding: 14px;
+    padding: 3.733vw;
   }
   .content-title {
-    font-size: 24px;
+    font-size: 6.4vw;
   }
   .content-number {
-    font-size: 24px;
+    font-size: 6.4vw;
   }
   .about-partner_content {
     display: grid;
@@ -299,7 +295,8 @@
     display: grid;
     order: 2;
     width: 91vw;
-    font-size: 34px;
+    font-size: 9.067vw;
+    line-height: 34px;
   }
   .about-block_min {
     display: grid;
@@ -308,13 +305,14 @@
   }
   .about-block_text {
     width: 91vw;
-    font-size: 16px;
+    font-size: 4.267vw;
   }
   .main-about {
     height: 76vh;
+    margin: 21.333vw 0;
   }
   .main-about_partner {
-    margin: 120px 0 0 0;
+    margin: 32vw 0 0 0;
   }
   .achievement-box_white {
     width: 91vw;
@@ -324,7 +322,7 @@
   }
   .achievement-box_information {
     margin-top: 40px;
-    width: 253px;
+    width: 100%;
   }
   .achievement-box_title {
     font-size: 34px;

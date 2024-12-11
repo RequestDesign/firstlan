@@ -1059,12 +1059,12 @@ input[type="range"]::-moz-range-thumb {
     margin-bottom: 24px;
   }
   .banner_text {
-    font-size: 14px;
-    width: 99%;
+    font-size: 3.733vw;
+    width: 98%;
   }
   .banner_iamge {
-    width: 280px;
-    height: 111px;
+    width: 81%;
+    height: 100%;
   }
   .main-banner_white {
     height: 90px;
